@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Deletreo básico</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/deletreo-basico.css"
+    >
+</head>
+
+<body>
+
+    <main class="desk">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="abecedario-cursos.html"
+                class="back-link"
+            >
+                ← Volver
+            </a>
+
+            <div class="topbar-title">
+                <img src="../images/logo.png" alt="SignBridge">
+                <span>Deletreo básico</span>
+            </div>
+
+            <span
+                id="contador"
+                class="counter"
+            >
+                Palabra 1 / 10
+            </span>
+
+        </header>
+
+
+        <!-- CUADERNO -->
+
+        <section
+            class="notebook"
+            aria-live="polite"
+        >
+
+            <div class="notebook-holes" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+
+            <!-- PALABRA -->
+
+            <div class="word-header">
+
+                <span
+                    id="pista"
+                    class="hint"
+                    aria-hidden="true"
+                >
+                    ☀️
+                </span>
+
+                <div>
+
+                    <span
+                        id="faseEtiqueta"
+                        class="phase-label"
+                    >
+                        Paso 1 · Aprende la palabra
+                    </span>
+
+                    <div
+                        id="fichas"
+                        class="tiles"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FASE 1: APRENDER LETRA POR LETRA -->
+
+            <div
+                id="faseAprender"
+                class="phase"
+            >
+
+                <figure class="sign-card">
+
+                    <img
+                        id="senaGrande"
+                        src="../images/abecedario/S.png"
+                        alt="Seña de la letra S"
+                    >
+
+                    <figcaption>
+                        Letra
+                        <strong id="letraActual">S</strong>
+                    </figcaption>
+
+                </figure>
+
+
+                <div class="controls">
+
+                    <button
+                        id="anterior"
+                        class="btn-paper"
+                        type="button"
+                    >
+                        ← Anterior
+                    </button>
+
+                    <button
+                        id="reproducir"
+                        class="btn-paper"
+                        type="button"
+                    >
+                        ▶ Reproducir
+                    </button>
+
+                    <button
+                        id="siguienteLetra"
+                        class="btn-paper"
+                        type="button"
+                    >
+                        Siguiente →
+                    </button>
+
+                </div>
+
+
+                <button
+                    id="aPrueba"
+                    class="btn-ink"
+                    type="button"
+                    disabled
+                >
+                    Mira todas las letras para continuar
+                </button>
+
+            </div>
+
+
+            <!-- FASE 2: COMPROBAR -->
+
+            <div
+                id="fasePrueba"
+                class="phase hidden"
+            >
+
+                <p class="question">
+                    ¿Qué palabra se deletrea con estas señas?
+                </p>
+
+                <div
+                    id="tira"
+                    class="sign-strip"
+                ></div>
+
+                <div
+                    id="opciones"
+                    class="word-options"
+                ></div>
+
+                <p
+                    id="mensaje"
+                    class="feedback"
+                ></p>
+
+                <button
+                    id="siguientePalabra"
+                    class="btn-ink hidden"
+                    type="button"
+                >
+                    Siguiente palabra →
+                </button>
+
+            </div>
+
+
+            <!-- SELLO DE ACIERTO -->
+
+            <div
+                id="sello"
+                class="stamp"
+                aria-hidden="true"
+            >
+                ¡Muy bien!
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESO -->
+
+        <div class="pencil-progress" aria-label="Progreso">
+
+            <div
+                id="barra"
+                class="pencil-fill"
+            ></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- PANTALLA FINAL -->
+
+    <section
+        id="final"
+        class="final hidden"
+    >
+
+        <div class="final-sheet">
+
+            <span class="final-tag">CALIFICACIÓN</span>
+
+            <div
+                id="estrellas"
+                class="stars"
+            >
+                ⭐⭐⭐
+            </div>
+
+            <h2>¡Terminaste el deletreo!</h2>
+
+            <p id="finalTexto">
+                Acertaste 10 de 10 palabras al primer intento.
+            </p>
+
+            <div class="final-actions">
+
+                <button
+                    id="repetir"
+                    class="btn-ink"
+                    type="button"
+                >
+                    Practicar otra vez
+                </button>
+
+                <a
+                    href="abecedario-cursos.html"
+                    class="btn-paper"
+                >
+                    Volver al abecedario
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/deletreo-basico.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

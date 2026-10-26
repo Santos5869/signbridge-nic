@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Escuela</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <!-- Mismo diseño de tarjetas que el curso de abecedario -->
+    <link
+        rel="stylesheet"
+        href="../css/abecedario-cursos.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="background">
+
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+
+    </div>
+
+
+    <main class="alphabet-page">
+
+        <header class="alphabet-header">
+
+            <button
+                class="back-button"
+                type="button"
+                onclick="navegarSuave('cursos.html')"
+                aria-label="Volver a cursos"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <span class="section-badge">
+                    🏫 Aprendizaje
+                </span>
+
+                <h1>
+                    Escuela
+                </h1>
+
+                <p>
+                    Aprende los materiales, las órdenes de clase
+                    y el vocabulario del entorno escolar.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section
+            class="alphabet-courses"
+            aria-label="Mini cursos de escuela"
+        >
+
+            <!-- MATERIALES -->
+
+            <article
+                class="alphabet-course-card"
+                tabindex="0"
+                role="button"
+                onclick="navegarSuave('escuela-materiales.html')"
+            >
+
+                <div class="course-icon">
+                    ✂️
+                </div>
+
+                <div class="course-info">
+
+                    <span class="course-level">
+                        MINI CURSO 1
+                    </span>
+
+                    <h2>
+                        Materiales escolares
+                    </h2>
+
+                    <p>
+                        Lápiz, cuaderno, libro, tijeras y más.
+                        Después, prepara tu mochila.
+                    </p>
+
+                    <div class="course-meta">
+                        <span>🎒 10 materiales</span>
+                        <span>🎓 Básico</span>
+                    </div>
+
+                    <button
+                        class="course-button"
+                        type="button"
+                        onclick="event.stopPropagation(); navegarSuave('escuela-materiales.html')"
+                    >
+                        Comenzar →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ÓRDENES -->
+
+            <article
+                class="alphabet-course-card"
+                tabindex="0"
+                role="button"
+                onclick="navegarSuave('escuela-ordenes.html')"
+            >
+
+                <div class="course-icon">
+                    🧑‍🏫
+                </div>
+
+                <div class="course-info">
+
+                    <span class="course-level">
+                        MINI CURSO 2
+                    </span>
+
+                    <h2>
+                        Órdenes en clase
+                    </h2>
+
+                    <p>
+                        Observar, repetir, explicar, abrir el libro...
+                        Entiende lo que pide el profesor.
+                    </p>
+
+                    <div class="course-meta">
+                        <span>📋 12 órdenes</span>
+                        <span>🎓 Intermedio</span>
+                    </div>
+
+                    <button
+                        class="course-button"
+                        type="button"
+                        onclick="event.stopPropagation(); navegarSuave('escuela-ordenes.html')"
+                    >
+                        Comenzar →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- VOCABULARIO -->
+
+            <article
+                class="alphabet-course-card"
+                tabindex="0"
+                role="button"
+                onclick="navegarSuave('escuela-vocabulario.html')"
+            >
+
+                <div class="course-icon">
+                    🗺️
+                </div>
+
+                <div class="course-info">
+
+                    <span class="course-level">
+                        MINI CURSO 3
+                    </span>
+
+                    <h2>
+                        Vocabulario de la escuela
+                    </h2>
+
+                    <p>
+                        Director, profesor, biblioteca, laboratorio...
+                        Recorre el mapa de la escuela.
+                    </p>
+
+                    <div class="course-meta">
+                        <span>🏫 13 palabras</span>
+                        <span>🎓 Intermedio</span>
+                    </div>
+
+                    <button
+                        class="course-button"
+                        type="button"
+                        onclick="event.stopPropagation(); navegarSuave('escuela-vocabulario.html')"
+                    >
+                        Comenzar →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        "use strict";
+
+        function navegarSuave(url) {
+
+            document.body.classList.add("page-exiting");
+
+            setTimeout(() => {
+                window.location.href = url;
+            }, 250);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            requestAnimationFrame(() => document.body.classList.add("page-ready"));
+        });
+
+        /* Enter o espacio abren la tarjeta enfocada. */
+        document.querySelectorAll(".alphabet-course-card").forEach((tarjeta) => {
+            tarjeta.addEventListener("keydown", (evento) => {
+                if (evento.key === "Enter" || evento.key === " ") {
+                    evento.preventDefault();
+                    tarjeta.click();
+                }
+            });
+        });
+    </script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

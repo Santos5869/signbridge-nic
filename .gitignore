@@ -1,0 +1,19 @@
+# Respaldos locales (no se publican)
+respaldo-css-oscuro/
+respaldo-numeros-original/
+respaldo-logo-original.png
+
+# Archivos del sistema y del editor
+*.lnk
+.vscode/
+Thumbs.db
+desktop.ini
+
+# Imagen suelta duplicada (la que se usa está en images/courses/)
+/abecedario.png
+
+# Copias descargadas del capturador (la buena está en js/posturas-base.js)
+/posturas-base*.js
+
+# No es una imagen: es una página web guardada de un banco de fotos, y no se usa
+images/saludos/hola.png

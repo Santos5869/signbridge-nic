@@ -1,0 +1,745 @@
+/* =========================================================
+   SIGNBRIDGE - DELETREA TU NOMBRE
+   Estilo: carné de identidad colgado de una cinta.
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #f3f1fb;
+    --indigo: #3730a3;
+    --indigo-dark: #1e1b4b;
+    --teal: #0d9488;
+    --teal-light: #5eead4;
+    --text: #1e1b3a;
+    --muted: #625f80;
+    --card: #ffffff;
+    --good: #0f8a5f;
+    --bad: #d33f49;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    color: var(--text);
+
+    background:
+        repeating-linear-gradient(-45deg, rgba(55, 48, 163, 0.035) 0 14px, transparent 14px 28px),
+        radial-gradient(circle at 85% 10%, rgba(94, 234, 212, 0.35), transparent 40%),
+        var(--bg);
+
+    animation: entrar .3s ease both;
+}
+
+@keyframes entrar {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ESTRUCTURA
+========================================================= */
+
+.page {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0 48px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.back-link {
+    padding: 9px 16px;
+
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--indigo);
+
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+
+    box-shadow: 0 4px 14px rgba(55, 48, 163, 0.1);
+}
+
+.topbar-tag {
+    padding: 7px 14px;
+
+    border-radius: 999px;
+    background: rgba(13, 148, 136, 0.12);
+    color: var(--teal);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 36px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   PANEL IZQUIERDO
+========================================================= */
+
+.panel {
+    padding: 30px;
+
+    border-radius: 24px;
+    background: var(--card);
+
+    box-shadow: 0 20px 50px rgba(30, 27, 75, 0.08);
+}
+
+.panel h1 {
+    margin-bottom: 8px;
+
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: -1px;
+}
+
+.lead {
+    margin-bottom: 24px;
+
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.name-form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--indigo);
+}
+
+.name-row {
+    display: flex;
+    gap: 10px;
+}
+
+.name-row input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 14px 16px;
+
+    border: 2px solid #dcd9f2;
+    border-radius: 14px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+
+    outline: none;
+
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.name-row input:focus {
+    border-color: var(--indigo);
+    box-shadow: 0 0 0 4px rgba(55, 48, 163, 0.12);
+}
+
+.form-note {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.form-note.error {
+    color: var(--bad);
+}
+
+
+/* BOTONES */
+
+.btn-primary {
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, var(--indigo), var(--teal));
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 24px rgba(55, 48, 163, 0.25);
+
+    transition: transform .15s, box-shadow .15s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-round {
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid #dcd9f2;
+    border-radius: 50%;
+
+    background: #fff;
+    color: var(--indigo);
+
+    font-size: 26px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: transform .15s, border-color .15s;
+}
+
+.btn-round:hover:not(:disabled) {
+    border-color: var(--indigo);
+    transform: scale(1.06);
+}
+
+.btn-round:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+
+/* PESTAÑAS */
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+
+    margin: 28px 0 20px;
+    padding: 6px;
+
+    border-radius: 16px;
+    background: #efedf9;
+}
+
+.tab {
+    padding: 11px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: transparent;
+    color: var(--muted);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background .2s, color .2s;
+}
+
+.tab.active {
+    background: #fff;
+    color: var(--indigo);
+
+    box-shadow: 0 4px 12px rgba(30, 27, 75, 0.1);
+}
+
+
+/* MODO APRENDER */
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.speed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.speed input {
+    width: 160px;
+
+    accent-color: var(--teal);
+
+    /* El valor es la pausa en ms; invertimos para que a la derecha sea más rápido. */
+    direction: rtl;
+}
+
+.speed span {
+    min-width: 56px;
+    color: var(--indigo);
+}
+
+
+/* MODO PRUÉBATE */
+
+.practice-question {
+    margin-bottom: 16px;
+
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.letter-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+.letter-option {
+    aspect-ratio: 1;
+
+    border: 2px solid #dcd9f2;
+    border-radius: 16px;
+
+    background: #fff;
+    color: var(--text);
+
+    font-size: 30px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform .15s, border-color .15s;
+}
+
+.letter-option:hover:not(:disabled) {
+    border-color: var(--indigo);
+    transform: translateY(-3px);
+}
+
+.letter-option.right {
+    border-color: var(--good);
+    background: #dcf7ec;
+    color: var(--good);
+}
+
+.letter-option.wrong {
+    border-color: var(--bad);
+    background: #fde4e6;
+    color: var(--bad);
+}
+
+.letter-option:disabled {
+    cursor: default;
+}
+
+.feedback {
+    min-height: 24px;
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    text-align: center;
+}
+
+.feedback.good {
+    color: var(--good);
+}
+
+.feedback.bad {
+    color: var(--bad);
+}
+
+#otraVez {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARNÉ
+========================================================= */
+
+.badge-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: sticky;
+    top: 20px;
+}
+
+/* Cinta del carné */
+.lanyard {
+    width: 34px;
+    height: 70px;
+
+    background: repeating-linear-gradient(180deg, var(--indigo) 0 10px, var(--teal) 10px 20px);
+
+    border-radius: 0 0 6px 6px;
+
+    position: relative;
+}
+
+.lanyard::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+
+    width: 22px;
+    height: 22px;
+
+    border: 4px solid #a8a5c4;
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+}
+
+.id-card {
+    width: min(340px, 100%);
+
+    margin-top: 6px;
+
+    border-radius: 22px;
+    background: var(--card);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 60px rgba(30, 27, 75, 0.18),
+        0 0 0 1px rgba(55, 48, 163, 0.06);
+
+    transform-origin: top center;
+
+    position: relative;
+}
+
+/* Brillo holográfico */
+.id-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.55) 50%, transparent 60%);
+    background-size: 250% 100%;
+    background-position: 120% 0;
+
+    pointer-events: none;
+}
+
+.id-card.nuevo {
+    animation: balanceo .9s ease;
+}
+
+.id-card.nuevo::after {
+    animation: brillo 1.2s ease .2s;
+}
+
+.id-card.completo {
+    box-shadow:
+        0 30px 60px rgba(13, 148, 136, 0.3),
+        0 0 0 3px var(--teal-light);
+}
+
+@keyframes balanceo {
+    0% { transform: rotate(-6deg); }
+    40% { transform: rotate(4deg); }
+    70% { transform: rotate(-2deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes brillo {
+    to { background-position: -40% 0; }
+}
+
+.id-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 16px 18px;
+
+    background: linear-gradient(135deg, var(--indigo-dark), var(--indigo) 55%, var(--teal));
+    color: #fff;
+}
+
+.id-header img {
+    width: 40px;
+    height: 40px;
+
+    padding: 3px;
+
+    border-radius: 10px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.id-header strong {
+    display: block;
+    font-size: 17px;
+}
+
+.id-header span {
+    font-size: 12px;
+    opacity: .8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.id-photo {
+    position: relative;
+
+    margin: 18px 18px 0;
+
+    border-radius: 16px;
+    background: #eef0f8;
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+}
+
+.id-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.id-photo img.aparecer {
+    animation: aparecer .3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(1.04); }
+    to { opacity: 1; transform: none; }
+}
+
+.no-photo {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 20px;
+
+    color: var(--muted);
+    text-align: center;
+}
+
+.no-photo strong {
+    font-size: 72px;
+    color: var(--indigo);
+}
+
+.photo-letter {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+
+    min-width: 54px;
+    height: 54px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+    background: var(--indigo);
+    color: #fff;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 18px rgba(30, 27, 75, 0.3);
+}
+
+.id-body {
+    padding: 16px 18px 18px;
+}
+
+.id-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin: 8px 0 16px;
+}
+
+.chip {
+    min-width: 36px;
+    height: 42px;
+
+    padding: 0 8px;
+
+    border: 2px solid #dcd9f2;
+    border-radius: 10px;
+
+    background: #fff;
+    color: var(--text);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform .15s, background .15s, color .15s, border-color .15s;
+}
+
+.chip.current {
+    border-color: var(--indigo);
+    background: var(--indigo);
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+.chip.oculta {
+    color: transparent;
+    background: repeating-linear-gradient(45deg, #efedf9 0 6px, #e4e1f5 6px 12px);
+}
+
+.chip.oculta.current {
+    border-color: var(--teal);
+    background: repeating-linear-gradient(45deg, #ccfbf1 0 6px, #99f6e4 6px 12px);
+}
+
+.chip.hecha {
+    border-color: var(--good);
+    color: var(--good);
+}
+
+.chip.sin-foto {
+    border-style: dashed;
+    color: var(--muted);
+}
+
+.chip-space {
+    width: 14px;
+}
+
+.id-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.barcode {
+    flex: 1;
+    max-width: 150px;
+    height: 30px;
+
+    background: repeating-linear-gradient(90deg,
+        var(--text) 0 2px, transparent 2px 4px,
+        var(--text) 4px 7px, transparent 7px 9px,
+        var(--text) 9px 10px, transparent 10px 13px);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 860px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* En el celular el carné va primero. */
+    .badge-area {
+        position: static;
+        order: -1;
+    }
+
+    .id-card {
+        width: min(300px, 100%);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .panel {
+        padding: 22px 18px;
+    }
+
+    .name-row {
+        flex-direction: column;
+    }
+
+    .letter-options {
+        gap: 8px;
+    }
+
+    .letter-option {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

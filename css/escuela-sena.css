@@ -1,0 +1,84 @@
+/* =========================================================
+   SIGNBRIDGE - ESCUELA
+   Caja de la seña: video o palabra deletreada.
+   Cada mini curso le da su propio marco.
+========================================================= */
+
+.sena {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.sena-video {
+    display: block;
+
+    width: 100%;
+    max-height: 340px;
+
+    border-radius: 12px;
+
+    background: #000;
+
+    object-fit: contain;
+}
+
+.sena-deletreo {
+    width: 100%;
+
+    text-align: center;
+}
+
+.sena-tira {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.sena-palabra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.sena-palabra figure {
+    width: 58px;
+}
+
+.sena-palabra img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 3 / 4;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    object-fit: cover;
+}
+
+.sena-palabra figcaption {
+    margin-top: 3px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sena-nota {
+    margin-top: 10px;
+
+    font-size: 12px;
+    opacity: .7;
+}
+
+@media (max-width: 520px) {
+
+    .sena-palabra figure {
+        width: 44px;
+    }
+}

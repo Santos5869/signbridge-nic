@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Reto de abecedario</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/reto-abecedario.css"
+    >
+</head>
+
+<body>
+
+    <main class="arcade">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="abecedario-cursos.html"
+                class="back-link"
+            >
+                ← Salir
+            </a>
+
+            <span class="logo-text">
+                RETO ABC
+            </span>
+
+            <span
+                id="record"
+                class="record"
+            >
+                🏆 0
+            </span>
+
+        </header>
+
+
+        <!-- PANTALLA DE INICIO -->
+
+        <section
+            id="inicio"
+            class="screen start"
+        >
+
+            <h1>
+                ¿Cuántas señas
+                <span>reconoces?</span>
+            </h1>
+
+            <ul class="rules">
+                <li><b>⏱ 60 s</b> para responder todo lo que puedas</li>
+                <li><b>❤️ 3 vidas</b>: cada error cuesta una</li>
+                <li><b>🔥 Racha</b>: aciertos seguidos multiplican tus puntos</li>
+                <li><b>➕ 1 s</b> extra por cada acierto</li>
+            </ul>
+
+            <button
+                id="jugar"
+                class="btn-arcade"
+                type="button"
+            >
+                ¡JUGAR!
+            </button>
+
+            <p class="keys-hint">
+                Puedes responder con las teclas 1, 2, 3 y 4.
+            </p>
+
+        </section>
+
+
+        <!-- JUEGO -->
+
+        <section
+            id="juego"
+            class="screen game hidden"
+        >
+
+            <!-- MARCADOR -->
+
+            <div class="hud">
+
+                <div class="hud-box">
+                    <span>PUNTOS</span>
+                    <strong id="puntos">0</strong>
+                </div>
+
+                <div class="hud-box">
+                    <span>RACHA</span>
+                    <strong id="racha">x1</strong>
+                </div>
+
+                <div class="hud-box">
+                    <span>VIDAS</span>
+                    <strong id="vidas">❤️❤️❤️</strong>
+                </div>
+
+            </div>
+
+            <div class="timer">
+
+                <div
+                    id="tiempoBarra"
+                    class="timer-fill"
+                ></div>
+
+                <span id="tiempoTexto">60</span>
+
+            </div>
+
+
+            <!-- PREGUNTA -->
+
+            <div
+                id="tarjeta"
+                class="question-card"
+                aria-live="polite"
+            >
+
+                <span
+                    id="tipo"
+                    class="question-type"
+                >
+                    ¿QUÉ LETRA ES?
+                </span>
+
+                <h2
+                    id="pregunta"
+                    class="question-text"
+                ></h2>
+
+                <img
+                    id="sena"
+                    class="question-sign"
+                    src="../images/abecedario/A.png"
+                    alt="Seña para identificar"
+                >
+
+                <div
+                    id="opciones"
+                    class="answers"
+                ></div>
+
+            </div>
+
+            <div
+                id="flotante"
+                class="float-points"
+                aria-hidden="true"
+            ></div>
+
+        </section>
+
+
+        <!-- FIN -->
+
+        <section
+            id="fin"
+            class="screen end hidden"
+        >
+
+            <span
+                id="nuevoRecord"
+                class="new-record hidden"
+            >
+                ¡NUEVO RÉCORD!
+            </span>
+
+            <h2>FIN DEL RETO</h2>
+
+            <div class="final-score">
+                <strong id="puntosFinal">0</strong>
+                <span>puntos</span>
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    <strong id="aciertosFinal">0</strong>
+                    <span>aciertos</span>
+                </div>
+
+                <div>
+                    <strong id="precisionFinal">0%</strong>
+                    <span>precisión</span>
+                </div>
+
+                <div>
+                    <strong id="rachaFinal">0</strong>
+                    <span>mejor racha</span>
+                </div>
+
+            </div>
+
+            <p
+                id="repasar"
+                class="review"
+            ></p>
+
+            <button
+                id="otraVez"
+                class="btn-arcade"
+                type="button"
+            >
+                JUGAR OTRA VEZ
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/reto-abecedario.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

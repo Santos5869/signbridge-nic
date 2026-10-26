@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Deletrea tu nombre</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/deletrea-nombre.css"
+    >
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="abecedario-cursos.html"
+                class="back-link"
+            >
+                ← Volver
+            </a>
+
+            <span class="topbar-tag">
+                🪪 Aplicación
+            </span>
+
+        </header>
+
+
+        <div class="layout">
+
+            <!-- COLUMNA IZQUIERDA: FORMULARIO Y MODOS -->
+
+            <section class="panel">
+
+                <h1>
+                    Deletrea tu nombre
+                </h1>
+
+                <p class="lead">
+                    Escribe tu nombre y te enseñamos a deletrearlo
+                    seña por seña. Después, pruébate.
+                </p>
+
+
+                <form
+                    id="formNombre"
+                    class="name-form"
+                    autocomplete="off"
+                >
+
+                    <label for="nombre">
+                        Tu nombre
+                    </label>
+
+                    <div class="name-row">
+
+                        <input
+                            id="nombre"
+                            type="text"
+                            maxlength="20"
+                            placeholder="Ej. María"
+                            required
+                        >
+
+                        <button
+                            class="btn-primary"
+                            type="submit"
+                        >
+                            Crear carné
+                        </button>
+
+                    </div>
+
+                    <small id="avisoNombre" class="form-note">
+                        Solo letras. Las tildes se ignoran.
+                    </small>
+
+                </form>
+
+
+                <!-- MODOS -->
+
+                <div
+                    class="tabs"
+                    role="tablist"
+                >
+
+                    <button
+                        id="tabVer"
+                        class="tab active"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                    >
+                        👀 Aprende
+                    </button>
+
+                    <button
+                        id="tabPracticar"
+                        class="tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        ✋ Pruébate
+                    </button>
+
+                </div>
+
+
+                <!-- MODO APRENDER -->
+
+                <div
+                    id="modoVer"
+                    class="mode"
+                >
+
+                    <div class="player">
+
+                        <button
+                            id="anterior"
+                            class="btn-round"
+                            type="button"
+                            aria-label="Letra anterior"
+                        >
+                            ‹
+                        </button>
+
+                        <button
+                            id="reproducir"
+                            class="btn-primary"
+                            type="button"
+                        >
+                            ▶ Reproducir
+                        </button>
+
+                        <button
+                            id="siguiente"
+                            class="btn-round"
+                            type="button"
+                            aria-label="Letra siguiente"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+                    <label
+                        class="speed"
+                        for="velocidad"
+                    >
+                        Velocidad
+
+                        <input
+                            id="velocidad"
+                            type="range"
+                            min="500"
+                            max="2000"
+                            step="100"
+                            value="1200"
+                        >
+
+                        <span id="velocidadTexto">Normal</span>
+                    </label>
+
+                </div>
+
+
+                <!-- MODO PRUÉBATE -->
+
+                <div
+                    id="modoPracticar"
+                    class="mode hidden"
+                >
+
+                    <p
+                        id="preguntaPractica"
+                        class="practice-question"
+                    >
+                        ¿Qué letra es esta seña?
+                    </p>
+
+                    <div
+                        id="opciones"
+                        class="letter-options"
+                    ></div>
+
+                    <p
+                        id="mensaje"
+                        class="feedback"
+                    ></p>
+
+                    <button
+                        id="otraVez"
+                        class="btn-primary hidden"
+                        type="button"
+                    >
+                        Practicar otra vez
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- COLUMNA DERECHA: CARNÉ -->
+
+            <section
+                class="badge-area"
+                aria-live="polite"
+            >
+
+                <div class="lanyard" aria-hidden="true"></div>
+
+                <article
+                    id="carne"
+                    class="id-card"
+                >
+
+                    <header class="id-header">
+
+                        <img src="../images/logo.png" alt="">
+
+                        <div>
+                            <strong>SignBridge</strong>
+                            <span>Carné de señas</span>
+                        </div>
+
+                    </header>
+
+
+                    <div class="id-photo">
+
+                        <img
+                            id="senaGrande"
+                            src="../images/abecedario/A.png"
+                            alt="Seña de la letra A"
+                        >
+
+                        <div
+                            id="sinFoto"
+                            class="no-photo hidden"
+                        >
+                            <strong>Ñ</strong>
+                            <span>Aún no tenemos foto de esta letra</span>
+                        </div>
+
+                        <span
+                            id="letraFoto"
+                            class="photo-letter"
+                        >
+                            A
+                        </span>
+
+                    </div>
+
+
+                    <div class="id-body">
+
+                        <span class="id-label">
+                            NOMBRE
+                        </span>
+
+                        <div
+                            id="fichas"
+                            class="chips"
+                        ></div>
+
+                        <div class="id-footer">
+
+                            <span id="idNumero">
+                                N.º 0000
+                            </span>
+
+                            <div
+                                class="barcode"
+                                aria-hidden="true"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/deletrea-nombre.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

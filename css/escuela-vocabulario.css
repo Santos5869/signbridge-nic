@@ -1,0 +1,559 @@
+/* =========================================================
+   SIGNBRIDGE - ESCUELA / VOCABULARIO
+   Estilo: mapa ilustrado del colegio visto desde arriba,
+   con patio de césped, caminos y edificios de colores.
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+:root {
+    --sky: #eaf6ff;
+    --grass: #8fd18b;
+    --grass-dark: #6bb867;
+    --path: #f3e3c3;
+    --ink: #1f2a44;
+    --muted: #5f6b85;
+    --white: #ffffff;
+    --good: #16a34a;
+    --bad: #e11d48;
+    --accent: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Fredoka', 'Segoe UI', sans-serif;
+    color: var(--ink);
+
+    background:
+        radial-gradient(circle at 10% 0%, #fff 0, transparent 40%),
+        var(--sky);
+
+    animation: entrar .3s ease both;
+}
+
+@keyframes entrar {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ESTRUCTURA
+========================================================= */
+
+.page {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 22px 0 48px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.back-link {
+    padding: 9px 16px;
+
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--accent);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+}
+
+.title-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.compass {
+    font-size: 34px;
+
+    animation: girar 8s linear infinite;
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
+
+.title-block h1 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+}
+
+.tabs {
+    display: flex;
+    gap: 6px;
+
+    padding: 5px;
+
+    border-radius: 999px;
+    background: var(--white);
+
+    box-shadow: 0 4px 12px rgba(31, 42, 68, 0.08);
+}
+
+.tab {
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: transparent;
+    color: var(--muted);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.tab.active {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.map {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "direccion   aula    aula    biblioteca"
+        "enfermeria  patio   patio   laboratorio"
+        "bano        comedor comedor computacion";
+    gap: 16px;
+
+    padding: 18px;
+
+    border-radius: 26px;
+
+    /* Césped con caminos de tierra entre edificios */
+    background:
+        linear-gradient(90deg, transparent calc(50% - 10px), var(--path) calc(50% - 10px), var(--path) calc(50% + 10px), transparent calc(50% + 10px)),
+        radial-gradient(rgba(255, 255, 255, 0.25) 1.5px, transparent 2px) 0 0 / 14px 14px,
+        var(--grass);
+
+    box-shadow:
+        inset 0 0 0 6px var(--grass-dark),
+        0 18px 40px rgba(31, 42, 68, 0.15);
+}
+
+.zone {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    min-height: 130px;
+    padding: 10px;
+
+    border-radius: 16px;
+
+    /* Edificio con techo de color */
+    background: var(--white);
+    border-top: 12px solid var(--techo, #94a3b8);
+
+    box-shadow: 0 6px 0 rgba(31, 42, 68, 0.15);
+}
+
+.zone-direccion   { --techo: #f97316; }
+.zone-aula        { --techo: #3b82f6; }
+.zone-biblioteca  { --techo: #a855f7; }
+.zone-laboratorio { --techo: #14b8a6; }
+.zone-computacion { --techo: #0ea5e9; }
+.zone-comedor     { --techo: #f59e0b; }
+.zone-enfermeria  { --techo: #ef4444; }
+.zone-bano        { --techo: #64748b; }
+
+/* El patio no es edificio: es césped abierto */
+.zone-patio {
+    background: rgba(255, 255, 255, 0.22);
+    border-top: none;
+    border: 3px dashed rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+}
+
+
+/* LUGAR */
+
+.place {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    border: 3px solid transparent;
+    border-radius: 12px;
+
+    background: transparent;
+    color: var(--ink);
+
+    cursor: pointer;
+
+    transition: background .15s, transform .15s, border-color .15s;
+}
+
+.place:hover {
+    background: #f1f5ff;
+    transform: translateY(-2px);
+}
+
+.place-emoji {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.place-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* PERSONAS */
+
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.person {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 5px 10px 5px 6px;
+
+    border: 2px solid #dbe4f5;
+    border-radius: 999px;
+
+    background: #f8faff;
+    color: var(--ink);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: transform .15s, border-color .15s;
+}
+
+.person span {
+    font-size: 20px;
+}
+
+.person:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+}
+
+
+/* ESTADOS */
+
+.place.visto::after,
+.person.visto::after {
+    content: "✓";
+
+    color: var(--good);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.place.current,
+.person.current {
+    border-color: var(--accent);
+    background: #e7efff;
+}
+
+.place.right,
+.person.right {
+    border-color: var(--good);
+    background: #dcfce7;
+
+    animation: brillo .6s ease;
+}
+
+.place.wrong,
+.person.wrong {
+    border-color: var(--bad);
+    background: #ffe4e9;
+
+    animation: sacudir .35s;
+}
+
+/* En el juego ocultamos las marcas de "visto" para no dar pistas. */
+.map.playing .visto::after {
+    content: none;
+}
+
+@keyframes brillo {
+    50% { transform: scale(1.08); }
+}
+
+@keyframes sacudir {
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+
+/* =========================================================
+   FICHA LATERAL
+========================================================= */
+
+.side {
+    position: sticky;
+    top: 18px;
+}
+
+.card {
+    padding: 22px;
+
+    border-radius: 24px;
+    background: var(--white);
+
+    box-shadow: 0 18px 40px rgba(31, 42, 68, 0.12);
+}
+
+.type-chip {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 999px;
+    background: #e7efff;
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card h2 {
+    margin: 10px 0 14px;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.sign-box {
+    min-height: 200px;
+
+    padding: 12px;
+
+    border-radius: 16px;
+    background: #f4f7fd;
+}
+
+.empty {
+    padding: 50px 10px;
+
+    color: var(--muted);
+    text-align: center;
+}
+
+.visited {
+    margin-top: 14px;
+
+    color: var(--muted);
+    font-weight: 500;
+    text-align: center;
+}
+
+.game-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.feedback {
+    margin-top: 14px;
+
+    font-weight: 600;
+    text-align: center;
+    color: var(--muted);
+}
+
+.feedback.good {
+    color: var(--good);
+}
+
+.feedback.bad {
+    color: var(--bad);
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+
+    display: grid;
+    place-items: center;
+
+    padding: 16px;
+
+    background: rgba(31, 42, 68, 0.5);
+}
+
+.final-card {
+    width: min(400px, 100%);
+
+    padding: 30px 24px;
+
+    border-radius: 26px;
+    background: var(--white);
+
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+
+    animation: entrar .25s ease both;
+}
+
+.final-icon {
+    font-size: 64px;
+}
+
+.final-card h2 {
+    font-size: 30px;
+}
+
+.final-card p {
+    margin: 8px 0 20px;
+    color: var(--muted);
+}
+
+.btn-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 4px;
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: var(--accent);
+    color: var(--white);
+
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.btn-map.light {
+    background: #e7efff;
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* En el celular la ficha va arriba y se queda visible. */
+    .side {
+        order: -1;
+        position: static;
+    }
+
+    .sign-box {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .map {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "direccion   biblioteca"
+            "aula        aula"
+            "patio       patio"
+            "enfermeria  laboratorio"
+            "comedor     comedor"
+            "bano        computacion";
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .zone {
+        min-height: 100px;
+    }
+
+    .place-emoji {
+        font-size: 30px;
+    }
+
+    .place-name {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

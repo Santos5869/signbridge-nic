@@ -1,0 +1,46 @@
+﻿VIDEOS DE SEÑAS - ESCUELA
+
+Graba cada seña y guárdala en la carpeta indicada con este nombre exacto (minúsculas, sin tildes, formato .mp4).
+Cuando el archivo exista, la plataforma lo mostrará automáticamente en lugar del deletreo.
+
+videos/escuela/materiales/
+    lapiz.mp4
+    lapicero.mp4
+    cuaderno.mp4
+    libro.mp4
+    tijeras.mp4
+    borrador.mp4
+    regla.mp4
+    mochila.mp4
+    pegamento.mp4
+    colores.mp4
+
+videos/escuela/ordenes/
+    observar.mp4
+    repetir.mp4
+    explicar.mp4
+    abrir-libro.mp4
+    cerrar-libro.mp4
+    escribir.mp4
+    leer.mp4
+    prestar-atencion.mp4
+    levantar-mano.mp4
+    silencio.mp4
+    sentarse.mp4
+    trabajar-grupo.mp4
+
+videos/escuela/vocabulario/
+    director.mp4
+    profesor.mp4
+    estudiante.mp4
+    bibliotecario.mp4
+    direccion.mp4
+    aula.mp4
+    biblioteca.mp4
+    laboratorio.mp4
+    computacion.mp4
+    comedor.mp4
+    enfermeria.mp4
+    bano.mp4
+    patio.mp4
+

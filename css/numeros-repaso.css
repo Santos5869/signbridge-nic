@@ -1,0 +1,74 @@
+/* =========================================================
+   SIGNBRIDGE - REPASO DE NÚMEROS
+   Usa repaso-letras.css como base; aquí solo lo propio.
+========================================================= */
+
+/* VIDEO DE LA SEÑA (11 al 20) */
+
+.visual-area video {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 100%;
+
+    max-height: 310px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.077);
+}
+
+.hidden-media {
+    display: none !important;
+}
+
+
+/* CONTADOR DE ACIERTOS */
+
+.exercise-header .score-chip {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 12px;
+
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(22, 184, 122, 0.12);
+
+    border: 1px solid rgba(22, 184, 122, 0.3);
+
+    color: #0f7a52;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* OPCIONES CON NÚMEROS */
+
+.options .option {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+/* BOTONES DE LA PANTALLA FINAL */
+
+.final-card .repeat-btn {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 600px) {
+
+    .visual-area video {
+        max-height: 235px;
+    }
+}

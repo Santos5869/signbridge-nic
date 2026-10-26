@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Materiales escolares</title>
+
+    <link rel="stylesheet" href="../css/escuela-sena.css">
+    <link rel="stylesheet" href="../css/escuela-materiales.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="escuela-cursos.html"
+                class="back-link"
+            >
+                ← Escuela
+            </a>
+
+            <h1 class="title">
+                Materiales escolares
+            </h1>
+
+            <span
+                id="vistos"
+                class="note-tag"
+            >
+                Vistos 0 / 10
+            </span>
+
+        </header>
+
+
+        <!-- PESTAÑAS -->
+
+        <nav
+            class="tabs"
+            role="tablist"
+        >
+
+            <button
+                id="tabAprender"
+                class="tab active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+            >
+                📌 Aprende
+            </button>
+
+            <button
+                id="tabJugar"
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+            >
+                🎒 Prepara la mochila
+            </button>
+
+        </nav>
+
+
+        <!-- APRENDER: TABLERO DE CORCHO -->
+
+        <section
+            id="modoAprender"
+            class="board"
+        >
+
+            <div
+                id="tablero"
+                class="pins"
+            ></div>
+
+        </section>
+
+
+        <!-- JUEGO: MOCHILA -->
+
+        <section
+            id="modoJugar"
+            class="board game hidden"
+        >
+
+            <div class="game-top">
+
+                <p class="game-question">
+                    ¿Qué material es esta seña?
+                </p>
+
+                <span
+                    id="ronda"
+                    class="note-tag"
+                >
+                    1 / 8
+                </span>
+
+            </div>
+
+            <div class="polaroid big">
+
+                <div
+                    id="senaJuego"
+                    class="polaroid-photo"
+                ></div>
+
+                <span class="polaroid-caption">?</span>
+
+            </div>
+
+            <div
+                id="opciones"
+                class="options"
+            ></div>
+
+            <div class="backpack-row">
+
+                <div
+                    id="mochila"
+                    class="backpack"
+                    aria-label="Mochila"
+                >
+                    🎒
+                </div>
+
+                <div
+                    id="dentro"
+                    class="inside"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- VISOR DE UN MATERIAL -->
+
+    <div
+        id="visor"
+        class="viewer hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="visorTitulo"
+    >
+
+        <div class="viewer-card">
+
+            <button
+                id="cerrarVisor"
+                class="viewer-close"
+                type="button"
+                aria-label="Cerrar"
+            >
+                ✕
+            </button>
+
+            <div class="polaroid big">
+
+                <div
+                    id="senaVisor"
+                    class="polaroid-photo"
+                ></div>
+
+                <span
+                    id="visorTitulo"
+                    class="polaroid-caption"
+                >
+                    Lápiz
+                </span>
+
+            </div>
+
+            <div class="viewer-nav">
+
+                <button
+                    id="anterior"
+                    class="btn-pin"
+                    type="button"
+                >
+                    ← Anterior
+                </button>
+
+                <span
+                    id="visorEmoji"
+                    class="viewer-emoji"
+                >
+                    ✏️
+                </span>
+
+                <button
+                    id="siguiente"
+                    class="btn-pin"
+                    type="button"
+                >
+                    Siguiente →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FINAL DEL JUEGO -->
+
+    <div
+        id="final"
+        class="viewer hidden"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="viewer-card final-card">
+
+            <div class="final-bag">🎒</div>
+
+            <h2>¡Mochila lista!</h2>
+
+            <p id="finalTexto">
+                Reconociste 8 de 8 materiales al primer intento.
+            </p>
+
+            <button
+                id="jugarOtraVez"
+                class="btn-pin"
+                type="button"
+            >
+                Jugar otra vez
+            </button>
+
+            <a
+                href="escuela-cursos.html"
+                class="btn-pin light"
+            >
+                Volver a Escuela
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/escuela-comun.js"></script>
+    <script src="../js/escuela-materiales.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Repaso de números</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <!-- Mismo diseño que el repaso de letras -->
+    <link
+        rel="stylesheet"
+        href="../css/repaso-letras.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/numeros-repaso.css"
+    >
+</head>
+
+<body>
+
+    <!-- FONDO -->
+
+    <div class="background">
+
+        <div class="grid-overlay"></div>
+
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+
+    </div>
+
+
+    <!-- CONTENEDOR -->
+
+    <main class="course-container">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <button
+                id="volver"
+                class="back-btn"
+                type="button"
+            >
+                ← Volver
+            </button>
+
+
+            <div class="brand">
+
+                <div class="logo-wrapper">
+
+                    <img
+                        src="../images/logo.png"
+                        class="logo"
+                        alt="SignBridge"
+                    >
+
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        SignBridge
+                    </strong>
+
+                    <span>
+                        Repaso de números
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="contador"
+                class="lesson-counter"
+            >
+                1 / 20
+            </div>
+
+        </header>
+
+
+        <!-- ENCABEZADO -->
+
+        <section class="course-heading">
+
+            <span class="course-badge">
+                🧠 PRÁCTICA
+            </span>
+
+            <h1>
+                Adivina el número
+            </h1>
+
+            <p>
+                Observa la seña y elige qué número
+                representa.
+            </p>
+
+        </section>
+
+
+        <!-- TARJETA DEL EJERCICIO -->
+
+        <section
+            id="exerciseCard"
+            class="exercise-card"
+        >
+
+            <div class="exercise-header">
+
+                <div>
+
+                    <span class="exercise-label">
+                        IDENTIFICA EL NÚMERO
+                    </span>
+
+                    <h2>
+                        ¿Qué número representa esta seña?
+                    </h2>
+
+                </div>
+
+                <div
+                    id="aciertos"
+                    class="score-chip"
+                >
+                    ✓ 0 aciertos
+                </div>
+
+            </div>
+
+
+            <!-- ÁREA VISUAL -->
+            <!-- Del 1 al 10 son imágenes; del 11 al 20, videos -->
+
+            <div class="visual-area">
+
+                <div class="visual-glow"></div>
+
+                <img
+                    id="imagenNumero"
+                    src="../images/numeros/1.webp"
+                    alt="Seña para identificar"
+                >
+
+                <video
+                    id="videoNumero"
+                    class="hidden-media"
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                ></video>
+
+            </div>
+
+
+            <!-- OPCIONES -->
+
+            <div
+                id="opciones"
+                class="options"
+            >
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div
+                id="resultado"
+                class="result"
+            >
+
+                <div
+                    id="resultadoIcono"
+                    class="result-icon"
+                >
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong id="resultadoTitulo">
+                        ¡Correcto!
+                    </strong>
+
+                    <p id="resultadoMensaje">
+                        Has identificado correctamente el número.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESO -->
+
+            <div class="progress-section">
+
+                <div class="progress-header">
+
+                    <span>
+                        Progreso del repaso
+                    </span>
+
+                    <strong id="progresoTexto">
+                        5%
+                    </strong>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        id="barraProgreso"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÓN SIGUIENTE -->
+
+            <button
+                id="siguiente"
+                class="next-btn"
+                type="button"
+                disabled
+            >
+                Siguiente →
+            </button>
+
+        </section>
+
+
+        <!-- NOTA -->
+
+        <div class="learning-note">
+
+            <span>
+                💡
+            </span>
+
+            <p>
+                Fíjate en la forma de la mano y en el movimiento.
+                Si fallas, puedes intentarlo otra vez.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- PANTALLA FINAL -->
+
+    <section
+        id="finalScreen"
+        class="final-screen"
+    >
+
+        <div class="final-card">
+
+            <div class="final-logo">
+
+                <img
+                    src="../images/logo.png"
+                    alt="SignBridge"
+                >
+
+            </div>
+
+            <span class="final-badge">
+                REPASO COMPLETADO
+            </span>
+
+            <div class="final-icon">
+                🎉
+            </div>
+
+            <h2>
+                ¡Excelente trabajo!
+            </h2>
+
+            <p id="finalMensaje">
+                Has completado el repaso
+                de los números del 1 al 20.
+            </p>
+
+            <div class="final-progress">
+
+                <strong id="finalAciertos">
+                    20 / 20
+                </strong>
+
+                <span>
+                    Aciertos al primer intento
+                </span>
+
+            </div>
+
+            <button
+                id="repetir"
+                class="repeat-btn"
+                type="button"
+            >
+                Repasar otra vez
+            </button>
+
+            <button
+                id="volverInicio"
+                type="button"
+            >
+                Volver a números
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="../js/numeros-repaso.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

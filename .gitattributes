@@ -1,0 +1,10 @@
+# Imágenes y videos siempre como binarios (sin convertir saltos de línea)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.mp4  binary
+*.ico  binary
+
+# El resto de archivos de texto con saltos de línea normalizados
+* text=auto

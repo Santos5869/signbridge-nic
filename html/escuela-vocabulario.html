@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Vocabulario de la escuela</title>
+
+    <link rel="stylesheet" href="../css/escuela-sena.css">
+    <link rel="stylesheet" href="../css/escuela-vocabulario.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="escuela-cursos.html"
+                class="back-link"
+            >
+                ← Escuela
+            </a>
+
+            <div class="title-block">
+                <span class="compass" aria-hidden="true">🧭</span>
+                <h1>Mapa de la escuela</h1>
+            </div>
+
+            <div
+                class="tabs"
+                role="tablist"
+            >
+
+                <button
+                    id="tabExplorar"
+                    class="tab active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                >
+                    Explorar
+                </button>
+
+                <button
+                    id="tabJugar"
+                    class="tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                >
+                    ¿Dónde está?
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div class="layout">
+
+            <!-- MAPA -->
+
+            <section
+                id="mapa"
+                class="map"
+                aria-label="Mapa de la escuela"
+            ></section>
+
+
+            <!-- FICHA LATERAL -->
+
+            <aside class="side">
+
+                <div
+                    id="fichaExplorar"
+                    class="card"
+                >
+
+                    <span
+                        id="tipo"
+                        class="type-chip"
+                    >
+                        Toca el mapa
+                    </span>
+
+                    <h2 id="titulo">
+                        Explora la escuela
+                    </h2>
+
+                    <div
+                        id="senaExplorar"
+                        class="sign-box"
+                    >
+                        <p class="empty">
+                            👆 Toca un lugar o una persona del mapa
+                            para ver su seña.
+                        </p>
+                    </div>
+
+                    <p
+                        id="vistos"
+                        class="visited"
+                    >
+                        Descubiertos 0 / 13
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="fichaJugar"
+                    class="card hidden"
+                >
+
+                    <div class="game-head">
+
+                        <span
+                            id="ronda"
+                            class="type-chip"
+                        >
+                            1 / 10
+                        </span>
+
+                        <span
+                            id="puntos"
+                            class="score"
+                        >
+                            ⭐ 0
+                        </span>
+
+                    </div>
+
+                    <h2>
+                        ¿Dónde está esto en el mapa?
+                    </h2>
+
+                    <div
+                        id="senaJugar"
+                        class="sign-box"
+                    ></div>
+
+                    <p
+                        id="mensaje"
+                        class="feedback"
+                    >
+                        Toca la respuesta en el mapa.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FINAL -->
+
+    <div
+        id="final"
+        class="overlay hidden"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="final-card">
+
+            <div class="final-icon">🗺️</div>
+
+            <h2>¡Recorrido completado!</h2>
+
+            <p id="finalTexto">
+                Encontraste 10 de 10 al primer intento.
+            </p>
+
+            <button
+                id="jugarOtraVez"
+                class="btn-map"
+                type="button"
+            >
+                Jugar otra vez
+            </button>
+
+            <a
+                href="escuela-cursos.html"
+                class="btn-map light"
+            >
+                Volver a Escuela
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/escuela-comun.js"></script>
+    <script src="../js/escuela-vocabulario.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

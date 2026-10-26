@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Órdenes en clase</title>
+
+    <link rel="stylesheet" href="../css/escuela-sena.css">
+    <link rel="stylesheet" href="../css/escuela-ordenes.css">
+</head>
+
+<body>
+
+    <main class="classroom">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="escuela-cursos.html"
+                class="back-link"
+            >
+                ← Escuela
+            </a>
+
+            <div
+                class="tabs"
+                role="tablist"
+            >
+
+                <button
+                    id="tabAprender"
+                    class="tab active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                >
+                    📋 Aprende
+                </button>
+
+                <button
+                    id="tabJugar"
+                    class="tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                >
+                    🧑‍🏫 El profe dice
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- PIZARRA -->
+
+        <section class="chalkboard">
+
+            <h1 class="board-title">
+                Órdenes en clase
+            </h1>
+
+
+            <!-- APRENDER -->
+
+            <div
+                id="modoAprender"
+                class="learn"
+            >
+
+                <ol
+                    id="lista"
+                    class="chalk-list"
+                ></ol>
+
+                <div class="mini-board">
+
+                    <div
+                        id="senaAprender"
+                        class="sign-frame"
+                    ></div>
+
+                    <p
+                        id="ordenTitulo"
+                        class="chalk-big"
+                    >
+                        Observar
+                    </p>
+
+                    <p
+                        id="ordenDetalle"
+                        class="chalk-small"
+                    >
+                        Mira con atención.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- JUEGO -->
+
+            <div
+                id="modoJugar"
+                class="play hidden"
+            >
+
+                <div class="play-head">
+
+                    <span
+                        id="ronda"
+                        class="chalk-small"
+                    >
+                        Orden 1 de 10
+                    </span>
+
+                    <span
+                        id="marcas"
+                        class="tally"
+                        aria-label="Aciertos"
+                    ></span>
+
+                </div>
+
+                <div
+                    id="senaJuego"
+                    class="sign-frame wide"
+                ></div>
+
+            </div>
+
+            <div class="chalk-tray" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+        </section>
+
+
+        <!-- PROFESOR Y RESPUESTAS -->
+
+        <section
+            id="zonaJuego"
+            class="desk hidden"
+        >
+
+            <div class="teacher">
+
+                <span
+                    class="teacher-face"
+                    aria-hidden="true"
+                >
+                    🧑‍🏫
+                </span>
+
+                <p
+                    id="burbuja"
+                    class="bubble"
+                >
+                    ¿Qué te estoy pidiendo?
+                </p>
+
+            </div>
+
+            <div
+                id="opciones"
+                class="actions"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BOLETA FINAL -->
+
+    <div
+        id="final"
+        class="overlay hidden"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="report">
+
+            <span class="report-tag">BOLETA DE CALIFICACIONES</span>
+
+            <div class="report-row">
+                <span>Comprensión de órdenes</span>
+                <strong id="nota">10</strong>
+            </div>
+
+            <p id="finalTexto">
+                Entendiste 10 de 10 órdenes al primer intento.
+            </p>
+
+            <button
+                id="jugarOtraVez"
+                class="btn-chalk"
+                type="button"
+            >
+                Otra ronda
+            </button>
+
+            <a
+                href="escuela-cursos.html"
+                class="btn-chalk light"
+            >
+                Volver a Escuela
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/escuela-comun.js"></script>
+    <script src="../js/escuela-ordenes.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>
