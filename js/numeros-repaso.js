@@ -1,18 +1,18 @@
 "use strict";
 
 /* =========================================================
-   SIGNBRIDGE - REPASO DE NÚMEROS ALEATORIO (1 AL 20)
+   SIGNBRIDGE - REPASO DE NÚMEROS ALEATORIO (1 AL 20 Y 30 AL 50)
 ========================================================= */
 
 /*
    Del 1 al 10 la seña es una imagen.
-   Del 11 al 20 es un video.
+   Del 11 al 20 y del 30 al 50 es un video.
 */
 
-const numeros = Array.from(
-    { length: 20 },
-    (_, i) => i + 1
-);
+const numeros = [
+    ...Array.from({ length: 20 }, (_, i) => i + 1),
+    ...Array.from({ length: 21 }, (_, i) => i + 30)
+];
 
 function rutaSena(numero) {
 
@@ -169,7 +169,7 @@ function obtenerNumeroActual() {
 /*
    Tres opciones incorrectas: preferimos números
    cercanos (más difícil y más útil para repasar)
-   y completamos con cualquiera del 1 al 20.
+   y completamos con cualquier otro número del repaso.
 */
 
 function generarOpciones() {

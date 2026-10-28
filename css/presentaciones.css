@@ -16,30 +16,9 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    color: #141b29;
+    color: #000000;
 
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(0, 198, 255, 0.14),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(0, 114, 255, 0.17),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(0, 198, 255, 0.06),
-            transparent 25%
-        ),
-        linear-gradient(
-            135deg,
-            #f1f5fc 0%,
-            #e8f0fa 55%,
-            #e6effa 100%
-        );
+    background: #ffffff;
 }
 
 
@@ -63,7 +42,7 @@ body {
 
     border-radius: 50%;
 
-    filter: blur(28px);
+    filter: none;
 
     opacity: 0.42;
 
@@ -78,7 +57,7 @@ body {
     top: 8%;
     left: -90px;
 
-    background: rgba(0, 198, 255, 0.10);
+    background: #dceeff;
 }
 
 .orb-2 {
@@ -88,7 +67,7 @@ body {
     top: 38%;
     right: -150px;
 
-    background: rgba(0, 114, 255, 0.12);
+    background: #dceeff;
 
     animation-delay: -4s;
 }
@@ -100,7 +79,7 @@ body {
     left: 38%;
     bottom: -110px;
 
-    background: rgba(0, 198, 255, 0.07);
+    background: #dceeff;
 
     animation-delay: -8s;
 }
@@ -111,16 +90,7 @@ body {
 
     opacity: 0.025;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.92) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.92) 1px,
-            transparent 1px
-        );
+    background-image: transparent;
 
     background-size: 44px 44px;
 }
@@ -149,7 +119,7 @@ body {
     gap: 25px;
 
     border-bottom:
-        1px solid rgba(15, 23, 42, 0.096);
+        1px solid #000000;
 
     animation:
         fadeDown 0.7s ease both;
@@ -169,15 +139,14 @@ body {
 
     padding: 11px 17px;
 
-    border-radius: 13px;
+    border-radius: 1600px;
 
     border:
-        1px solid rgba(15, 23, 42, 0.12);
+        1px solid #000000;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 0.87rem;
 
@@ -194,11 +163,10 @@ body {
 .back-button:hover {
     transform: translateX(-3px);
 
-    background:
-        rgba(255, 255, 255, 0.9);
+    background: #ffffff;
 
     border-color:
-        rgba(0,198,255,0.30);
+        #000000;
 }
 
 .back-icon {
@@ -228,11 +196,7 @@ body {
 
     display: block;
 
-    filter:
-        drop-shadow(
-            0 5px 16px
-            rgba(0, 198, 255, 0.12)
-        );
+    filter: none;
 
     transition:
         transform 0.3s ease,
@@ -242,15 +206,11 @@ body {
 .brand img:hover {
     transform: scale(1.04);
 
-    filter:
-        drop-shadow(
-            0 8px 23px
-            rgba(0, 198, 255, 0.18)
-        );
+    filter: none;
 }
 
 .brand span {
-    color: #141b29;
+    color: #000000;
 
     font-size: 1.35rem;
 
@@ -277,14 +237,13 @@ body {
 
     border-radius: 50px;
 
-    background:
-        rgba(255, 255, 255, 0.75);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.104);
+        1px solid #000000;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 0.76rem;
 }
@@ -295,11 +254,9 @@ body {
 
     border-radius: 50%;
 
-    background: #00c6ff;
+    background: #4da2ff;
 
-    box-shadow:
-        0 0 10px
-        rgba(0, 198, 255, 0.42);
+    box-shadow: none;
 
     animation:
         pulseDot 2s infinite;
@@ -356,15 +313,14 @@ body {
     padding:
         8px 14px;
 
-    border-radius: 50px;
+    border-radius: 1600px;
 
-    background:
-        rgba(0,198,255,0.10);
+    background: #dceeff;
 
     border:
-        1px solid rgba(0,198,255,0.22);
+        1px solid #000000;
 
-    color: #0e83aa;
+    color: #5c4ade;
 
     font-size: 0.72rem;
 
@@ -377,22 +333,21 @@ body {
     padding:
         8px 14px;
 
-    border-radius: 50px;
+    border-radius: 1600px;
 
-    background:
-        rgba(255, 255, 255, 0.75);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.104);
+        1px solid #000000;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 0.72rem;
 }
 
 .lesson-counter strong {
-    color: #0e83aa;
+    color: #5c4ade;
 }
 
 .lesson-heading h1 {
@@ -408,25 +363,16 @@ body {
     letter-spacing:
         -1.5px;
 
-    background:
-        linear-gradient(
-            120deg,
-            #141b29,
-            #0e8aaa,
-            #141b29
-        );
+    background: none;
 
     background-size:
         200% auto;
 
-    background-clip:
-        text;
+    background-clip: border-box;
 
-    -webkit-background-clip:
-        text;
+    -webkit-background-clip: border-box;
 
-    -webkit-text-fill-color:
-        transparent;
+    -webkit-text-fill-color: #5c4ade;
 
     animation:
         titleShine 6s linear infinite;
@@ -440,7 +386,7 @@ body {
         0 auto;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     line-height:
         1.75;
@@ -466,28 +412,16 @@ body {
 
     border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.87),
-            rgba(255, 255, 255, 0.705)
-        );
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.136);
+        1px solid #000000;
 
-    box-shadow:
-        0 30px 75px
-        rgba(15, 23, 42, 0.077),
+    box-shadow: none;
 
-        inset 0 1px
-        rgba(255,255,255,0.04);
+    backdrop-filter: none;
 
-    backdrop-filter:
-        blur(18px);
-
-    -webkit-backdrop-filter:
-        blur(18px);
+    -webkit-backdrop-filter: none;
 
     animation:
         scaleIn
@@ -523,12 +457,7 @@ body {
 
     overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(0,198,255,0.11),
-            transparent 50%
-        );
+    background: transparent;
 }
 
 .visual-glow {
@@ -539,11 +468,9 @@ body {
 
     border-radius: 50%;
 
-    background:
-        rgba(0,198,255,0.07);
+    background: #dceeff;
 
-    filter:
-        blur(35px);
+    filter: none;
 
     animation:
         pulseGlow 5s ease-in-out infinite;
@@ -562,7 +489,7 @@ body {
     gap: 8px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size:
         0.69rem;
@@ -580,11 +507,9 @@ body {
 
     border-radius: 50%;
 
-    background: #00c6ff;
+    background: #4da2ff;
 
-    box-shadow:
-        0 0 10px
-        rgba(0, 198, 255, 0.33);
+    box-shadow: none;
 
     animation:
         pulseDot 2s infinite;
@@ -627,29 +552,18 @@ body {
     margin:
         0 auto 25px;
 
-    border-radius:
-        36px;
+    border-radius: 36px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(48,158,235,0.25),
-            rgba(219, 233, 247, 0.23)
-        );
+    background: transparent;
 
     border:
         1px solid
-        rgba(100,200,255,0.26);
+        #000000;
 
     font-size:
         4.5rem;
 
-    box-shadow:
-        0 20px 45px
-        rgba(15, 23, 42, 0.063),
-
-        inset 0 1px
-        rgba(255,255,255,0.08);
+    box-shadow: none;
 
     transition:
         transform 0.35s ease,
@@ -661,9 +575,7 @@ body {
         translateY(-6px)
         scale(1.03);
 
-    box-shadow:
-        0 25px 55px
-        rgba(15, 23, 42, 0.084);
+    box-shadow: none;
 }
 
 .visual-content h2 {
@@ -682,7 +594,7 @@ body {
         0 auto 21px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     line-height:
         1.65;
@@ -704,18 +616,16 @@ body {
     padding:
         10px 15px;
 
-    border-radius:
-        50px;
+    border-radius: 50px;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     border:
         1px solid
-        rgba(15, 23, 42, 0.104);
+        #000000;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size:
         0.72rem;
@@ -737,14 +647,12 @@ body {
     justify-content:
         center;
 
-    border-radius:
-        50%;
+    border-radius: 50%;
 
-    background:
-        rgba(0,198,255,0.12);
+    background: #dceeff;
 
     color:
-        #0e84aa;
+        #5c4ade;
 
     font-size:
         0.60rem;
@@ -768,12 +676,11 @@ body {
     padding:
         45px;
 
-    background:
-        rgba(245, 248, 253, 0.18);
+    background: #ffffff;
 
     border-left:
         1px solid
-        rgba(15, 23, 42, 0.104);
+        #000000;
 
     animation:
         slideRight
@@ -788,7 +695,7 @@ body {
         12px;
 
     color:
-        #0e84aa;
+        #5c4ade;
 
     font-size:
         0.72rem;
@@ -816,7 +723,7 @@ body {
         0;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     line-height:
         1.8;
@@ -835,12 +742,7 @@ body {
     margin:
         28px 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.92),
-            transparent
-        );
+    background: transparent;
 }
 
 .lesson-features {
@@ -884,15 +786,13 @@ body {
     justify-content:
         center;
 
-    border-radius:
-        12px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.78);
+    background: #ffffff;
 
     border:
         1px solid
-        rgba(15, 23, 42, 0.096);
+        #000000;
 }
 
 .feature div:last-child {
@@ -913,7 +813,7 @@ body {
 
 .feature span {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size:
         0.71rem;
@@ -934,15 +834,13 @@ body {
     padding:
         21px 23px;
 
-    border-radius:
-        20px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.735);
+    background: #ffffff;
 
     border:
         1px solid
-        rgba(15, 23, 42, 0.104);
+        #000000;
 
     animation:
         fadeUp
@@ -979,7 +877,7 @@ body {
 
 .progress-kicker {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size:
         0.64rem;
@@ -998,7 +896,7 @@ body {
 
 .progress-percentage {
     color:
-        #0e84aa;
+        #5c4ade;
 
     font-size:
         0.9rem;
@@ -1017,11 +915,9 @@ body {
     overflow:
         hidden;
 
-    border-radius:
-        30px;
+    border-radius: 30px;
 
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 }
 
 .progress-fill {
@@ -1031,19 +927,11 @@ body {
     height:
         100%;
 
-    border-radius:
-        inherit;
+    border-radius: inherit;
 
-    background:
-        linear-gradient(
-            90deg,
-            #00c6ff,
-            #0072ff
-        );
+    background: #4da2ff;
 
-    box-shadow:
-        0 0 18px
-        rgba(0, 198, 255, 0.15);
+    box-shadow: none;
 
     transition:
         width 0.65s
@@ -1081,7 +969,7 @@ body {
 
 .navigation-center {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size:
         0.75rem;
@@ -1097,8 +985,7 @@ body {
     padding:
         0 22px;
 
-    border-radius:
-        14px;
+    border-radius: 1600px;
 
     font-size:
         0.85rem;
@@ -1126,19 +1013,17 @@ body {
         start;
 
     color:
-        #141b29;
+        #000000;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     border:
         1px solid
-        rgba(15, 23, 42, 0.112);
+        #000000;
 }
 
 .nav-button.secondary:hover {
-    background:
-        rgba(255, 255, 255, 0.87);
+    background: #ffffff;
 }
 
 .nav-button.primary {
@@ -1146,27 +1031,18 @@ body {
         end;
 
     color:
-        white;
+        #ffffff;
 
     border:
         0;
 
-    background:
-        linear-gradient(
-            135deg,
-            #00c6ff,
-            #0072ff
-        );
+    background: #000000;
 
-    box-shadow:
-        0 10px 25px
-        rgba(0, 114, 255, 0.108);
+    box-shadow: none;
 }
 
 .nav-button.primary:hover {
-    box-shadow:
-        0 15px 35px
-        rgba(0, 114, 255, 0.168);
+    box-shadow: none;
 }
 
 .nav-button:disabled {
@@ -1195,23 +1071,15 @@ body {
     text-align:
         center;
 
-    border-radius:
-        30px;
+    border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(0,198,255,0.11),
-            rgba(0,114,255,0.055)
-        );
+    background: transparent;
 
     border:
         1px solid
-        rgba(0,198,255,0.17);
+        #000000;
 
-    box-shadow:
-        0 25px 70px
-        rgba(15, 23, 42, 0.07);
+    box-shadow: none;
 
     animation:
         scaleIn
@@ -1239,27 +1107,19 @@ body {
     margin:
         0 auto 20px;
 
-    border-radius:
-        50%;
+    border-radius: 50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #00c6ff,
-            #0072ff
-        );
+    background: #4da2ff;
 
     font-size:
         2rem;
 
-    box-shadow:
-        0 15px 35px
-        rgba(0, 114, 255, 0.15);
+    box-shadow: none;
 }
 
 .completion-label {
     color:
-        #0e84aa;
+        #5c4ade;
 
     font-size:
         0.72rem;
@@ -1287,7 +1147,7 @@ body {
         0 auto 26px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     line-height:
         1.7;
@@ -1300,18 +1160,12 @@ body {
     border:
         0;
 
-    border-radius:
-        13px;
+    border-radius: 1600px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #00c6ff,
-            #0072ff
-        );
+    background: #000000;
 
     color:
-        white;
+        #ffffff;
 
     font-weight:
         700;
@@ -1328,9 +1182,7 @@ body {
     transform:
         translateY(-3px);
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 114, 255, 0.168);
+    box-shadow: none;
 }
 
 .hidden {
@@ -1452,21 +1304,15 @@ body {
 @keyframes pulseDot {
 
     0% {
-        box-shadow:
-            0 0 0 0
-            rgba(0, 198, 255, 0.27);
+        box-shadow: none;
     }
 
     70% {
-        box-shadow:
-            0 0 0 8px
-            rgba(0, 198, 255, 0);
+        box-shadow: none;
     }
 
     100% {
-        box-shadow:
-            0 0 0 0
-            rgba(0, 198, 255, 0);
+        box-shadow: none;
     }
 }
 
@@ -1541,7 +1387,7 @@ body {
 
         border-top:
             1px solid
-            rgba(15, 23, 42, 0.104);
+            #000000;
     }
 }
 
@@ -1652,4 +1498,44 @@ body {
         scroll-behavior:
             auto !important;
     }
+}
+
+/* =========================================================
+   MATERIAL DE LA SEÑA (IMAGEN O VIDEO)
+========================================================= */
+
+.lesson-media {
+    position: relative;
+    z-index: 2;
+
+    /* Deja visible la etiqueta "MATERIAL VISUAL" de la esquina */
+    margin-top: 44px;
+
+    width: min(460px, 88%);
+
+    padding: 12px;
+
+    border: 1px solid #000000;
+    border-radius: 20px;
+
+    background: #ffffff;
+}
+
+.lesson-media[hidden],
+.visual-content[hidden] {
+    display: none;
+}
+
+.lesson-media img,
+.lesson-media video {
+    display: block;
+
+    width: 100%;
+    max-height: 420px;
+
+    border-radius: 16px;
+
+    object-fit: contain;
+
+    background: #ffffff;
 }

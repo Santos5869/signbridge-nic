@@ -1,0 +1,212 @@
+/* =========================================================
+   SIGNBRIDGE - SISTEMA DE DISEÑO "SLUSH"
+   Universo de stickers sobre papel pastel (ver DESIGN.md).
+   Se carga al final de cada página: define los tokens y
+   las reglas comunes que unifican todas las pantallas.
+========================================================= */
+
+/* Bowlby One sustituye a Lateral e Inter a Aeonik Pro. */
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:wght@500;700;800&display=swap');
+
+:root {
+    /* Colores */
+    --color-carbon: #000000;
+    --color-paper-white: #ffffff;
+    --color-sky-wash: #dceeff;
+    --color-concrete-gray: #cccccc;
+    --color-soft-mist: #e9e9e9;
+    --color-electric-blue: #4da2ff;
+    --color-mint-pop: #55db9c;
+    --color-lavender: #e9ccff;
+    --color-ember: #fb4903;
+    --color-sunburst: #ffd731;
+    --color-voltage-violet: #5c4ade;
+
+    /* Tipografía */
+    --font-display: 'Bowlby One', 'Lateral', 'Antonio', Impact, sans-serif;
+    --font-ui: 'Inter', 'Aeonik Pro', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+    /* Radios */
+    --radius-pill: 1600px;
+    --radius-cards: 20px;
+    --radius-body: 30px;
+    --radius-cards-elevated: 40px;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+    background: var(--color-sky-wash);
+}
+
+body {
+    background: var(--color-sky-wash);
+    color: var(--color-carbon);
+
+    font-family: var(--font-ui);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+::selection {
+    background: var(--color-sunburst);
+    color: var(--color-carbon);
+}
+
+
+/* Titulares display: letras gruesas y apretadas, como objetos */
+
+h1,
+h2 {
+    font-family: var(--font-display) !important;
+    font-weight: 400 !important;
+    line-height: 0.9 !important;
+    letter-spacing: 0 !important;
+    text-transform: uppercase;
+}
+
+
+/* Los h2 suelen ser títulos de tarjeta en varias líneas: con
+   interlineado de display las líneas se pisan. */
+
+h2 {
+    line-height: 1.02 !important;
+}
+
+
+/* El titular de la portada va aún más apretado (0.75–0.80) */
+
+.hero h1 {
+    line-height: 0.8 !important;
+}
+
+
+/* Controles: texto UI en negrita con un poco de aire */
+
+button,
+.btn,
+a[class*="button"],
+a[class*="btn"],
+a[class*="link"] {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--color-electric-blue);
+    outline-offset: 2px;
+}
+
+/* Barra de desplazamiento */
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-carbon);
+    border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-sky-wash);
+}
+
+
+/* Los brillos difuminados del diseño anterior no existen en
+   este sistema (sin degradados ni desenfoques). */
+
+.glow,
+.blob,
+.grid,
+.grid-overlay,
+.image-glow,
+.visual-glow,
+.background .glow,
+.background .blob {
+    display: none !important;
+}
+
+
+/* =========================================================
+   COMPONENTES DEL SISTEMA
+========================================================= */
+
+/* Marquesina: franja negra con texto que se desplaza */
+
+.marquee {
+    overflow: hidden;
+
+    background: var(--color-carbon);
+    color: var(--color-paper-white);
+
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.032em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 48px;
+
+    padding: 9px 0;
+
+    animation: marquesina 28s linear infinite;
+}
+
+@keyframes marquesina {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* Sticker decorativo: recorte plano con contorno negro */
+
+.sticker {
+    position: absolute;
+    z-index: 3;
+
+    display: grid;
+    place-items: center;
+
+    width: 76px;
+    height: 76px;
+
+    border: 1px solid var(--color-carbon);
+    border-radius: 20px;
+
+    font-size: 38px;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.sticker.ember   { background: var(--color-ember); }
+.sticker.sun     { background: var(--color-sunburst); }
+.sticker.mint    { background: var(--color-mint-pop); }
+.sticker.violet  { background: var(--color-voltage-violet); }
+.sticker.lavender { background: var(--color-lavender); }
+.sticker.blue    { background: var(--color-electric-blue); }
+
+
+@media (max-width: 720px) {
+
+    .sticker {
+        width: 54px;
+        height: 54px;
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .marquee-track {
+        animation: none;
+    }
+}

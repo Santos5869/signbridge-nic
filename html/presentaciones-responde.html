@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Responde la pregunta</title>
+
+    <link rel="stylesheet" href="../css/juegos.css">
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
+</head>
+
+<body class="juego-responde">
+
+    <main class="juego">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="presentaciones-cursos.html"
+                class="pill"
+            >
+                ← Presentaciones
+            </a>
+
+            <span class="pill acento">
+                💬 Conversación
+            </span>
+
+        </header>
+
+
+        <!-- ENCABEZADO -->
+
+        <section class="cabecera">
+
+            <span class="sticker ember" aria-hidden="true">💬</span>
+            <span class="sticker violet" aria-hidden="true">🤝</span>
+
+            <h1>Responde</h1>
+
+            <p>
+                Alguien te dice algo en señas.
+                Elige la seña con la que responderías.
+            </p>
+
+        </section>
+
+
+        <!-- JUEGO -->
+
+        <section
+            class="tarjeta"
+            aria-live="polite"
+        >
+
+            <div class="marcador">
+
+                <span
+                    id="ronda"
+                    class="pill"
+                >
+                    Diálogo 1 / 6
+                </span>
+
+                <span
+                    id="aciertos"
+                    class="pill acento"
+                >
+                    ✓ 0 aciertos
+                </span>
+
+            </div>
+
+            <div class="barra">
+                <span id="barra"></span>
+            </div>
+
+
+            <div class="chat">
+
+                <!-- Lo que te dicen -->
+
+                <div class="burbuja">
+
+                    <span class="avatar" aria-hidden="true">🧑</span>
+
+                    <div class="globo">
+
+                        <div
+                            id="pregunta"
+                            class="sena-marco"
+                        ></div>
+
+                        <strong id="preguntaTexto">
+                            ¿Qué te están diciendo?
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tu respuesta -->
+
+                <p class="mensaje">
+                    👇 Tu respuesta:
+                </p>
+
+                <div
+                    id="opciones"
+                    class="cartas-respuesta"
+                ></div>
+
+            </div>
+
+
+            <p
+                id="mensaje"
+                class="mensaje"
+            ></p>
+
+            <div class="acciones">
+
+                <button
+                    id="siguiente"
+                    class="btn hidden"
+                    type="button"
+                >
+                    Siguiente →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FINAL -->
+
+    <div
+        id="final"
+        class="final hidden"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="final-tarjeta">
+
+            <span class="sticker sun" aria-hidden="true">💬</span>
+
+            <h2>¡Buena charla!</h2>
+
+            <div
+                id="estrellas"
+                class="final-estrellas"
+            ></div>
+
+            <p id="finalTexto"></p>
+
+            <div class="acciones">
+
+                <button
+                    id="otraVez"
+                    class="btn"
+                    type="button"
+                >
+                    Jugar otra vez
+                </button>
+
+                <a
+                    href="presentaciones-cursos.html"
+                    class="btn fantasma"
+                >
+                    Volver
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/presentaciones-juegos.js"></script>
+    <script src="../js/presentaciones-responde.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

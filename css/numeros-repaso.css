@@ -18,7 +18,7 @@
 
     background: #ffffff;
 
-    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.077);
+    box-shadow: none;
 }
 
 .hidden-media {
@@ -37,13 +37,13 @@
 
     padding: 7px 14px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
-    background: rgba(22, 184, 122, 0.12);
+    background: #d6f5e6;
 
-    border: 1px solid rgba(22, 184, 122, 0.3);
+    border: 1px solid #000000;
 
-    color: #0f7a52;
+    color: #12824f;
 
     font-size: 13px;
     font-weight: 700;

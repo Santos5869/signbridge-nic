@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Toca el color</title>
+
+    <link rel="stylesheet" href="../css/juegos.css">
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
+</head>
+
+<body class="juego-paleta">
+
+    <main class="juego">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="colores-cursos.html"
+                class="pill"
+            >
+                ← Colores
+            </a>
+
+            <span class="pill acento">
+                🎨 Paleta
+            </span>
+
+        </header>
+
+
+        <!-- ENCABEZADO -->
+
+        <section class="cabecera">
+
+            <span class="sticker mint" aria-hidden="true">🖌️</span>
+            <span class="sticker ember" aria-hidden="true">🎨</span>
+
+            <h1>Toca el color</h1>
+
+            <p>
+                Mira la seña y toca el color correcto en la paleta.
+                Sin palabras: solo la seña y el color.
+            </p>
+
+        </section>
+
+
+        <!-- JUEGO -->
+
+        <section
+            class="tarjeta"
+            aria-live="polite"
+        >
+
+            <div class="marcador">
+
+                <span
+                    id="ronda"
+                    class="pill"
+                >
+                    Color 1 / 9
+                </span>
+
+                <div class="grupo">
+
+                    <span
+                        id="racha"
+                        class="pill"
+                    >
+                        🔥 0
+                    </span>
+
+                    <span
+                        id="aciertos"
+                        class="pill acento"
+                    >
+                        ✓ 0
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="barra">
+                <span id="barra"></span>
+            </div>
+
+            <div
+                id="sena"
+                class="sena-marco"
+            ></div>
+
+            <!-- Paleta de pintura -->
+            <div
+                id="paleta"
+                class="paleta"
+                role="group"
+                aria-label="Paleta de colores"
+            ></div>
+
+            <p
+                id="mensaje"
+                class="mensaje"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FINAL -->
+
+    <div
+        id="final"
+        class="final hidden"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="final-tarjeta">
+
+            <span class="sticker sun" aria-hidden="true">🎨</span>
+
+            <h2>¡Paleta completa!</h2>
+
+            <div
+                id="estrellas"
+                class="final-estrellas"
+            ></div>
+
+            <p id="finalTexto"></p>
+
+            <div
+                id="repasar"
+                class="repasar hidden"
+            ></div>
+
+            <div class="acciones">
+
+                <button
+                    id="otraVez"
+                    class="btn"
+                    type="button"
+                >
+                    Jugar otra vez
+                </button>
+
+                <a
+                    href="colores-cursos.html"
+                    class="btn fantasma"
+                >
+                    Volver
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/colores-juegos.js"></script>
+    <script src="../js/colores-paleta.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

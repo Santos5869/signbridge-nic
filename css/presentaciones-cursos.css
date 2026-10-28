@@ -17,25 +17,9 @@ body {
 
     overflow-x: hidden;
 
-    color: #141b29;
+    color: #000000;
 
-    background:
-        radial-gradient(
-            circle at 5% 10%,
-            rgba(0, 198, 255, 0.14),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 95% 20%,
-            rgba(0, 114, 255, 0.18),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #f0f4fc,
-            #dbe9f7 55%,
-            #e6effa
-        );
+    background: #ffffff;
 }
 
 
@@ -60,7 +44,7 @@ body {
 
     border-radius: 50%;
 
-    filter: blur(25px);
+    filter: none;
 
     opacity: 0.45;
 
@@ -75,7 +59,7 @@ body {
     top: -100px;
     left: -90px;
 
-    background: rgba(0, 198, 255, 0.10);
+    background: #dceeff;
 }
 
 .orb-2 {
@@ -85,7 +69,7 @@ body {
     top: 35%;
     right: -160px;
 
-    background: rgba(0, 114, 255, 0.12);
+    background: #dceeff;
 
     animation-delay: -4s;
 }
@@ -97,7 +81,7 @@ body {
     left: 40%;
     bottom: -120px;
 
-    background: rgba(0, 198, 255, 0.07);
+    background: #dceeff;
 
     animation-delay: -8s;
 }
@@ -109,16 +93,7 @@ body {
 
     opacity: 0.025;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.92) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.92) 1px,
-            transparent 1px
-        );
+    background-image: transparent;
 
     background-size: 45px 45px;
 }
@@ -171,7 +146,7 @@ body {
 
     gap: 25px;
 
-    border-bottom: 1px solid rgba(15, 23, 42, 0.096);
+    border-bottom: 1px solid #000000;
 
     animation:
         fadeDown 0.7s ease both;
@@ -191,13 +166,13 @@ body {
 
     padding: 11px 17px;
 
-    border-radius: 13px;
+    border-radius: 1600px;
 
-    border: 1px solid rgba(15, 23, 42, 0.12);
+    border: 1px solid #000000;
 
-    background: rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 0.88rem;
 
@@ -214,9 +189,9 @@ body {
 .back-button:hover {
     transform: translateX(-3px);
 
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
 
-    border-color: rgba(0,198,255,0.30);
+    border-color: #000000;
 }
 
 .back-button span:first-child {
@@ -244,11 +219,7 @@ body {
 
     display: block;
 
-    filter:
-        drop-shadow(
-            0 5px 15px
-            rgba(0, 198, 255, 0.12)
-        );
+    filter: none;
 
     transition:
         transform 0.3s ease,
@@ -258,11 +229,7 @@ body {
 .brand img:hover {
     transform: scale(1.04);
 
-    filter:
-        drop-shadow(
-            0 8px 22px
-            rgba(0, 198, 255, 0.18)
-        );
+    filter: none;
 }
 
 .brand span {
@@ -287,13 +254,13 @@ body {
 
     padding: 10px 15px;
 
-    border-radius: 50px;
+    border-radius: 1600px;
 
-    background: rgba(0,198,255,0.08);
+    background: #dceeff;
 
-    border: 1px solid rgba(0,198,255,0.20);
+    border: 1px solid #000000;
 
-    color: #0e83aa;
+    color: #5c4ade;
 
     font-size: 0.78rem;
 
@@ -325,11 +292,11 @@ body {
 
     border-radius: 50px;
 
-    background: rgba(0,198,255,0.10);
+    background: #dceeff;
 
-    border: 1px solid rgba(0,198,255,0.22);
+    border: 1px solid #000000;
 
-    color: #0e83aa;
+    color: #5c4ade;
 
     font-size: 0.74rem;
 
@@ -347,18 +314,12 @@ body {
 
     letter-spacing: -1.5px;
 
-    background:
-        linear-gradient(
-            120deg,
-            #141b29,
-            #0e8aaa,
-            #141b29
-        );
+    background: none;
 
     background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #5c4ade;
 
     animation:
         titleShine 6s linear infinite;
@@ -369,7 +330,7 @@ body {
 
     margin: auto;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     line-height: 1.75;
 
@@ -414,20 +375,13 @@ body {
 
     border-radius: 28px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.87),
-            rgba(255, 255, 255, 0.705)
-        );
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.12);
+    border: 1px solid #000000;
 
-    box-shadow:
-        0 20px 50px rgba(15, 23, 42, 0.042),
-        inset 0 1px rgba(255,255,255,0.035);
+    box-shadow: none;
 
-    backdrop-filter: blur(16px);
+    backdrop-filter: none;
 
     transition:
         transform 0.35s cubic-bezier(.2,.8,.2,1),
@@ -457,11 +411,9 @@ body {
 .course-card.available:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(0,198,255,0.40);
+    border-color: #000000;
 
-    box-shadow:
-        0 30px 70px rgba(15, 23, 42, 0.07),
-        0 0 35px rgba(0, 198, 255, 0.036);
+    box-shadow: none;
 }
 
 
@@ -480,9 +432,9 @@ body {
 
     border-radius: 50%;
 
-    background: rgba(0,198,255,0.07);
+    background: #dceeff;
 
-    filter: blur(20px);
+    filter: none;
 
     pointer-events: none;
 }
@@ -511,14 +463,9 @@ body {
 
     border-radius: 23px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(42,157,226,0.20),
-            rgba(218, 232, 247, 0.2)
-        );
+    background: transparent;
 
-    border: 1px solid rgba(90,190,255,0.17);
+    border: 1px solid #000000;
 
     overflow: hidden;
 }
@@ -534,19 +481,13 @@ body {
 
     border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.9),
-            rgba(255, 255, 255, 0.705)
-        );
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.12);
+    border: 1px solid #000000;
 
     font-size: 3.5rem;
 
-    box-shadow:
-        0 15px 35px rgba(15, 23, 42, 0.056);
+    box-shadow: none;
 
     transition:
         transform 0.4s ease;
@@ -564,7 +505,7 @@ body {
     left: 14px;
     bottom: 12px;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 0.68rem;
 
@@ -589,7 +530,7 @@ body {
 
     margin-bottom: 10px;
 
-    color: #0e83aa;
+    color: #5c4ade;
 
     font-size: 0.70rem;
 
@@ -601,7 +542,7 @@ body {
 .course-content h2 {
     margin: 0 0 11px;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 1.65rem;
 
@@ -611,7 +552,7 @@ body {
 .course-content p {
     margin: 0 0 17px;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 0.92rem;
 
@@ -636,13 +577,13 @@ body {
 .course-meta span {
     padding: 7px 10px;
 
-    border-radius: 9px;
+    border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.088);
+    border: 1px solid #000000;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 0.72rem;
 }
@@ -663,13 +604,13 @@ body {
 
     padding: 11px 17px;
 
-    border-radius: 12px;
+    border-radius: 1600px;
 
-    border: 1px solid rgba(0,198,255,0.25);
+    border: 1px solid #000000;
 
-    background: rgba(0,150,220,0.11);
+    background: #dceeff;
 
-    color: #0e83aa;
+    color: #5c4ade;
 
     font-weight: 700;
 
@@ -686,18 +627,17 @@ body {
 .course-button:hover {
     transform: translateY(-2px);
 
-    background: rgba(0,198,255,0.17);
+    background: #dceeff;
 
-    box-shadow:
-        0 8px 22px rgba(0, 114, 255, 0.078);
+    box-shadow: none;
 }
 
 .course-button.disabled {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
-    background: rgba(255, 255, 255, 0.705);
+    background: #ffffff;
 
-    border-color: rgba(15, 23, 42, 0.096);
+    border-color: #000000;
 
     cursor: default;
 }
@@ -705,7 +645,7 @@ body {
 .course-button.disabled:hover {
     transform: none;
 
-    background: rgba(255, 255, 255, 0.705);
+    background: #ffffff;
 
     box-shadow: none;
 }

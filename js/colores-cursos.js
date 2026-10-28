@@ -39,12 +39,16 @@ function abrirCurso(curso) {
             navegarSuave("colores.html");
             break;
 
-        case "mas-colores":
-            navegarSuave("mas-colores.html");
+        case "quiz":
+            navegarSuave("colores-quiz.html");
             break;
 
-        case "practica":
-            navegarSuave("practica-colores.html");
+        case "paleta":
+            navegarSuave("colores-paleta.html");
+            break;
+
+        case "memoria":
+            navegarSuave("colores-memoria.html");
             break;
 
         default:

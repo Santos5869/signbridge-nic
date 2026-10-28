@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Memoria de señas</title>
+
+    <link rel="stylesheet" href="../css/juegos.css">
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
+</head>
+
+<body class="juego-memoria">
+
+    <main class="juego">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+            <a
+                href="presentaciones-cursos.html"
+                class="pill"
+            >
+                ← Presentaciones
+            </a>
+
+            <span
+                id="record"
+                class="pill acento"
+            >
+                🏆 Récord: —
+            </span>
+
+        </header>
+
+
+        <!-- ENCABEZADO -->
+
+        <section class="cabecera">
+
+            <span class="sticker blue" aria-hidden="true">🃏</span>
+            <span class="sticker ember" aria-hidden="true">👋</span>
+
+            <h1>Memoria</h1>
+
+            <p>
+                Voltea dos cartas a la vez y une cada seña
+                con su significado. ¡Con los menos intentos posibles!
+            </p>
+
+        </section>
+
+
+        <!-- JUEGO -->
+
+        <section class="tarjeta">
+
+            <div class="marcador">
+
+                <span
+                    id="parejas"
+                    class="pill"
+                >
+                    Parejas 0 / 6
+                </span>
+
+                <div class="grupo">
+
+                    <span
+                        id="intentos"
+                        class="pill"
+                    >
+                        🔁 0 intentos
+                    </span>
+
+                    <span
+                        id="tiempo"
+                        class="pill acento"
+                    >
+                        ⏱ 0:00
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div
+                id="tablero"
+                class="tablero"
+            ></div>
+
+            <p
+                id="mensaje"
+                class="mensaje"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FINAL -->
+
+    <div
+        id="final"
+        class="final hidden"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="final-tarjeta">
+
+            <span class="sticker violet" aria-hidden="true">🃏</span>
+
+            <h2>¡Lo lograste!</h2>
+
+            <div
+                id="estrellas"
+                class="final-estrellas"
+            ></div>
+
+            <p id="finalTexto"></p>
+
+            <div class="acciones">
+
+                <button
+                    id="otraVez"
+                    class="btn"
+                    type="button"
+                >
+                    Jugar otra vez
+                </button>
+
+                <a
+                    href="presentaciones-cursos.html"
+                    class="btn fantasma"
+                >
+                    Volver
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/abc-comun.js"></script>
+    <script src="../js/presentaciones-juegos.js"></script>
+    <script src="../js/juego-memoria.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+</body>
+
+</html>

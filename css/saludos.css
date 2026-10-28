@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family: var(--font-ui);
 }
 
 body{
@@ -13,12 +11,9 @@ body{
     justify-content:center;
     align-items:center;
     overflow-x:hidden;
-    color:#141b29;
+    color:#000000;
 
-    background:
-    radial-gradient(circle at top left,#2d7cff55,transparent 35%),
-    radial-gradient(circle at bottom right,#00d9ff44,transparent 35%),
-    linear-gradient(135deg,#f4f8fc,#ebf2fa,#dfeaf7);
+    background: #ffffff;
 }
 
 /* =========================================
@@ -34,15 +29,15 @@ body{
 
 .blob{
     position:absolute;
-    border-radius:50%;
-    filter:blur(120px);
+    border-radius: 50%;
+    filter: none;
     animation:flotar 12s ease-in-out infinite;
 }
 
 .blob1{
     width:350px;
     height:350px;
-    background:#2563eb;
+    background: #4da2ff;
     top:-120px;
     left:-120px;
 }
@@ -50,7 +45,7 @@ body{
 .blob2{
     width:400px;
     height:400px;
-    background:#14b8a6;
+    background: #4da2ff;
     right:-120px;
     top:20%;
     animation-delay:3s;
@@ -59,7 +54,7 @@ body{
 .blob3{
     width:350px;
     height:350px;
-    background:#7c3aed;
+    background: #5c4ade;
     bottom:-120px;
     left:35%;
     animation-delay:6s;
@@ -98,28 +93,28 @@ body{
 .badge{
     display:inline-block;
     padding:10px 18px;
-    border-radius:30px;
+    border-radius: 1600px;
 
-    background:rgba(255, 255, 255, 0.84);
-    border:1px solid rgba(15, 23, 42, 0.16);
+    background: #ffffff;
+    border:1px solid #000000;
 
     margin-bottom:20px;
-    color:#0e94aa;
+    color:#5c4ade;
 }
 
 .encabezado h1{
     font-size:55px;
     margin-bottom:15px;
 
-    background:linear-gradient(90deg,#141b29,#0e93aa);
+    background: none;
 
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #5c4ade;
 }
 
 .encabezado p{
-    color:#0e4caa;
+    color:#5c4ade;
     font-size:18px;
 }
 
@@ -128,21 +123,20 @@ body{
 ========================================= */
 
 .tarjeta{
-    background:rgba(255, 255, 255, 0.84);
-    backdrop-filter:blur(18px);
+    background: #ffffff;
+    backdrop-filter: none;
 
-    border-radius:30px;
+    border-radius: 30px;
     padding:35px;
 
-    border:1px solid rgba(15, 23, 42, 0.16);
+    border:1px solid #000000;
 
-    box-shadow:
-        0 20px 45px rgba(15, 23, 42, 0.122);
+    box-shadow: none;
 }
 
 .numero-leccion{
     text-align:right;
-    color:#0e94aa;
+    color:#5c4ade;
     margin-bottom:15px;
 }
 
@@ -166,17 +160,16 @@ body{
 
     margin:0 auto 25px auto;
 
-    border-radius:20px;
+    border-radius: 20px;
     overflow:hidden;
 
-    background:#ffffff;
+    background: #ffffff;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    box-shadow:
-        0 15px 35px rgba(15, 23, 42, 0.122);
+    box-shadow: none;
 
 }
 
@@ -197,7 +190,7 @@ video{
 
 #descripcion{
     text-align:center;
-    color:#0e4baa;
+    color:#5c4ade;
 
     line-height:1.8;
 
@@ -212,9 +205,9 @@ video{
     width:100%;
     height:14px;
 
-    background:rgba(255, 255, 255, 0.84);
+    background: #ffffff;
 
-    border-radius:20px;
+    border-radius: 20px;
     overflow:hidden;
 }
 
@@ -222,12 +215,7 @@ video{
     width:0%;
     height:100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            #00d9ff,
-            #2563eb
-        );
+    background: #4da2ff;
 
     transition:width .5s ease;
 }
@@ -235,7 +223,7 @@ video{
 .porcentaje{
     text-align:center;
     margin-top:12px;
-    color:#0e94aa;
+    color:#5c4ade;
 }
 
 /* =========================================
@@ -257,21 +245,16 @@ video{
     padding:16px;
 
     border:none;
-    border-radius:15px;
+    border-radius: 1600px;
 
     cursor:pointer;
 
-    color:#fff;
+    color:#ffffff;
 
     font-size:17px;
     font-weight:600;
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #14b8a6
-        );
+    background: #000000;
 
     transition:
         transform .3s ease,
@@ -282,8 +265,7 @@ video{
 .botones button:hover{
     transform:translateY(-4px);
 
-    box-shadow:
-        0 15px 30px rgba(37, 99, 235, 0.21);
+    box-shadow: none;
 }
 
 .botones button:disabled{
@@ -303,19 +285,19 @@ video{
     top:25px;
     left:25px;
 
-    background:rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
-    color:#141b29;
+    color:#000000;
 
     text-decoration:none;
 
     padding:12px 20px;
 
-    border-radius:14px;
+    border-radius: 1600px;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter: none;
 
-    border:1px solid rgba(15, 23, 42, 0.16);
+    border:1px solid #000000;
 
     font-weight:600;
 
@@ -326,12 +308,11 @@ video{
 }
 
 .btn-volver:hover{
-    background:#22d3ee;
+    background: #000000;
 
     transform:translateX(-3px);
 
-    box-shadow:
-        0 8px 20px rgba(34, 211, 238, 0.24);
+    box-shadow: none;
 }
 
 /* =========================================
@@ -351,10 +332,9 @@ video{
 
     padding:25px;
 
-    background:
-        rgba(247, 250, 253, 0.65);
+    background: #ffffff;
 
-    backdrop-filter:blur(14px);
+    backdrop-filter: none;
 
     opacity:0;
     visibility:hidden;
@@ -387,22 +367,15 @@ video{
 
     text-align:center;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.92),
-            rgba(255, 255, 255, 0.81)
-        );
+    background: #ffffff;
 
-    border:1px solid rgba(15, 23, 42, 0.216);
+    border:1px solid #000000;
 
-    backdrop-filter:blur(25px);
+    backdrop-filter: none;
 
-    box-shadow:
-        0 30px 80px rgba(15, 23, 42, 0.158),
-        0 0 50px rgba(34, 211, 238, 0.072);
+    box-shadow: none;
 
     transform:
         translateY(30px)
@@ -470,17 +443,12 @@ video{
 
     margin-bottom:15px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #141b29,
-            #0e94aa
-        );
+    background: none;
 
-    -webkit-background-clip:text;
-    background-clip:text;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
 
-    -webkit-text-fill-color:transparent;
+    -webkit-text-fill-color: #5c4ade;
 }
 
 /* =========================================
@@ -489,7 +457,7 @@ video{
 
 .final-card p{
 
-    color:#0e4baa;
+    color:#5c4ade;
 
     font-size:19px;
 
@@ -508,25 +476,19 @@ video{
 
     border:none;
 
-    border-radius:16px;
+    border-radius: 20px;
 
     cursor:pointer;
 
-    color:#fff;
+    color:#ffffff;
 
     font-size:18px;
 
     font-weight:700;
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #14b8a6
-        );
+    background: #4da2ff;
 
-    box-shadow:
-        0 10px 30px rgba(37, 99, 235, 0.15);
+    box-shadow: none;
 
     transition:
         transform .3s ease,
@@ -537,8 +499,7 @@ video{
 
     transform:translateY(-4px);
 
-    box-shadow:
-        0 18px 35px rgba(37, 99, 235, 0.24);
+    box-shadow: none;
 }
 
 /* =========================================

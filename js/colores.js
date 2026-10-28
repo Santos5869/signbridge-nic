@@ -12,6 +12,7 @@ const lecciones = [
 
     {
         nombre: "ROJO",
+        video: "../videos/colores/rojo.mp4",
         emoji: "🔴",
         descripcion:
             "Aprende el nombre del color rojo y observa la seña correspondiente."
@@ -19,6 +20,7 @@ const lecciones = [
 
     {
         nombre: "AZUL",
+        video: "../videos/colores/azul.mp4",
         emoji: "🔵",
         descripcion:
             "Aprende el nombre del color azul y observa la seña correspondiente."
@@ -26,6 +28,7 @@ const lecciones = [
 
     {
         nombre: "AMARILLO",
+        video: "../videos/colores/amarillo.mp4",
         emoji: "🟡",
         descripcion:
             "Aprende el nombre del color amarillo y observa la seña correspondiente."
@@ -33,6 +36,7 @@ const lecciones = [
 
     {
         nombre: "VERDE",
+        video: "../videos/colores/verde.mp4",
         emoji: "🟢",
         descripcion:
             "Aprende el nombre del color verde y observa la seña correspondiente."
@@ -40,6 +44,7 @@ const lecciones = [
 
     {
         nombre: "NEGRO",
+        video: "../videos/colores/negro.mp4",
         emoji: "⚫",
         descripcion:
             "Aprende el nombre del color negro y observa la seña correspondiente."
@@ -47,6 +52,7 @@ const lecciones = [
 
     {
         nombre: "BLANCO",
+        video: "../videos/colores/blanco.mp4",
         emoji: "⚪",
         descripcion:
             "Aprende el nombre del color blanco y observa la seña correspondiente."
@@ -61,6 +67,7 @@ const lecciones = [
 
     {
         nombre: "MORADO",
+        video: "../videos/colores/morado.mp4",
         emoji: "🟣",
         descripcion:
             "Aprende el nombre del color morado y observa la seña correspondiente."
@@ -68,6 +75,7 @@ const lecciones = [
 
     {
         nombre: "ROSA",
+        video: "../videos/colores/rosado.mp4",
         emoji: "🩷",
         descripcion:
             "Aprende el nombre del color rosa y observa la seña correspondiente."
@@ -75,6 +83,7 @@ const lecciones = [
 
     {
         nombre: "CAFÉ",
+        video: "../videos/colores/cafe.mp4",
         emoji: "🟤",
         descripcion:
             "Aprende el nombre del color café y observa la seña correspondiente."
@@ -108,6 +117,15 @@ const nombreColor =
 
 const colorPreview =
     document.getElementById("colorPreview");
+
+const videoColor =
+    document.getElementById("videoColor");
+
+const videoPlaceholder =
+    document.getElementById("videoPlaceholder");
+
+const indicacionVideo =
+    document.getElementById("indicacionVideo");
 
 const progresoTexto =
     document.getElementById("progresoTexto");
@@ -368,6 +386,34 @@ function mostrarLeccion() {
     // Emoji
     colorPreview.textContent =
         leccion.emoji;
+
+
+    // Video de la seña, o el aviso si todavía no existe
+
+    videoColor.pause();
+
+    indicacionVideo.textContent = leccion.video
+        ? "Observa atentamente el video y practica la seña."
+        : "El video de este color estará disponible pronto.";
+
+    if (leccion.video) {
+
+        videoColor.src =
+            leccion.video;
+
+        videoColor.hidden = false;
+        videoPlaceholder.hidden = true;
+
+        videoColor.play().catch(() => {});
+
+    } else {
+
+        videoColor.removeAttribute("src");
+        videoColor.load();
+
+        videoColor.hidden = true;
+        videoPlaceholder.hidden = false;
+    }
 
 
     // Porcentaje

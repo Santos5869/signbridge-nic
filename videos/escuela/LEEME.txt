@@ -10,6 +10,7 @@ videos/escuela/materiales/
     libro.mp4
     tijeras.mp4
     borrador.mp4
+    sacapuntas.mp4
     regla.mp4
     mochila.mp4
     pegamento.mp4

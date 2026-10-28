@@ -3,19 +3,17 @@
    Estilo: carné de identidad colgado de una cinta.
 ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 :root {
-    --bg: #f3f1fb;
-    --indigo: #3730a3;
-    --indigo-dark: #1e1b4b;
-    --teal: #0d9488;
-    --teal-light: #5eead4;
-    --text: #1e1b3a;
-    --muted: #625f80;
+    --bg: #ffffff;
+    --indigo: #5c4ade;
+    --indigo-dark: #000000;
+    --teal: #4da2ff;
+    --teal-light: #4da2ff;
+    --text: #000000;
+    --muted: #4a4a4a;
     --card: #ffffff;
-    --good: #0f8a5f;
-    --bad: #d33f49;
+    --good: #55db9c;
+    --bad: #fb4903;
 }
 
 * {
@@ -27,13 +25,10 @@
 body {
     min-height: 100vh;
 
-    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-family: var(--font-ui);
     color: var(--text);
 
-    background:
-        repeating-linear-gradient(-45deg, rgba(55, 48, 163, 0.035) 0 14px, transparent 14px 28px),
-        radial-gradient(circle at 85% 10%, rgba(94, 234, 212, 0.35), transparent 40%),
-        var(--bg);
+    background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.12) 0 14px, transparent 14px 28px), var(--bg);
 
     animation: entrar .3s ease both;
 }
@@ -74,7 +69,7 @@ input {
 .back-link {
     padding: 9px 16px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
     background: var(--card);
     color: var(--indigo);
 
@@ -82,14 +77,14 @@ input {
     font-size: 14px;
     text-decoration: none;
 
-    box-shadow: 0 4px 14px rgba(55, 48, 163, 0.1);
+    box-shadow: none;
 }
 
 .topbar-tag {
     padding: 7px 14px;
 
-    border-radius: 999px;
-    background: rgba(13, 148, 136, 0.12);
+    border-radius: 1600px;
+    background: #d6f5e6;
     color: var(--teal);
 
     font-size: 13px;
@@ -116,7 +111,7 @@ input {
     border-radius: 24px;
     background: var(--card);
 
-    box-shadow: 0 20px 50px rgba(30, 27, 75, 0.08);
+    box-shadow: none;
 }
 
 .panel h1 {
@@ -156,8 +151,8 @@ input {
 
     padding: 14px 16px;
 
-    border: 2px solid #dcd9f2;
-    border-radius: 14px;
+    border: 1px solid #000000;
+    border-radius: 20px;
 
     font-size: 18px;
     font-weight: 600;
@@ -170,7 +165,7 @@ input {
 
 .name-row input:focus {
     border-color: var(--indigo);
-    box-shadow: 0 0 0 4px rgba(55, 48, 163, 0.12);
+    box-shadow: 0 0 0 3px #4da2ff;
 }
 
 .form-note {
@@ -193,17 +188,17 @@ input {
     padding: 13px 20px;
 
     border: none;
-    border-radius: 14px;
+    border-radius: 1600px;
 
-    background: linear-gradient(135deg, var(--indigo), var(--teal));
-    color: #fff;
+    background: #000000;
+    color: #ffffff;
 
     font-size: 15px;
     font-weight: 700;
 
     cursor: pointer;
 
-    box-shadow: 0 10px 24px rgba(55, 48, 163, 0.25);
+    box-shadow: none;
 
     transition: transform .15s, box-shadow .15s;
 }
@@ -216,10 +211,10 @@ input {
     width: 48px;
     height: 48px;
 
-    border: 2px solid #dcd9f2;
+    border: 1px solid #000000;
     border-radius: 50%;
 
-    background: #fff;
+    background: #ffffff;
     color: var(--indigo);
 
     font-size: 26px;
@@ -251,15 +246,15 @@ input {
     margin: 28px 0 20px;
     padding: 6px;
 
-    border-radius: 16px;
-    background: #efedf9;
+    border-radius: 1600px;
+    background: #ffffff;
 }
 
 .tab {
     padding: 11px;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 1600px;
 
     background: transparent;
     color: var(--muted);
@@ -273,10 +268,10 @@ input {
 }
 
 .tab.active {
-    background: #fff;
+    background: #ffffff;
     color: var(--indigo);
 
-    box-shadow: 0 4px 12px rgba(30, 27, 75, 0.1);
+    box-shadow: none;
 }
 
 
@@ -338,10 +333,10 @@ input {
 .letter-option {
     aspect-ratio: 1;
 
-    border: 2px solid #dcd9f2;
-    border-radius: 16px;
+    border: 1px solid #000000;
+    border-radius: 20px;
 
-    background: #fff;
+    background: #ffffff;
     color: var(--text);
 
     font-size: 30px;
@@ -359,13 +354,13 @@ input {
 
 .letter-option.right {
     border-color: var(--good);
-    background: #dcf7ec;
+    background: #d6f5e6;
     color: var(--good);
 }
 
 .letter-option.wrong {
     border-color: var(--bad);
-    background: #fde4e6;
+    background: #ffe1d3;
     color: var(--bad);
 }
 
@@ -429,7 +424,7 @@ input {
     width: 22px;
     height: 22px;
 
-    border: 4px solid #a8a5c4;
+    border: 1px solid #000000;
     border-radius: 50%;
 
     transform: translateX(-50%);
@@ -445,9 +440,7 @@ input {
 
     overflow: hidden;
 
-    box-shadow:
-        0 30px 60px rgba(30, 27, 75, 0.18),
-        0 0 0 1px rgba(55, 48, 163, 0.06);
+    box-shadow: none;
 
     transform-origin: top center;
 
@@ -461,7 +454,7 @@ input {
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.55) 50%, transparent 60%);
+    background: transparent;
     background-size: 250% 100%;
     background-position: 120% 0;
 
@@ -477,9 +470,7 @@ input {
 }
 
 .id-card.completo {
-    box-shadow:
-        0 30px 60px rgba(13, 148, 136, 0.3),
-        0 0 0 3px var(--teal-light);
+    box-shadow: none;
 }
 
 @keyframes balanceo {
@@ -500,8 +491,8 @@ input {
 
     padding: 16px 18px;
 
-    background: linear-gradient(135deg, var(--indigo-dark), var(--indigo) 55%, var(--teal));
-    color: #fff;
+    background: var(--indigo-dark);
+    color: #ffffff;
 }
 
 .id-header img {
@@ -510,8 +501,8 @@ input {
 
     padding: 3px;
 
-    border-radius: 10px;
-    background: #fff;
+    border-radius: 20px;
+    background: #ffffff;
     object-fit: contain;
 }
 
@@ -532,8 +523,8 @@ input {
 
     margin: 18px 18px 0;
 
-    border-radius: 16px;
-    background: #eef0f8;
+    border-radius: 20px;
+    background: #ffffff;
 
     aspect-ratio: 3 / 4;
 
@@ -588,14 +579,14 @@ input {
     display: grid;
     place-items: center;
 
-    border-radius: 14px;
+    border-radius: 20px;
     background: var(--indigo);
-    color: #fff;
+    color: #ffffff;
 
     font-size: 30px;
     font-weight: 700;
 
-    box-shadow: 0 8px 18px rgba(30, 27, 75, 0.3);
+    box-shadow: none;
 }
 
 .id-body {
@@ -623,10 +614,10 @@ input {
 
     padding: 0 8px;
 
-    border: 2px solid #dcd9f2;
-    border-radius: 10px;
+    border: 1px solid #000000;
+    border-radius: 1600px;
 
-    background: #fff;
+    background: #ffffff;
     color: var(--text);
 
     font-size: 20px;
@@ -640,19 +631,19 @@ input {
 .chip.current {
     border-color: var(--indigo);
     background: var(--indigo);
-    color: #fff;
+    color: #ffffff;
 
     transform: translateY(-3px);
 }
 
 .chip.oculta {
     color: transparent;
-    background: repeating-linear-gradient(45deg, #efedf9 0 6px, #e4e1f5 6px 12px);
+    background: repeating-linear-gradient(45deg, #ffffff 0 6px, #e9ccff 6px 12px);
 }
 
 .chip.oculta.current {
     border-color: var(--teal);
-    background: repeating-linear-gradient(45deg, #ccfbf1 0 6px, #99f6e4 6px 12px);
+    background: repeating-linear-gradient(45deg, #d6f5e6 0 6px, #4da2ff 6px 12px);
 }
 
 .chip.hecha {

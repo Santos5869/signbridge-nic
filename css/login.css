@@ -4,27 +4,27 @@
    ========================================================= */
 
 :root {
-    --bg-1: #f7fafd;
-    --bg-2: #f0f5fc;
-    --bg-3: #e8f1fa;
+    --bg-1: #ffffff;
+    --bg-2: #ffffff;
+    --bg-3: #dceeff;
 
-    --cyan: #21dce9;
-    --cyan-light: #9bf5fa;
-    --blue: #1685ff;
-    --blue-soft: #5bb0ff;
-    --purple: #7562ff;
+    --cyan: #4da2ff;
+    --cyan-light: #4da2ff;
+    --blue: #4da2ff;
+    --blue-soft: #4da2ff;
+    --purple: #5c4ade;
 
-    --white: #141b29;
-    --text: #152032;
-    --text-soft: #405a77;
-    --text-muted: #7d91a8;
+    --white: #000000;
+    --text: #000000;
+    --text-soft: #4a4a4a;
+    --text-muted: #4a4a4a;
 
-    --card-white: #13202d;
-    --dark-text: #102033;
-    --dark-muted: #6c7d90;
+    --card-white: #000000;
+    --dark-text: #000000;
+    --dark-muted: #4a4a4a;
 
-    --border: rgba(15, 23, 42, 0.136);
-    --shadow: 0 35px 100px rgba(15, 23, 42, 0.133);
+    --border: #000000;
+    --shadow: none;
 
     --transition:
         .4s cubic-bezier(.2,.8,.2,1);
@@ -49,9 +49,9 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-ui);
 
-    background: #f7fafd;
+    background: #ffffff;
 }
 
 
@@ -72,30 +72,9 @@ body {
 
     overflow: hidden;
 
-    color: var(--#141b29);
+    color: #000000;
 
-    background:
-        radial-gradient(
-            circle at 10% 15%,
-            rgba(33,220,233,.11),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 92% 15%,
-            rgba(117,98,255,.10),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(22,133,255,.07),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
-            var(--bg-1),
-            var(--bg-2) 55%,
-            #f3f7fc
-        );
+    background: #ffffff;
 }
 
 
@@ -120,16 +99,7 @@ body {
 
     opacity: .09;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.75) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.75) 1px,
-            transparent 1px
-        );
+    background-image: transparent;
 
     background-size: 56px 56px;
 
@@ -146,7 +116,7 @@ body {
 
     border-radius: 50%;
 
-    filter: blur(100px);
+    filter: none;
 
     pointer-events: none;
 
@@ -167,8 +137,7 @@ body {
     left: -190px;
     top: -170px;
 
-    background:
-        rgba(33,220,233,.18);
+    background: #dceeff;
 }
 
 .blob2 {
@@ -178,8 +147,7 @@ body {
     right: -220px;
     top: 8%;
 
-    background:
-        rgba(117,98,255,.16);
+    background: #e9ccff;
 
     animation-delay: -5s;
 }
@@ -191,8 +159,7 @@ body {
     left: 40%;
     bottom: -230px;
 
-    background:
-        rgba(22,133,255,.13);
+    background: #dceeff;
 
     animation-delay: -10s;
 }
@@ -235,18 +202,16 @@ body {
 
     border-radius: 34px;
 
-    background:
-        rgba(255, 255, 255, 0.735);
+    background: #ffffff;
 
     border:
         1px solid
-        rgba(15, 23, 42, 0.144);
+        #000000;
 
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow:
-        0 40px 110px rgba(15, 23, 42, 0.14);
+    box-shadow: none;
 
     animation:
         layoutEnter
@@ -285,14 +250,7 @@ body {
     width: 76%;
     height: 1px;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(33,220,233,.55),
-            rgba(117,98,255,.35),
-            transparent
-        );
+    background: transparent;
 
     opacity: .7;
 
@@ -321,26 +279,11 @@ body {
 
     overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(33,220,233,.10),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 20% 85%,
-            rgba(117,98,255,.10),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            rgba(227, 239, 249, 0.72),
-            rgba(237, 244, 251, 0.64)
-        );
+    background: #dceeff;
 
     border-right:
         1px solid
-        rgba(15, 23, 42, 0.12);
+        #000000;
 }
 
 
@@ -363,11 +306,9 @@ body {
 
     border:
         1px solid
-        rgba(33,220,233,.08);
+        #000000;
 
-    box-shadow:
-        0 0 0 45px rgba(33, 220, 233, 0.009),
-        0 0 0 90px rgba(33, 220, 233, 0.006);
+    box-shadow: none;
 
     animation:
         slowRotate
@@ -389,10 +330,9 @@ body {
 
     border-radius: 50%;
 
-    background:
-        rgba(117,98,255,.08);
+    background: #e9ccff;
 
-    filter: blur(35px);
+    filter: none;
 }
 
 @keyframes slowRotate {
@@ -423,7 +363,7 @@ body {
 
     z-index: 5;
 
-    color: #141b29;
+    color: #000000;
 
     text-decoration: none;
 }
@@ -440,14 +380,11 @@ body {
 
     flex-shrink: 0;
 
-    border-radius: 17px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
-    box-shadow:
-        0 0 35px rgba(33, 220, 233, 0.06),
-        0 12px 30px rgba(15, 23, 42, 0.07);
+    box-shadow: none;
 
     overflow: hidden;
 
@@ -471,9 +408,7 @@ body {
         scale(1.04)
         rotate(-2deg);
 
-    box-shadow:
-        0 0 42px rgba(33, 220, 233, 0.12),
-        0 15px 35px rgba(15, 23, 42, 0.088);
+    box-shadow: none;
 }
 
 .brand-name {
@@ -493,7 +428,7 @@ body {
 .brand-name small {
     margin-top: 6px;
 
-    color: #8097af;
+    color: #4a4a4a;
 
     font-size: 8px;
 
@@ -531,21 +466,20 @@ body {
 
     border-radius: 999px;
 
-    background:
-        rgba(33,220,233,.07);
+    background: #dceeff;
 
     border:
         1px solid
-        rgba(33,220,233,.17);
+        #000000;
 
     color:
-        #10a0a7;
+        #5c4ade;
 
     font-size: 9px;
 
     font-weight: 600;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
 }
 
 
@@ -571,18 +505,12 @@ body {
 .information-content h1 span {
     display: block;
 
-    color: transparent;
+    color: #5c4ade;
 
-    background:
-        linear-gradient(
-            100deg,
-            #141b29,
-            #0e96aa 50%,
-            #11a6b0 90%
-        );
+    background: none;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
 
     background-size: 200% auto;
 
@@ -684,19 +612,13 @@ body {
     align-items: center;
     justify-content: center;
 
-    border-radius: 11px;
+    border-radius: 20px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #20dce9,
-            #1685ff
-        );
+    background: #4da2ff;
 
-    box-shadow:
-        0 8px 22px rgba(22, 133, 255, 0.12);
+    box-shadow: none;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 12px;
 
@@ -706,7 +628,7 @@ body {
 .benefit h2 {
     margin: 0 0 3px;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 12px;
 
@@ -714,7 +636,7 @@ body {
 }
 
 .benefit p {
-    color: #52708b;
+    color: #4a4a4a;
 
     font-size: 9px;
 
@@ -734,7 +656,7 @@ body {
     margin: 0;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 9px;
 
@@ -761,12 +683,7 @@ body {
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #f7fbff
-        );
+    background: #ffffff;
 
     color:
         var(--dark-text);
@@ -788,12 +705,7 @@ body {
 
     border-radius: 50%;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(33,220,233,.13),
-            transparent 68%
-        );
+    background: transparent;
 }
 
 .login-card::after {
@@ -809,10 +721,9 @@ body {
 
     border-radius: 50%;
 
-    background:
-        rgba(117,98,255,.05);
+    background: #e9ccff;
 
-    filter: blur(25px);
+    filter: none;
 }
 
 
@@ -844,12 +755,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    border-radius: 14px;
+    border-radius: 20px;
 
-    background: white;
+    background: #ffffff;
 
-    box-shadow:
-        0 10px 25px rgba(15, 23, 42, 0.03);
+    box-shadow: none;
 }
 
 .mobile-logo-box img {
@@ -870,7 +780,7 @@ body {
 
     margin-top: 3px;
 
-    color: #8493a4;
+    color: #4a4a4a;
 
     font-size: 8px;
 
@@ -897,7 +807,7 @@ body {
 
     margin-bottom: 10px;
 
-    color: #0d60b5;
+    color: #5c4ade;
 
     font-size: 8px;
 
@@ -909,7 +819,7 @@ body {
 .login-header h2 {
     margin: 0;
 
-    color: #102033;
+    color: #000000;
 
     font-size: 34px;
 
@@ -921,7 +831,7 @@ body {
 .login-header p {
     margin: 10px 0 0;
 
-    color: #718094;
+    color: #4a4a4a;
 
     font-size: 11px;
 
@@ -954,7 +864,7 @@ body {
 }
 
 .form-group label {
-    color: #344356;
+    color: #000000;
 
     font-size: 10px;
 
@@ -975,7 +885,7 @@ body {
 }
 
 .forgot-password {
-    color: #0d60b5;
+    color: #5c4ade;
 
     font-size: 9px;
 
@@ -985,7 +895,7 @@ body {
 }
 
 .forgot-password:hover {
-    color: #0c63c2;
+    color: #5c4ade;
 
     text-decoration: underline;
 }
@@ -1008,12 +918,11 @@ body {
 
     border:
         1px solid
-        #dce4ed;
+        #000000;
 
-    border-radius: 14px;
+    border-radius: 20px;
 
-    background:
-        #f7fafc;
+    background: #ffffff;
 
     transition:
         border-color .3s ease,
@@ -1024,23 +933,18 @@ body {
 
 .input-container:hover {
     border-color:
-        #c6d4e3;
+        #000000;
 }
 
 .input-container:focus-within {
     transform: translateY(-1px);
 
-    background: white;
+    background: #ffffff;
 
     border-color:
-        #1784ef;
+        #000000;
 
-    box-shadow:
-        0 0 0 4px
-        rgba(23, 132, 239, 0.054),
-
-        0 10px 25px
-        rgba(15, 70, 120, 0.036);
+    box-shadow: 0 0 0 3px #4da2ff;
 }
 
 .input-icon {
@@ -1051,7 +955,7 @@ body {
     text-align: center;
 
     color:
-        #0d60b5;
+        #5c4ade;
 
     font-size: 13px;
 
@@ -1071,7 +975,7 @@ body {
     background: transparent;
 
     color:
-        #102033;
+        #000000;
 
     font-family: inherit;
 
@@ -1080,7 +984,7 @@ body {
 
 .input-container input::placeholder {
     color:
-        #576c7f;
+        #4a4a4a;
 }
 
 
@@ -1097,7 +1001,7 @@ body {
 
     background: transparent;
 
-    color: #0d60b5;
+    color: #5c4ade;
 
     font-family: inherit;
 
@@ -1112,7 +1016,7 @@ body {
 
 .toggle-password:hover {
     color:
-        #0081c2;
+        #5c4ade;
 }
 
 
@@ -1127,7 +1031,7 @@ body {
 
     gap: 8px;
 
-    color: #69798b;
+    color: #4a4a4a;
 
     font-size: 9px;
 
@@ -1156,7 +1060,7 @@ body {
 .error-message {
     min-height: 13px;
 
-    color: #a90e0e;
+    color: #d6261b;
 
     font-size: 8px;
 }
@@ -1164,7 +1068,7 @@ body {
 .form-message {
     min-height: 14px;
 
-    color: #a90e0e;
+    color: #d6261b;
 
     font-size: 9px;
 
@@ -1191,16 +1095,11 @@ body {
 
     border: none;
 
-    border-radius: 14px;
+    border-radius: 1600px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1cdbe7,
-            #1685ff
-        );
+    background: #000000;
 
-    color: white;
+    color: #ffffff;
 
     font-family: inherit;
 
@@ -1212,9 +1111,7 @@ body {
 
     overflow: hidden;
 
-    box-shadow:
-        0 14px 32px
-        rgba(22, 133, 255, 0.138);
+    box-shadow: none;
 
     transition:
         transform .3s ease,
@@ -1232,13 +1129,7 @@ body {
     width: 70%;
     height: 100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.92),
-            transparent
-        );
+    background: transparent;
 
     transform: skewX(-20deg);
 
@@ -1253,9 +1144,7 @@ body {
     transform:
         translateY(-3px);
 
-    box-shadow:
-        0 20px 40px
-        rgba(22, 133, 255, 0.18);
+    box-shadow: none;
 }
 
 .primary-button:active {
@@ -1295,14 +1184,13 @@ body {
 
     height: 1px;
 
-    background:
-        #e4e9ef;
+    background: #dceeff;
 }
 
 .divider p {
     margin: 0;
 
-    color: #5c6d7e;
+    color: #4a4a4a;
 
     font-size: 8px;
 
@@ -1325,13 +1213,13 @@ body {
 
     border:
         1px solid
-        #d4dee8;
+        #000000;
 
-    border-radius: 14px;
+    border-radius: 1600px;
 
-    background: white;
+    background: #ffffff;
 
-    color: #0d60b5;
+    color: #5c4ade;
 
     font-size: 10px;
 
@@ -1349,14 +1237,11 @@ body {
         translateY(-2px);
 
     border-color:
-        #1681ee;
+        #000000;
 
-    background:
-        #f4f9ff;
+    background: #ffffff;
 
-    box-shadow:
-        0 10px 20px
-        rgba(18, 132, 255, 0.048);
+    box-shadow: none;
 }
 
 
@@ -1369,7 +1254,7 @@ body {
 
     text-align: center;
 
-    color: #778699;
+    color: #4a4a4a;
 
     font-size: 9px;
 
@@ -1380,7 +1265,7 @@ body {
 
 .back-home:hover {
     color:
-        #0d60b5;
+        #5c4ade;
 
     transform:
         translateY(-1px);

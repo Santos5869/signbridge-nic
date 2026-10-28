@@ -46,10 +46,6 @@ function abrirCategoria(categoria) {
             destino = "abecedario-cursos.html";
             break;
 
-        case "saludos":
-            destino = "saludos-cursos.html";
-            break;
-
         case "colores":
             destino = "colores-cursos.html";
             break;

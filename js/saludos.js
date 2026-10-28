@@ -32,7 +32,7 @@ const saludos = [
 
     {
         titulo: "¿Cómo estás?",
-        video: "../videos/saludos/como_estas.mp4",
+        video: "../videos/presentaciones/como-estas.mp4",
         descripcion: "Pregunta utilizada para saber cómo se encuentra una persona."
     },
 
@@ -604,7 +604,7 @@ if (btnVolverInicio) {
         "click",
         () => {
 
-            window.location.href = "saludos-cursos.html";
+            window.location.href = "presentaciones-cursos.html";
 
         }
     );

@@ -4,22 +4,22 @@
 ========================================== */
 
 :root {
-    --bg-dark: #f7f9fd;
-    --bg-main: #f0f4fc;
+    --bg-dark: #ffffff;
+    --bg-main: #ffffff;
 
-    --blue: #176ce8;
-    --blue-light: #3b82f6;
+    --blue: #4da2ff;
+    --blue-light: #4da2ff;
 
-    --cyan: #20e0d0;
-    --cyan-light: #69f5e8;
+    --cyan: #4da2ff;
+    --cyan-light: #4da2ff;
 
-    --white: #141b29;
-    --text: #151d32;
-    --text-soft: #3e527a;
-    --text-muted: #7185a7;
+    --white: #000000;
+    --text: #000000;
+    --text-soft: #4a4a4a;
+    --text-muted: #4a4a4a;
 
-    --card: rgba(234, 240, 251, 0.78);
-    --card-border: rgba(15, 23, 42, 0.12);
+    --card: #dceeff;
+    --card-border: #000000;
 
     --radius: 24px;
 }
@@ -44,27 +44,11 @@ body {
     width: 100%;
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
 
     color: var(--text);
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(23, 108, 232, 0.20),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 85% 75%,
-            rgba(32, 224, 208, 0.14),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #f8f9fd,
-            #f0f4fc 48%,
-            #f1f5fc
-        );
+    background: #ffffff;
 
     overflow-x: hidden;
 }
@@ -91,7 +75,7 @@ body {
 
     border-radius: 50%;
 
-    filter: blur(90px);
+    filter: none;
 
     opacity: 0.45;
 }
@@ -100,7 +84,7 @@ body {
     width: 360px;
     height: 360px;
 
-    background: #176ce8;
+    background: #4da2ff;
 
     top: -120px;
     left: -100px;
@@ -110,7 +94,7 @@ body {
     width: 300px;
     height: 300px;
 
-    background: #20e0d0;
+    background: #4da2ff;
 
     right: -80px;
     bottom: -100px;
@@ -120,7 +104,7 @@ body {
     width: 250px;
     height: 250px;
 
-    background: #4c2cff;
+    background: #5c4ade;
 
     left: 45%;
     top: 40%;
@@ -182,19 +166,19 @@ body {
 
     border: 1px solid var(--card-border);
 
-    border-radius: 12px;
+    border-radius: 1600px;
 
-    background: rgba(255, 255, 255, 0.72);
+    background: #ffffff;
 
     transition: 0.25s ease;
 }
 
 .back-button:hover {
-    color: #141b29;
+    color: #000000;
 
-    border-color: rgba(32, 224, 208, 0.45);
+    border-color: #000000;
 
-    background: rgba(32, 224, 208, 0.08);
+    background: #dceeff;
 
     transform: translateX(-3px);
 }
@@ -218,19 +202,13 @@ body {
 
     object-fit: contain;
 
-    border-radius: 14px;
+    border-radius: 20px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #176ce8,
-            #20e0d0
-        );
+    background: #4da2ff;
 
     padding: 6px;
 
-    box-shadow:
-        0 8px 30px rgba(23, 108, 232, 0.15);
+    box-shadow: none;
 }
 
 .brand h1 {
@@ -273,7 +251,7 @@ body {
 
     padding: 8px 15px;
 
-    border-radius: 30px;
+    border-radius: 1600px;
 
     font-size: 11px;
 
@@ -281,14 +259,13 @@ body {
 
     letter-spacing: 1px;
 
-    color: #0eaa9b;
+    color: #5c4ade;
 
-    border: 1px solid rgba(32, 224, 208, 0.25);
+    border: 1px solid #000000;
 
-    background: rgba(32, 224, 208, 0.08);
+    background: #dceeff;
 
-    box-shadow:
-        0 0 25px rgba(32, 224, 208, 0.048);
+    box-shadow: none;
 }
 
 .intro h2 {
@@ -300,17 +277,12 @@ body {
 
     letter-spacing: -1.8px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #141b29 20%,
-            #0eaa9b 100%
-        );
+    background: none;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
 
-    color: transparent;
+    color: #5c4ade;
 }
 
 .intro p {
@@ -343,18 +315,11 @@ body {
 
     border: 1px solid var(--card-border);
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(226, 234, 249, 0.9),
-            rgba(242, 246, 252, 0.92)
-        );
+    background: #dceeff;
 
-    box-shadow:
-        0 30px 90px rgba(15, 23, 42, 0.158),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-shadow: none;
 
-    backdrop-filter: blur(20px);
+    backdrop-filter: none;
 
     overflow: hidden;
 }
@@ -373,14 +338,7 @@ body {
     width: 80%;
     height: 1px;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--cyan),
-            var(--blue),
-            transparent
-        );
+    background: transparent;
 
     opacity: 0.7;
 }
@@ -416,8 +374,7 @@ body {
 
     background: var(--cyan);
 
-    box-shadow:
-        0 0 12px var(--cyan);
+    box-shadow: none;
 }
 
 .camera-status {
@@ -435,7 +392,7 @@ body {
 
     border-radius: 8px;
 
-    background: rgba(255, 255, 255, 0.75);
+    background: #ffffff;
 }
 
 
@@ -454,17 +411,11 @@ body {
 
     overflow: hidden;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(23, 108, 232, 0.18),
-            transparent 50%
-        ),
-        #f8f9fd;
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.104);
+    border: 1px solid #000000;
 }
 
 
@@ -541,15 +492,9 @@ body {
 
     padding: 30px;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(23, 108, 232, 0.16),
-            transparent 45%
-        ),
-        rgba(248, 249, 253, 0.92);
+    background: #ffffff;
 
-    backdrop-filter: blur(5px);
+    backdrop-filter: none;
 
     transition:
         opacity 0.25s ease,
@@ -580,17 +525,11 @@ body {
 
     font-size: 30px;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(23, 108, 232, 0.35),
-            rgba(32, 224, 208, 0.20)
-        );
+    background: transparent;
 
-    border: 1px solid rgba(15, 23, 42, 0.136);
+    border: 1px solid #000000;
 
-    box-shadow:
-        0 15px 40px rgba(23, 108, 232, 0.12);
+    box-shadow: none;
 }
 
 .camera-placeholder h3 {
@@ -617,9 +556,9 @@ body {
 
     padding: 13px 25px;
 
-    border-radius: 12px;
+    border-radius: 1600px;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 14px;
 
@@ -627,15 +566,9 @@ body {
 
     cursor: pointer;
 
-    background:
-        linear-gradient(
-            100deg,
-            #176ce8,
-            #20e0d0
-        );
+    background: #000000;
 
-    box-shadow:
-        0 10px 30px rgba(23, 108, 232, 0.18);
+    box-shadow: none;
 
     transition: 0.25s ease;
 }
@@ -643,8 +576,7 @@ body {
 .camera-button:hover {
     transform: translateY(-2px);
 
-    box-shadow:
-        0 15px 40px rgba(32, 224, 208, 0.15);
+    box-shadow: none;
 }
 
 .camera-button:active {
@@ -683,7 +615,7 @@ body {
     height: 28px;
 
     border-color:
-        rgba(32, 224, 208, 0.75);
+        #000000;
 
     border-style: solid;
 }
@@ -693,10 +625,9 @@ body {
     left: 0;
 
     border-width:
-        2px 0 0 2px;
+        1px 0 0 1px;
 
-    border-radius:
-        8px 0 0 0;
+    border-radius: 8px 0 0 0;
 }
 
 .hand-guide span:nth-child(2) {
@@ -704,10 +635,9 @@ body {
     right: 0;
 
     border-width:
-        2px 2px 0 0;
+        1px 1px 0 0;
 
-    border-radius:
-        0 8px 0 0;
+    border-radius: 0 8px 0 0;
 }
 
 .hand-guide span:nth-child(3) {
@@ -715,10 +645,9 @@ body {
     left: 0;
 
     border-width:
-        0 0 2px 2px;
+        0 0 1px 1px;
 
-    border-radius:
-        0 0 0 8px;
+    border-radius: 0 0 0 8px;
 }
 
 .hand-guide span:nth-child(4) {
@@ -726,10 +655,9 @@ body {
     right: 0;
 
     border-width:
-        0 2px 2px 0;
+        0 1px 1px 0;
 
-    border-radius:
-        0 0 8px 0;
+    border-radius: 0 0 8px 0;
 }
 
 
@@ -742,13 +670,12 @@ body {
 
     padding: 15px;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.705);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.088);
+        1px solid #000000;
 }
 
 .recognition-title {
@@ -785,16 +712,11 @@ body {
 
     flex-shrink: 0;
 
-    border-radius: 12px;
+    border-radius: 20px;
 
     font-size: 21px;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(23, 108, 232, 0.25),
-            rgba(32, 224, 208, 0.15)
-        );
+    background: transparent;
 }
 
 .gesture-result strong {
@@ -829,13 +751,12 @@ body {
 
     padding: 15px;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
-    background:
-        rgba(23, 108, 232, 0.07);
+    background: #dceeff;
 
     border:
-        1px solid rgba(23, 108, 232, 0.12);
+        1px solid #000000;
 }
 
 .target-info span {
@@ -849,7 +770,7 @@ body {
 
     letter-spacing: 1px;
 
-    color: #16a196;
+    color: #5c4ade;
 }
 
 .target-info strong {
@@ -867,10 +788,9 @@ body {
 
     overflow: hidden;
 
-    border-radius: 10px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.84);
+    background: #ffffff;
 }
 
 .progress-bar span {
@@ -882,12 +802,7 @@ body {
 
     border-radius: inherit;
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--blue),
-            var(--cyan)
-        );
+    background: var(--blue);
 
     transition:
         width 0.4s ease;
@@ -940,13 +855,13 @@ body {
     .camera-card {
         padding: 12px;
 
-        border-radius: 19px;
+        border-radius: 20px;
     }
 
     .camera-container {
         min-height: 300px;
 
-        border-radius: 14px;
+        border-radius: 20px;
     }
 
     .practice-target {

@@ -17,18 +17,12 @@ html {
 body {
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #141b29;
+    font-family: var(--font-ui);
+    color: #000000;
 
     overflow-x: hidden;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f0f4fc 0%,
-            #e1ebf9 50%,
-            #e0f3f8 100%
-        );
+    background: #ffffff;
 
     opacity: 0;
     transform: translateY(12px);
@@ -70,22 +64,7 @@ body.page-exiting {
 
     z-index: -2;
 
-    background:
-        radial-gradient(
-            circle at 12% 12%,
-            rgba(37, 99, 235, 0.16),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 88% 28%,
-            rgba(14, 165, 164, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 50% 88%,
-            rgba(124, 58, 237, 0.10),
-            transparent 32%
-        );
+    background: transparent;
 }
 
 
@@ -97,16 +76,7 @@ body.page-exiting {
     position: absolute;
     inset: 0;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.666) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.666) 1px,
-            transparent 1px
-        );
+    background-image: transparent;
 
     background-size: 55px 55px;
 
@@ -123,7 +93,7 @@ body.page-exiting {
 
     border-radius: 50%;
 
-    filter: blur(95px);
+    filter: none;
     opacity: 0.28;
 
     animation:
@@ -137,7 +107,7 @@ body.page-exiting {
     top: -170px;
     left: -120px;
 
-    background: #1264e8;
+    background: #4da2ff;
 }
 
 .blob2 {
@@ -147,7 +117,7 @@ body.page-exiting {
     top: 28%;
     right: -130px;
 
-    background: #14b8a6;
+    background: #4da2ff;
 
     animation-delay: -4s;
 }
@@ -159,7 +129,7 @@ body.page-exiting {
     bottom: -230px;
     left: 32%;
 
-    background: #7c3aed;
+    background: #5c4ade;
 
     animation-delay: -8s;
 }
@@ -244,14 +214,13 @@ body.page-ready .topbar {
 
     padding: 12px 18px;
 
-    border: 1px solid rgba(15, 23, 42, 0.136);
+    border: 1px solid #000000;
 
-    border-radius: 15px;
+    border-radius: 1600px;
 
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 
-    color: #141b29;
+    color: #000000;
 
     font-family: inherit;
     font-size: 14px;
@@ -259,8 +228,8 @@ body.page-ready .topbar {
 
     cursor: pointer;
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     transition:
         transform 0.3s ease,
@@ -273,14 +242,12 @@ body.page-ready .topbar {
     transform:
         translateX(-4px);
 
-    background:
-        rgba(105, 213, 255, 0.11);
+    background: #dceeff;
 
     border-color:
-        rgba(105, 213, 255, 0.30);
+        #000000;
 
-    box-shadow:
-        0 10px 24px rgba(15, 23, 42, 0.063);
+    box-shadow: none;
 }
 
 .back-btn:active {
@@ -313,15 +280,12 @@ body.page-ready .topbar {
 
     border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.168);
+        1px solid #000000;
 
-    box-shadow:
-        0 14px 35px rgba(15, 23, 42, 0.077),
-        0 0 30px rgba(105, 213, 255, 0.048);
+    box-shadow: none;
 
     transition:
         transform 0.4s ease,
@@ -333,9 +297,7 @@ body.page-ready .topbar {
         translateY(-4px)
         scale(1.03);
 
-    box-shadow:
-        0 18px 42px rgba(15, 23, 42, 0.088),
-        0 0 38px rgba(105, 213, 255, 0.072);
+    box-shadow: none;
 }
 
 .logo {
@@ -355,7 +317,7 @@ body.page-ready .topbar {
 }
 
 .brand-text strong {
-    color: #141b29;
+    color: #000000;
 
     font-size: 19px;
     font-weight: 800;
@@ -363,7 +325,7 @@ body.page-ready .topbar {
 
 .brand-text span {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 12px;
 }
@@ -380,24 +342,23 @@ body.page-ready .topbar {
 
     padding: 10px 15px;
 
-    border-radius: 13px;
+    border-radius: 1600px;
 
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.112);
+        1px solid #000000;
 
     color:
-        rgba(20, 27, 41, 0.78);
+        #000000;
 
     font-size: 14px;
     font-weight: 800;
 
     text-align: center;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     transition:
         transform 0.3s ease,
@@ -409,11 +370,10 @@ body.page-ready .topbar {
     transform:
         translateY(-2px);
 
-    background:
-        rgba(255, 255, 255, 0.9);
+    background: #ffffff;
 
     border-color:
-        rgba(105, 213, 255, 0.20);
+        #000000;
 }
 
 
@@ -431,22 +391,15 @@ body.page-ready .topbar {
 
     border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(216, 229, 244, 0.68),
-            rgba(230, 239, 250, 0.58)
-        );
+    background: transparent;
 
     border:
-        1px solid rgba(15, 23, 42, 0.128);
+        1px solid #000000;
 
-    box-shadow:
-        0 25px 70px rgba(15, 23, 42, 0.091),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: none;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     text-align: center;
 
@@ -481,18 +434,15 @@ body.page-ready .lesson-card {
 
     border-radius: 50%;
 
-    background:
-        rgba(105, 213, 255, 0.08);
+    background: #dceeff;
 
-    filter: blur(18px);
+    filter: none;
 
     pointer-events: none;
 }
 
 .lesson-card:hover {
-    box-shadow:
-        0 30px 78px rgba(15, 23, 42, 0.105),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-shadow: none;
 }
 
 
@@ -503,7 +453,7 @@ body.page-ready .lesson-card {
 .lesson-card h1 {
     margin: 0 0 26px;
 
-    color: #141b29;
+    color: #000000;
 
     font-size:
         clamp(64px, 8vw, 88px);
@@ -512,8 +462,7 @@ body.page-ready .lesson-card {
 
     font-weight: 850;
 
-    text-shadow:
-        0 8px 25px rgba(15, 23, 42, 0.07);
+    text-shadow: none;
 
     transition:
         opacity 0.25s ease,
@@ -542,18 +491,12 @@ body.page-ready .lesson-card {
 
     border-radius: 25px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(57, 84, 126, 0.46),
-            rgba(226, 238, 248, 0.36)
-        );
+    background: transparent;
 
     border:
-        1px solid rgba(15, 23, 42, 0.12);
+        1px solid #000000;
 
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: none;
 
     overflow: hidden;
 }
@@ -566,10 +509,9 @@ body.page-ready .lesson-card {
 
     border-radius: 50%;
 
-    background:
-        rgba(105, 213, 255, 0.07);
+    background: #dceeff;
 
-    filter: blur(30px);
+    filter: none;
 
     animation:
         visualGlow 6s ease-in-out infinite alternate;
@@ -609,8 +551,7 @@ body.page-ready .lesson-card {
 
     border-radius: 22px;
 
-    box-shadow:
-        0 18px 40px rgba(15, 23, 42, 0.08);
+    box-shadow: none;
 
     transition:
         opacity 0.25s ease,
@@ -630,8 +571,7 @@ body.page-ready .lesson-card {
         translateY(10px)
         scale(0.97) !important;
 
-    filter:
-        blur(4px);
+    filter: none;
 }
 
 .fade-in {
@@ -641,8 +581,7 @@ body.page-ready .lesson-card {
         translateY(0)
         scale(1) !important;
 
-    filter:
-        blur(0);
+    filter: none;
 }
 
 
@@ -663,16 +602,14 @@ body.page-ready .lesson-card {
     padding:
         18px 22px;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.112);
+        1px solid #000000;
 
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    box-shadow: none;
 
     text-align: left;
 
@@ -683,8 +620,7 @@ body.page-ready .lesson-card {
 }
 
 .description:hover {
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 }
 
 .description-icon {
@@ -697,15 +633,14 @@ body.page-ready .lesson-card {
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
+    border-radius: 20px;
 
-    color: #0e7eaa;
+    color: #5c4ade;
 
-    background:
-        rgba(105, 213, 255, 0.09);
+    background: #dceeff;
 
     border:
-        1px solid rgba(105, 213, 255, 0.13);
+        1px solid #000000;
 
     font-size: 16px;
 }
@@ -714,7 +649,7 @@ body.page-ready .lesson-card {
     margin: 0;
 
     color:
-        rgba(20, 27, 41, 0.76);
+        #000000;
 
     font-size: 15px;
 
@@ -737,11 +672,9 @@ body.page-ready .lesson-card {
 
     border-radius: 999px;
 
-    background:
-        rgba(255, 255, 255, 0.84);
+    background: #ffffff;
 
-    box-shadow:
-        inset 0 1px 3px rgba(15, 23, 42, 0.056);
+    box-shadow: none;
 }
 
 .progress-fill {
@@ -751,16 +684,9 @@ body.page-ready .lesson-card {
 
     border-radius: inherit;
 
-    background:
-        linear-gradient(
-            90deg,
-            #1264e8 0%,
-            #1e9cce 48%,
-            #16c4ca 100%
-        );
+    background: #4da2ff;
 
-    box-shadow:
-        0 0 16px rgba(105, 213, 255, 0.132);
+    box-shadow: none;
 
     transition:
         width 0.8s cubic-bezier(.22,1,.36,1);
@@ -787,7 +713,7 @@ body.page-ready .lesson-card {
     padding:
         14px 22px;
 
-    border-radius: 17px;
+    border-radius: 1600px;
 
     font-family: inherit;
 
@@ -809,25 +735,23 @@ body.page-ready .lesson-card {
 
 .btn-secondary {
     border:
-        1px solid rgba(15, 23, 42, 0.128);
+        1px solid #000000;
 
-    color: #141b29;
+    color: #000000;
 
-    background:
-        rgba(255, 255, 255, 0.795);
+    background: #ffffff;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
 }
 
 .btn-secondary:hover:not(:disabled) {
     transform:
         translateY(-3px);
 
-    background:
-        rgba(255, 255, 255, 0.9);
+    background: #ffffff;
 
     border-color:
-        rgba(105, 213, 255, 0.20);
+        #000000;
 }
 
 
@@ -838,24 +762,16 @@ body.page-ready .lesson-card {
 
     color: #ffffff;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1264e8,
-            #1e9cce 50%,
-            #16b7aa
-        );
+    background: #000000;
 
-    box-shadow:
-        0 10px 25px rgba(18, 100, 232, 0.108);
+    box-shadow: none;
 }
 
 .btn-primary:hover:not(:disabled) {
     transform:
         translateY(-3px);
 
-    box-shadow:
-        0 16px 32px rgba(18, 100, 232, 0.168);
+    box-shadow: none;
 
     filter:
         brightness(1.05);
@@ -895,11 +811,10 @@ body.page-ready .lesson-card {
 
     padding: 20px;
 
-    background:
-        rgba(245, 248, 253, 0.78);
+    background: #ffffff;
 
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .final-screen.show {
@@ -935,21 +850,15 @@ body.page-ready .lesson-card {
 
     border-radius: 28px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(215, 228, 243, 0.94),
-            rgba(227, 239, 249, 0.94)
-        );
+    background: #dceeff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.136);
+        1px solid #000000;
 
-    box-shadow:
-        0 30px 80px rgba(15, 23, 42, 0.14);
+    box-shadow: none;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     animation:
         finalCardIn 0.55s cubic-bezier(.22,1,.36,1) both;
@@ -981,7 +890,7 @@ body.page-ready .lesson-card {
 .final-card h2 {
     margin-bottom: 10px;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 31px;
 }
@@ -990,7 +899,7 @@ body.page-ready .lesson-card {
     margin-bottom: 24px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 15px;
 
@@ -1003,16 +912,11 @@ body.page-ready .lesson-card {
 
     border: none;
 
-    border-radius: 14px;
+    border-radius: 1600px;
 
     color: #ffffff;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1264e8,
-            #16b7aa
-        );
+    background: #000000;
 
     font-family: inherit;
 
@@ -1030,8 +934,7 @@ body.page-ready .lesson-card {
     transform:
         translateY(-3px);
 
-    box-shadow:
-        0 14px 28px rgba(18, 100, 232, 0.15);
+    box-shadow: none;
 }
 
 
@@ -1105,7 +1008,7 @@ body.page-ready .lesson-card {
         width: 54px;
         height: 54px;
 
-        border-radius: 15px;
+        border-radius: 20px;
     }
 
     .logo {
@@ -1153,14 +1056,14 @@ body.page-ready .lesson-card {
     .image-container img {
         max-height: 245px;
 
-        border-radius: 17px;
+        border-radius: 20px;
     }
 
     .description {
         padding:
             15px 16px;
 
-        border-radius: 15px;
+        border-radius: 20px;
     }
 
     .description p {
@@ -1182,7 +1085,7 @@ body.page-ready .lesson-card {
 
         min-height: 54px;
 
-        border-radius: 15px;
+        border-radius: 1600px;
 
         font-size: 15px;
     }

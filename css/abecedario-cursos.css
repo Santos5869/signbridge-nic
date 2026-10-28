@@ -16,8 +16,8 @@ html {
 body {
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #141b29;
+    font-family: var(--font-ui);
+    color: #000000;
 
     overflow-x: hidden;
 
@@ -51,13 +51,7 @@ body.page-exiting {
     overflow: hidden;
     z-index: -3;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f0f4fc 0%,
-            #e2ebf9 52%,
-            #e0f3f8 100%
-        );
+    background: #ffffff;
 }
 
 .background::after {
@@ -66,16 +60,7 @@ body.page-exiting {
     position: absolute;
     inset: 0;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.666) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.666) 1px,
-            transparent 1px
-        );
+    background-image: transparent;
 
     background-size: 55px 55px;
 
@@ -87,7 +72,7 @@ body.page-exiting {
 
     border-radius: 50%;
 
-    filter: blur(95px);
+    filter: none;
     opacity: 0.28;
 
     animation:
@@ -101,7 +86,7 @@ body.page-exiting {
     top: -160px;
     left: -120px;
 
-    background: #1264e8;
+    background: #4da2ff;
 }
 
 .blob2 {
@@ -111,7 +96,7 @@ body.page-exiting {
     top: 28%;
     right: -140px;
 
-    background: #69d5ff;
+    background: #4da2ff;
 
     animation-delay: -5s;
 }
@@ -123,7 +108,7 @@ body.page-exiting {
     bottom: -220px;
     left: 30%;
 
-    background: #1264e8;
+    background: #4da2ff;
 
     animation-delay: -9s;
 }
@@ -182,17 +167,15 @@ body.page-exiting {
 
     border-radius: 26px;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.12);
+        1px solid #000000;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow:
-        0 20px 50px rgba(15, 23, 42, 0.07);
+    box-shadow: none;
 
     opacity: 0;
     transform: translateY(20px);
@@ -231,14 +214,13 @@ body.page-exiting {
     justify-content: center;
 
     border:
-        1px solid rgba(15, 23, 42, 0.136);
+        1px solid #000000;
 
-    border-radius: 16px;
+    border-radius: 1600px;
 
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 24px;
 
@@ -255,14 +237,12 @@ body.page-exiting {
     transform:
         translateX(-4px);
 
-    background:
-        rgba(105, 213, 255, 0.11);
+    background: #dceeff;
 
     border-color:
-        rgba(105, 213, 255, 0.30);
+        #000000;
 
-    box-shadow:
-        0 10px 25px rgba(15, 23, 42, 0.063);
+    box-shadow: none;
 }
 
 .back-button:active {
@@ -287,21 +267,20 @@ body.page-exiting {
 
     margin-bottom: 12px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
-    background:
-        rgba(105, 213, 255, 0.10);
+    background: #dceeff;
 
     border:
-        1px solid rgba(105, 213, 255, 0.16);
+        1px solid #000000;
 
     color:
-        #0e7eaa;
+        #5c4ade;
 
     font-size: 13px;
     font-weight: 700;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
 }
 
 
@@ -321,18 +300,12 @@ body.page-exiting {
 
     letter-spacing: -1.4px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #141b29,
-            #141b29 45%,
-            #0e7eaa
-        );
+    background: none;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
 
-    color: transparent;
+    color: #5c4ade;
 }
 
 .alphabet-header p {
@@ -341,7 +314,7 @@ body.page-exiting {
     margin-top: 12px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 15px;
 
@@ -363,17 +336,14 @@ body.page-exiting {
 
     border-radius: 22px;
 
-    background:
-        #ffffff url("../images/logo.png")
+    background: #ffffff url("../images/logo.png")
         center / 68px 68px
         no-repeat;
 
     border:
-        1px solid rgba(15, 23, 42, 0.168);
+        1px solid #000000;
 
-    box-shadow:
-        0 14px 35px rgba(15, 23, 42, 0.077),
-        0 0 30px rgba(105, 213, 255, 0.048);
+    box-shadow: none;
 
     transition:
         transform 0.4s ease,
@@ -385,9 +355,7 @@ body.page-exiting {
         translateY(-4px)
         scale(1.03);
 
-    box-shadow:
-        0 18px 42px rgba(15, 23, 42, 0.088),
-        0 0 38px rgba(105, 213, 255, 0.078);
+    box-shadow: none;
 }
 
 
@@ -424,22 +392,15 @@ body.page-exiting {
 
     border-radius: 25px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(224, 234, 248, 0.62),
-            rgba(232, 239, 250, 0.55)
-        );
+    background: transparent;
 
     border:
-        1px solid rgba(15, 23, 42, 0.112);
+        1px solid #000000;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow:
-        0 20px 48px rgba(15, 23, 42, 0.07),
-        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    box-shadow: none;
 
     opacity: 0;
     transform:
@@ -505,10 +466,9 @@ body.page-exiting {
 
     border-radius: 50%;
 
-    background:
-        rgba(105, 213, 255, 0.08);
+    background: #dceeff;
 
-    filter: blur(14px);
+    filter: none;
 
     transition:
         transform 0.5s ease,
@@ -533,13 +493,7 @@ body.page-exiting {
     width: 100%;
     height: 2px;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(105, 213, 255, 0.42),
-            transparent
-        );
+    background: transparent;
 
     opacity: 0;
 
@@ -557,27 +511,19 @@ body.page-exiting {
         translateY(-7px)
         scale(1.008);
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(217, 231, 247, 0.73),
-            rgba(227, 236, 249, 0.64)
-        );
+    background: #dceeff;
 
     border-color:
-        rgba(105, 213, 255, 0.25);
+        #000000;
 
-    box-shadow:
-        0 28px 65px rgba(15, 23, 42, 0.098),
-        0 0 30px rgba(105, 213, 255, 0.03);
+    box-shadow: none;
 }
 
 .alphabet-course-card:not(.locked):hover::before {
     transform:
         scale(1.18);
 
-    background:
-        rgba(105, 213, 255, 0.13);
+    background: #dceeff;
 }
 
 .alphabet-course-card:not(.locked):hover::after {
@@ -603,21 +549,14 @@ body.page-exiting {
 
     border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(105, 213, 255, 0.16),
-            rgba(18, 100, 232, 0.15)
-        );
+    background: transparent;
 
     border:
-        1px solid rgba(105, 213, 255, 0.14);
+        1px solid #000000;
 
     font-size: 39px;
 
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        0 12px 28px rgba(15, 23, 42, 0.066);
+    box-shadow: none;
 
     transition:
         transform 0.4s ease,
@@ -631,10 +570,9 @@ body.page-exiting {
         translateY(-2px);
 
     border-color:
-        rgba(105, 213, 255, 0.28);
+        #000000;
 
-    box-shadow:
-        0 17px 34px rgba(15, 23, 42, 0.08);
+    box-shadow: none;
 }
 
 
@@ -661,7 +599,7 @@ body.page-exiting {
     margin-bottom: 9px;
 
     color:
-        #0e7eaa;
+        #5c4ade;
 
     font-size: 11px;
     font-weight: 800;
@@ -672,7 +610,7 @@ body.page-exiting {
 .course-info h2 {
     margin: 0 0 10px;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 24px;
     font-weight: 800;
@@ -692,7 +630,7 @@ body.page-exiting {
     margin: 0;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 14px;
 
@@ -722,16 +660,15 @@ body.page-exiting {
     padding:
         7px 10px;
 
-    border-radius: 9px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.75);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.096);
+        1px solid #000000;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 11px;
     font-weight: 600;
@@ -751,15 +688,14 @@ body.page-exiting {
         11px 16px;
 
     border:
-        1px solid rgba(105, 213, 255, 0.18);
+        1px solid #000000;
 
-    border-radius: 12px;
+    border-radius: 1600px;
 
-    background:
-        rgba(105, 213, 255, 0.09);
+    background: #dceeff;
 
     color:
-        #0e7eaa;
+        #5c4ade;
 
     font-family: inherit;
 
@@ -779,14 +715,12 @@ body.page-exiting {
     transform:
         translateX(4px);
 
-    background:
-        rgba(105, 213, 255, 0.16);
+    background: #dceeff;
 
     border-color:
-        rgba(105, 213, 255, 0.30);
+        #000000;
 
-    box-shadow:
-        0 9px 22px rgba(15, 23, 42, 0.049);
+    box-shadow: none;
 }
 
 .course-button:not(:disabled):active {
@@ -798,14 +732,13 @@ body.page-exiting {
 .course-button:disabled {
     cursor: default;
 
-    background:
-        rgba(255, 255, 255, 0.735);
+    background: #ffffff;
 
     border-color:
-        rgba(15, 23, 42, 0.096);
+        #000000;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 }
 
 
@@ -827,19 +760,12 @@ body.page-exiting {
         translateY(0)
         scale(1);
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(224, 234, 248, 0.62),
-            rgba(232, 239, 250, 0.55)
-        );
+    background: transparent;
 
     border-color:
-        rgba(15, 23, 42, 0.112);
+        #000000;
 
-    box-shadow:
-        0 20px 48px rgba(15, 23, 42, 0.07),
-        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    box-shadow: none;
 }
 
 .alphabet-course-card.locked::after {
@@ -902,7 +828,7 @@ body.page-exiting .alphabet-course-card {
         width: 68px;
         height: 68px;
 
-        border-radius: 18px;
+        border-radius: 20px;
 
         background-size: 54px 54px;
     }

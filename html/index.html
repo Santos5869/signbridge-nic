@@ -10,6 +10,8 @@
     <title>SignBridge | Aprende Lengua de Señas</title>
 
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
 </head>
 
 <body>
@@ -26,6 +28,28 @@
 
         <div class="grid"></div>
 
+    </div>
+
+
+    <!-- =====================================================
+         MARQUESINA (el texto va dos veces para que el bucle no se corte)
+    ====================================================== -->
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>✋ Aprende Lengua de Señas Nicaragüense</span>
+            <span>🔤 Abecedario</span>
+            <span>🔢 Números</span>
+            <span>👋 Saludos</span>
+            <span>🏫 Escuela</span>
+            <span>📷 Practica con tu cámara</span>
+            <span>✋ Aprende Lengua de Señas Nicaragüense</span>
+            <span>🔤 Abecedario</span>
+            <span>🔢 Números</span>
+            <span>👋 Saludos</span>
+            <span>🏫 Escuela</span>
+            <span>📷 Practica con tu cámara</span>
+        </div>
     </div>
 
 
@@ -91,16 +115,25 @@
                 </div>
 
 
-                <h1>
+                <div class="hero-title">
 
-                    Aprende.
-                    <br>
+                    <!-- Stickers decorativos alrededor del titular -->
+                    <span class="sticker ember hero-sticker-1" aria-hidden="true">👋</span>
+                    <span class="sticker sun hero-sticker-2" aria-hidden="true">⭐</span>
+                    <span class="sticker violet hero-sticker-3" aria-hidden="true">🤟</span>
 
-                    Comunica.
+                    <h1>
 
-                    <span>Conecta.</span>
+                        Aprende.
+                        <br>
 
-                </h1>
+                        Comunica.
+
+                        <span>Conecta.</span>
+
+                    </h1>
+
+                </div>
 
 
                 <p class="hero-description">

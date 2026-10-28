@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 :root {
-    --bg-1: #f4f8fd;
-    --bg-2: #eff4fc;
-    --bg-3: #e8f1fa;
+    --bg-1: #ffffff;
+    --bg-2: #ffffff;
+    --bg-3: #dceeff;
 
-    --cyan: #19d8e8;
-    --blue: #1685ff;
-    --purple: #735cff;
+    --cyan: #4da2ff;
+    --blue: #4da2ff;
+    --purple: #5c4ade;
 
-    --white: #141b29;
-    --text: #152031;
-    --muted: #405a76;
+    --white: #000000;
+    --text: #000000;
+    --muted: #4a4a4a;
 
-    --glass: rgba(255, 255, 255, 0.765);
-    --glass-hover: rgba(255, 255, 255, 0.855);
-    --border: rgba(15, 23, 42, 0.136);
+    --glass: #ffffff;
+    --glass-hover: #ffffff;
+    --border: #000000;
 
-    --shadow: 0 25px 70px rgba(15, 23, 42, 0.105);
+    --shadow: none;
 
     --transition: 0.35s cubic-bezier(.2, .8, .2, 1);
 }
@@ -36,15 +34,11 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-ui);
 
     color: var(--text);
 
-    background:
-        radial-gradient(circle at 15% 15%, rgba(25, 216, 232, .10), transparent 25%),
-        radial-gradient(circle at 85% 25%, rgba(115, 92, 255, .10), transparent 28%),
-        radial-gradient(circle at 50% 100%, rgba(22, 133, 255, .08), transparent 30%),
-        linear-gradient(135deg, var(--bg-1), var(--bg-2) 50%, #f3f7fc);
+    background: #ffffff;
 
     opacity: 0;
 
@@ -93,9 +87,7 @@ button {
 
     opacity: .12;
 
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.735) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.735) 1px, transparent 1px);
+    background-image: transparent;
 
     background-size: 55px 55px;
 
@@ -111,7 +103,7 @@ button {
 
     border-radius: 50%;
 
-    filter: blur(85px);
+    filter: none;
 
     animation: glowFloat 12s ease-in-out infinite alternate;
 }
@@ -123,7 +115,7 @@ button {
     left: -150px;
     top: -100px;
 
-    background: rgba(25,216,232,.17);
+    background: #dceeff;
 }
 
 .glow-2 {
@@ -133,7 +125,7 @@ button {
     right: -180px;
     top: 15%;
 
-    background: rgba(115,92,255,.15);
+    background: #e9ccff;
 
     animation-delay: -4s;
 }
@@ -145,7 +137,7 @@ button {
     left: 35%;
     bottom: -210px;
 
-    background: rgba(22,133,255,.11);
+    background: #dceeff;
 
     animation-delay: -8s;
 }
@@ -180,14 +172,14 @@ button {
 
     border-radius: 24px;
 
-    background: rgba(242, 247, 252, 0.68);
+    background: #ffffff;
 
     border: 1px solid var(--border);
 
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow: 0 15px 50px rgba(15, 23, 42, 0.063);
+    box-shadow: none;
 
     position: relative;
     z-index: 30;
@@ -228,15 +220,13 @@ button {
 
     flex-shrink: 0;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
     overflow: hidden;
 
-    box-shadow:
-        0 0 28px rgba(25, 216, 232, 0.06),
-        0 10px 25px rgba(15, 23, 42, 0.07);
+    box-shadow: none;
 
     transition: var(--transition);
 }
@@ -253,9 +243,7 @@ button {
 .brand:hover .brand-logo {
     transform: translateY(-2px) scale(1.04) rotate(-2deg);
 
-    box-shadow:
-        0 0 35px rgba(25, 216, 232, 0.12),
-        0 12px 30px rgba(15, 23, 42, 0.088);
+    box-shadow: none;
 }
 
 .brand-name {
@@ -273,7 +261,7 @@ button {
 .brand-name small {
     margin-top: 6px;
 
-    color: #7f95ad;
+    color: #4a4a4a;
 
     font-size: 9px;
     font-weight: 500;
@@ -294,9 +282,9 @@ button {
 .nav-links a {
     padding: 11px 17px;
 
-    color: #405775;
+    color: #4a4a4a;
 
-    border-radius: 12px;
+    border-radius: 1600px;
 
     font-size: 13px;
     font-weight: 500;
@@ -305,37 +293,29 @@ button {
 }
 
 .nav-links a:hover {
-    color: #141b29;
+    color: #000000;
 
-    background: rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     transform: translateY(-2px);
 }
 
 .nav-links a.active {
-    color: #141b29;
+    color: #000000;
 }
 
 .nav-links .login-link {
     margin-left: 7px;
 
-    color: #141b29;
+    color: #000000;
 
-    background: linear-gradient(
-        135deg,
-        rgba(25,216,232,.15),
-        rgba(22,133,255,.15)
-    );
+    background: transparent;
 
-    border: 1px solid rgba(25,216,232,.16);
+    border: 1px solid #000000;
 }
 
 .nav-links .login-link:hover {
-    background: linear-gradient(
-        135deg,
-        rgba(25,216,232,.25),
-        rgba(22,133,255,.22)
-    );
+    background: transparent;
 }
 
 
@@ -394,13 +374,13 @@ button {
 
     padding: 9px 14px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
-    background: rgba(25,216,232,.07);
+    background: #dceeff;
 
-    border: 1px solid rgba(25,216,232,.18);
+    border: 1px solid #000000;
 
-    color: #0e9daa;
+    color: #5c4ade;
 
     font-size: 11px;
     font-weight: 600;
@@ -414,7 +394,7 @@ button {
 
     background: var(--cyan);
 
-    box-shadow: 0 0 13px rgba(25, 216, 232, 0.54);
+    box-shadow: none;
 
     animation: pulseDot 2s infinite;
 }
@@ -437,29 +417,62 @@ button {
 .hero h1 {
     margin-bottom: 24px;
 
-    font-size: clamp(53px, 6.2vw, 82px);
-
-    line-height: .96;
-
-    letter-spacing: -4px;
+    font-size: clamp(56px, 7.4vw, 118px);
 
     font-weight: 800;
+}
+
+
+/* STICKERS DEL TITULAR (girados, nunca alineados a la grilla) */
+
+.hero-title {
+    position: relative;
+}
+
+/* Sobre la esquina de "APRENDE." */
+.hero-sticker-1 {
+    top: -44px;
+    left: 46%;
+    transform: rotate(12deg);
+}
+
+/* Pisando el borde derecho del titular (nunca el párrafo) */
+.hero-sticker-2 {
+    top: 38%;
+    right: -28px;
+    transform: rotate(-10deg);
+}
+
+/* Asomando por la izquierda, entre líneas */
+.hero-sticker-3 {
+    top: 32%;
+    left: -48px;
+    transform: rotate(-14deg);
+}
+
+@media (max-width: 720px) {
+
+    /* Más específico que .sticker de slush.css, que va después */
+    .hero-title .hero-sticker-3 {
+        display: none;
+    }
+
+    .hero-title .hero-sticker-1 {
+        top: -14px;
+        left: auto;
+        right: 0;
+    }
 }
 
 .hero h1 span {
     display: inline-block;
 
-    background: linear-gradient(
-        100deg,
-        #141b29 10%,
-        #0e85aa 45%,
-        #12a5b0 80%
-    );
+    background: none;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
 
-    color: transparent;
+    color: #5c4ade;
 }
 
 .hero-description {
@@ -499,7 +512,7 @@ button {
 
     gap: 9px;
 
-    border-radius: 14px;
+    border-radius: 1600px;
 
     font-size: 12px;
     font-weight: 600;
@@ -508,43 +521,35 @@ button {
 }
 
 .btn-primary {
-    color: white;
+    color: #ffffff;
 
-    background: linear-gradient(
-        135deg,
-        #16d9ea,
-        #087cff
-    );
+    background: #000000;
 
-    box-shadow:
-        0 14px 35px rgba(0, 124, 255, 0.144),
-        inset 0 1px rgba(255,255,255,.25);
+    box-shadow: none;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0 20px 42px rgba(0, 124, 255, 0.204),
-        inset 0 1px rgba(255,255,255,.25);
+    box-shadow: none;
 }
 
 .btn-secondary {
-    color: #141b29;
+    color: #000000;
 
-    background: rgba(255, 255, 255, 0.735);
+    background: #ffffff;
 
     border: 1px solid var(--border);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: none;
 }
 
 .btn-secondary:hover {
     transform: translateY(-3px);
 
-    background: rgba(255, 255, 255, 0.84);
+    background: #ffffff;
 
-    border-color: rgba(25,216,232,.22);
+    border-color: #000000;
 }
 
 
@@ -570,7 +575,7 @@ button {
 }
 
 .info-item span {
-    color: #8196ad;
+    color: #4a4a4a;
 
     font-size: 10px;
 
@@ -584,7 +589,7 @@ button {
 
     margin: 0 25px;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 }
 
 
@@ -630,9 +635,9 @@ button {
 
     border-radius: 50%;
 
-    background: rgba(19,214,231,.10);
+    background: #dceeff;
 
-    filter: blur(70px);
+    filter: none;
 
     animation: visualGlow 5s ease-in-out infinite alternate;
 }
@@ -655,7 +660,7 @@ button {
 .circle-decoration {
     position: absolute;
 
-    border: 1px solid rgba(25,216,232,.09);
+    border: 1px solid #000000;
 
     border-radius: 50%;
 }
@@ -671,7 +676,7 @@ button {
     width: 390px;
     height: 390px;
 
-    border-color: rgba(115,92,255,.10);
+    border-color: #000000;
 
     animation: spinReverse 30s linear infinite;
 }
@@ -720,7 +725,7 @@ button {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(25,216,232,.16);
+    border: 1px solid #000000;
 
     pointer-events: none;
 }
@@ -736,7 +741,7 @@ button {
     width: 355px;
     height: 355px;
 
-    border-color: rgba(115,92,255,.12);
+    border-color: #000000;
 
     animation: spinReverse 22s linear infinite;
 }
@@ -747,7 +752,7 @@ button {
 .logo-orbit {
     position: absolute;
 
-    border: 1px dashed rgba(15, 23, 42, 0.128);
+    border: 1px dashed #000000;
 
     border-radius: 50%;
 
@@ -769,7 +774,7 @@ button {
 
     transform: rotate(56deg);
 
-    border-color: rgba(25,216,232,.10);
+    border-color: #000000;
 
     animation: orbitTwo 16s linear infinite;
 }
@@ -811,17 +816,11 @@ button {
 
     border-radius: 38px;
 
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.92),
-        rgba(239,248,255,.94)
-    );
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.5);
+    border: 1px solid #000000;
 
-    box-shadow:
-        0 30px 70px rgba(15, 23, 42, 0.105),
-        0 0 75px rgba(25, 216, 232, 0.054);
+    box-shadow: none;
 
     animation: logoFloat 5s ease-in-out infinite;
 }
@@ -841,9 +840,9 @@ button {
 
     border-radius: 45px;
 
-    background: rgba(25,216,232,.09);
+    background: #dceeff;
 
-    filter: blur(28px);
+    filter: none;
 
     z-index: -1;
 }
@@ -868,15 +867,15 @@ button {
     align-items: center;
     justify-content: center;
 
-    border-radius: 16px;
+    border-radius: 20px;
 
-    background: rgba(239, 245, 252, 0.85);
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.136);
+    border: 1px solid #000000;
 
-    backdrop-filter: blur(15px);
+    backdrop-filter: none;
 
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.077);
+    box-shadow: none;
 
     z-index: 8;
 
@@ -892,7 +891,7 @@ button {
     left: 25px;
     top: 55px;
 
-    color: #119ba7;
+    color: #5c4ade;
 }
 
 .symbol-two {
@@ -902,7 +901,7 @@ button {
     right: 8px;
     top: 100px;
 
-    color: #260eaa;
+    color: #5c4ade;
 
     font-size: 13px;
 
@@ -948,14 +947,14 @@ button {
 
     border-radius: 22px;
 
-    background: rgba(237, 244, 251, 0.78);
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.136);
+    border: 1px solid #000000;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow: var(--shadow);
+    box-shadow: none;
 
     z-index: 10;
 
@@ -979,7 +978,7 @@ button {
 
     margin-bottom: 20px;
 
-    color: #335c85;
+    color: #5c4ade;
 
     font-size: 10px;
     font-weight: 600;
@@ -991,7 +990,7 @@ button {
 
     gap: 5px;
 
-    color: #557d9b;
+    color: #4a4a4a;
 
     font-size: 9px;
 }
@@ -1002,9 +1001,9 @@ button {
 
     border-radius: 50%;
 
-    background: #27dbad;
+    background: #55db9c;
 
-    box-shadow: 0 0 10px rgba(39, 219, 173, 0.36);
+    box-shadow: none;
 }
 
 .hand-symbol {
@@ -1017,9 +1016,9 @@ button {
 
     margin-bottom: 13px;
 
-    border-radius: 14px;
+    border-radius: 20px;
 
-    background: rgba(25,216,232,.08);
+    background: #dceeff;
 
     font-size: 19px;
 }
@@ -1033,7 +1032,7 @@ button {
 }
 
 .card-content p {
-    color: #49627d;
+    color: #4a4a4a;
 
     font-size: 10px;
 
@@ -1050,7 +1049,7 @@ button {
 
     margin-bottom: 8px;
 
-    color: #8196ad;
+    color: #4a4a4a;
 
     font-size: 9px;
 }
@@ -1062,7 +1061,7 @@ button {
 
     border-radius: 99px;
 
-    background: rgba(255, 255, 255, 0.84);
+    background: #ffffff;
 }
 
 .progress-bar div {
@@ -1071,11 +1070,7 @@ button {
 
     border-radius: inherit;
 
-    background: linear-gradient(
-        90deg,
-        var(--cyan),
-        var(--blue)
-    );
+    background: var(--cyan);
 }
 
 
@@ -1095,15 +1090,15 @@ button {
 
     gap: 12px;
 
-    border-radius: 17px;
+    border-radius: 20px;
 
-    background: rgba(239, 245, 252, 0.84);
+    background: #ffffff;
 
-    border: 1px solid rgba(15, 23, 42, 0.128);
+    border: 1px solid #000000;
 
-    backdrop-filter: blur(18px);
+    backdrop-filter: none;
 
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.077);
+    box-shadow: none;
 
     z-index: 12;
 
@@ -1139,19 +1134,19 @@ button {
     align-items: center;
     justify-content: center;
 
-    border-radius: 12px;
+    border-radius: 20px;
 
-    background: rgba(25,216,232,.09);
+    background: #dceeff;
 
-    color: #119ba7;
+    color: #5c4ade;
 
     font-size: 11px;
     font-weight: 700;
 }
 
 .floating-icon.alphabet {
-    background: rgba(115,92,255,.10);
-    color: #260eaa;
+    background: #e9ccff;
+    color: #5c4ade;
 }
 
 .floating-icon.greetings {
@@ -1167,7 +1162,7 @@ button {
 }
 
 .floating-card small {
-    color: #8196ad;
+    color: #4a4a4a;
 
     font-size: 8px;
 }
@@ -1210,7 +1205,7 @@ button {
 
     margin-bottom: 12px;
 
-    color: #119ba7;
+    color: #5c4ade;
 
     font-size: 9px;
 
@@ -1230,7 +1225,7 @@ button {
 }
 
 .section-heading h2 span {
-    color: #119ba7;
+    color: #5c4ade;
 }
 
 .section-heading p {
@@ -1258,12 +1253,7 @@ button {
 
     border-radius: 25px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.795),
-            rgba(255, 255, 255, 0.684)
-        );
+    background: #ffffff;
 
     border: 1px solid var(--border);
 
@@ -1289,9 +1279,9 @@ button {
 
     background: var(--glass-hover);
 
-    border-color: rgba(25,216,232,.20);
+    border-color: #000000;
 
-    box-shadow: 0 25px 55px rgba(15, 23, 42, 0.063);
+    box-shadow: none;
 }
 
 .feature-icon {
@@ -1304,19 +1294,19 @@ button {
 
     margin-bottom: 20px;
 
-    border-radius: 16px;
+    border-radius: 20px;
 
-    background: rgba(25,216,232,.09);
+    background: #dceeff;
 
     font-size: 20px;
 }
 
 .feature-icon.blue {
-    background: rgba(22,133,255,.10);
+    background: #dceeff;
 }
 
 .feature-icon.purple {
-    background: rgba(115,92,255,.10);
+    background: #e9ccff;
 }
 
 .feature-number {
@@ -1325,7 +1315,7 @@ button {
     top: 27px;
     right: 28px;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 10px;
 
@@ -1341,7 +1331,7 @@ button {
 .feature-card p {
     max-width: 330px;
 
-    color: #496280;
+    color: #4a4a4a;
 
     font-size: 11px;
 
@@ -1356,11 +1346,7 @@ button {
 
     border-radius: 99px;
 
-    background: linear-gradient(
-        90deg,
-        var(--cyan),
-        transparent
-    );
+    background: transparent;
 }
 
 
@@ -1407,7 +1393,7 @@ button {
 .learning-heading p {
     max-width: 300px;
 
-    color: #516d89;
+    color: #4a4a4a;
 
     font-size: 11px;
 
@@ -1434,12 +1420,7 @@ button {
 
     border-radius: 23px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.795),
-            rgba(255, 255, 255, 0.675)
-        );
+    background: #ffffff;
 
     border: 1px solid var(--border);
 
@@ -1465,9 +1446,9 @@ button {
 
     background: var(--glass-hover);
 
-    border-color: rgba(25,216,232,.19);
+    border-color: #000000;
 
-    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.063);
+    box-shadow: none;
 }
 
 .learning-card-number {
@@ -1476,7 +1457,7 @@ button {
     top: 19px;
     right: 20px;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 10px;
 
@@ -1493,17 +1474,17 @@ button {
 
     margin-bottom: 25px;
 
-    border-radius: 16px;
+    border-radius: 20px;
 
-    background: rgba(25,216,232,.09);
+    background: #dceeff;
 
     font-size: 15px;
     font-weight: 700;
 }
 
 .learning-card-icon.alphabet {
-    background: rgba(115,92,255,.10);
-    color: #250eaa;
+    background: #e9ccff;
+    color: #5c4ade;
 }
 
 .learning-card-icon.greetings {
@@ -1511,13 +1492,9 @@ button {
 }
 
 .learning-card-icon.colors {
-    background: linear-gradient(
-        135deg,
-        #ff5f8d,
-        #7c68ff
-    );
+    background: #fb4903;
 
-    color: white;
+    color: #ffffff;
 }
 
 .learning-card-content span {
@@ -1525,7 +1502,7 @@ button {
 
     margin-bottom: 7px;
 
-    color: #6f889f;
+    color: #4a4a4a;
 
     font-size: 8px;
 
@@ -1539,7 +1516,7 @@ button {
 }
 
 .learning-card-content p {
-    color: #4c6782;
+    color: #4a4a4a;
 
     font-size: 10px;
 
@@ -1550,7 +1527,7 @@ button {
     margin-top: auto;
     padding-top: 23px;
 
-    color: #119ba7;
+    color: #5c4ade;
 
     font-size: 19px;
 
@@ -1584,22 +1561,11 @@ button {
 
     border-radius: 30px;
 
-    background:
-        radial-gradient(
-            circle at 5% 50%,
-            rgba(25,216,232,.13),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(115,92,255,.10),
-            transparent 28%
-        ),
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     border: 1px solid var(--border);
 
-    box-shadow: var(--shadow);
+    box-shadow: none;
 
     overflow: hidden;
 
@@ -1630,9 +1596,9 @@ button {
 
     border-radius: 25px;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.07);
+    box-shadow: none;
 }
 
 .cta-logo img {
@@ -1657,7 +1623,7 @@ button {
 }
 
 .cta-content p {
-    color: #49637e;
+    color: #4a4a4a;
 
     font-size: 12px;
 
@@ -1757,7 +1723,7 @@ button {
 
         padding: 0 13px;
 
-        border-radius: 18px;
+        border-radius: 20px;
     }
 
     .brand-logo {

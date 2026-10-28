@@ -22,6 +22,7 @@ const ESCUELA = (() => {
         { id: "libro",     palabra: "Libro",     emoji: "📕" },
         { id: "tijeras",   palabra: "Tijeras",   emoji: "✂️" },
         { id: "borrador",  palabra: "Borrador",  emoji: "🧽" },
+        { id: "sacapuntas", palabra: "Sacapuntas", emoji: "🌀" },
         { id: "regla",     palabra: "Regla",     emoji: "📏" },
         { id: "mochila",   palabra: "Mochila",   emoji: "🎒" },
         { id: "pegamento", palabra: "Pegamento", emoji: "🧴" },
@@ -78,7 +79,8 @@ const ESCUELA = (() => {
        pedirlos en cada pregunta.
     ===================================================== */
 
-    const CLAVE_FALTANTES = "signbridge_escuela_sin_video";
+    // La versión en la clave invalida la lista guardada cuando se suben videos nuevos
+    const CLAVE_FALTANTES = "signbridge_escuela_sin_video_v2";
 
     let faltantes = new Set();
 

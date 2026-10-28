@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>SignBridge | Números del 30 al 50</title>
+
+    <!-- Mismo diseño que el curso del 10 al 20 -->
+    <link
+        rel="stylesheet"
+        href="../css/numeros-10-20.css"
+    >
+
+    <style>
+        /* Aviso de video pendiente (estilo de sticker del sistema) */
+        .video-pendiente {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 260px;
+            border: 1px dashed #000000;
+            border-radius: 20px;
+            background: #e9ccff;
+            font-size: 18px;
+        }
+
+        .video-pendiente span {
+            font-size: 48px;
+        }
+    </style>
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         FONDO
+    =========================================== -->
+
+    <div class="background">
+
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         BOTÓN VOLVER
+    =========================================== -->
+
+    <a
+        href="numeros-cursos.html"
+        class="btn-volver"
+    >
+        ← Volver a Números
+    </a>
+
+
+
+    <!-- ==========================================
+         CONTENEDOR PRINCIPAL
+    =========================================== -->
+
+    <main class="contenedor">
+
+
+        <!-- ======================================
+             ENCABEZADO
+        ======================================= -->
+
+        <section class="encabezado">
+
+            <span class="badge">
+                🔢 Curso Interactivo
+            </span>
+
+
+            <h1>
+                Números del 30 al 50
+            </h1>
+
+
+            <p>
+                Aprende las señas de los números
+                del 30 al 50 en Lengua de Señas
+                Nicaragüense mediante videos prácticos.
+            </p>
+
+        </section>
+
+
+
+        <!-- ======================================
+             TARJETA DE LA LECCIÓN
+        ======================================= -->
+
+        <section
+            class="tarjeta"
+            id="tarjetaLeccion"
+        >
+
+
+            <!-- CONTADOR -->
+
+            <div class="numero-leccion">
+
+                Lección
+
+                <span id="contador">
+                    1 / 21
+                </span>
+
+            </div>
+
+
+
+            <!-- NÚMERO -->
+
+            <h2 id="titulo">
+                30
+            </h2>
+
+
+
+            <!-- ==================================
+                 MATERIAL
+            =================================== -->
+
+            <div class="video-box">
+
+                <video
+                    id="video"
+                    controls
+                    autoplay
+                    muted
+                    playsinline
+                    controlsList="nodownload"
+                >
+                </video>
+
+
+                <!-- Aviso para números cuyo video aún no está -->
+                <div
+                    id="pendiente"
+                    class="video-pendiente"
+                >
+                    <span aria-hidden="true">🎬</span>
+                    <strong>Video próximamente</strong>
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 DESCRIPCIÓN
+            =================================== -->
+
+            <p id="descripcion">
+
+                Observa atentamente el video para aprender
+                la seña correspondiente al número 30.
+
+            </p>
+
+
+
+            <!-- ==================================
+                 PROGRESO
+            =================================== -->
+
+            <div class="progreso">
+
+                <div id="barra"></div>
+
+            </div>
+
+
+            <div class="porcentaje">
+
+                <span id="textoProgreso">
+                    5% completado
+                </span>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 BOTONES
+            =================================== -->
+
+            <div class="botones">
+
+
+                <button
+                    id="anterior"
+                    type="button"
+                    disabled
+                >
+
+                    ⬅ Anterior
+
+                </button>
+
+
+
+                <button
+                    id="siguiente"
+                    type="button"
+                >
+
+                    Siguiente ➜
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         PANTALLA FINAL
+    =========================================== -->
+
+    <div
+        id="finalScreen"
+        class="final-screen"
+    >
+
+        <div class="final-card">
+
+
+            <div class="final-iconos">
+                🎉
+            </div>
+
+
+            <h2>
+                ¡Felicidades!
+            </h2>
+
+
+            <p>
+                Has completado el curso de
+                Números del 30 al 50.
+            </p>
+
+
+            <button
+                id="volverInicio"
+                type="button"
+            >
+
+                Volver a Números
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="../js/numeros-30-50.js"></script>
+    <script src="../js/fluidez.js"></script>
+
+
+</body>
+
+</html>

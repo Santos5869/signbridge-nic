@@ -7,6 +7,18 @@
 
 
 /* =========================================
+   SALUDOS
+========================================= */
+
+function abrirSaludos() {
+
+    window.location.href =
+        "saludos.html";
+
+}
+
+
+/* =========================================
    PRESENTACIÓN BÁSICA
 ========================================= */
 
@@ -19,37 +31,37 @@ function abrirPresentacionBasica() {
 
 
 /* =========================================
-   DATOS PERSONALES
+   QUIZ: ¿QUÉ SIGNIFICA ESTA SEÑA?
 ========================================= */
 
-function abrirDatosPersonales() {
+function abrirQuizSignificado() {
 
     window.location.href =
-        "datos-personales.html";
+        "presentaciones-quiz.html";
 
 }
 
 
 /* =========================================
-   CONVERSACIÓN DE PRESENTACIÓN
+   JUEGO: RESPONDE LA PREGUNTA
 ========================================= */
 
-function abrirConversacionPresentacion() {
+function abrirRespondePregunta() {
 
     window.location.href =
-        "conversacion-presentacion.html";
+        "presentaciones-responde.html";
 
 }
 
 
 /* =========================================
-   PRÁCTICA DE PRESENTACIONES
+   JUEGO: MEMORIA DE SEÑAS
 ========================================= */
 
-function abrirPracticaPresentaciones() {
+function abrirMemoriaSenas() {
 
     window.location.href =
-        "practica-presentaciones.html";
+        "presentaciones-memoria.html";
 
 }
 

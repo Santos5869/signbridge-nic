@@ -7,6 +7,7 @@ const lecciones = [
 
     {
         titulo: "MI NOMBRE",
+        imagen: "../images/presentaciones/mi-nombre.png",
         descripcion:
             "Aprende la expresión utilizada al momento de indicar tu nombre.",
         icono: "👤",
@@ -16,6 +17,7 @@ const lecciones = [
 
     {
         titulo: "¿CÓMO TE LLAMAS?",
+        video: "../videos/presentaciones/como-te-llamas.mp4",
         descripcion:
             "Aprende cómo preguntar el nombre de otra persona.",
         icono: "❓",
@@ -25,6 +27,8 @@ const lecciones = [
 
     {
         titulo: "ME LLAMO...",
+        // Se hace igual que "Mi nombre"
+        imagen: "../images/presentaciones/mi-nombre.png",
         descripcion:
             "Aprende la expresión utilizada para responder indicando tu nombre.",
         icono: "🙋",
@@ -34,6 +38,7 @@ const lecciones = [
 
     {
         titulo: "MUCHO GUSTO",
+        video: "../videos/presentaciones/mucho-gusto.mp4",
         descripcion:
             "Aprende una expresión utilizada al conocer a otra persona.",
         icono: "🤝",
@@ -43,6 +48,7 @@ const lecciones = [
 
     {
         titulo: "YO",
+        imagen: "../images/presentaciones/yo.png",
         descripcion:
             "Aprende la palabra utilizada para referirte a ti mismo.",
         icono: "👤",
@@ -52,6 +58,7 @@ const lecciones = [
 
     {
         titulo: "TÚ",
+        imagen: "../images/presentaciones/tu.png",
         descripcion:
             "Aprende la palabra utilizada para referirte a otra persona.",
         icono: "👉",
@@ -61,6 +68,7 @@ const lecciones = [
 
     {
         titulo: "¿DE DÓNDE ERES?",
+        video: "../videos/presentaciones/de-donde-eres.mp4",
         descripcion:
             "Aprende cómo preguntar el lugar de origen de otra persona.",
         icono: "🌎",
@@ -70,6 +78,7 @@ const lecciones = [
 
     {
         titulo: "SOY DE...",
+        video: "../videos/presentaciones/soy-de.mp4",
         descripcion:
             "Aprende cómo expresar tu lugar de origen.",
         icono: "📍",
@@ -79,6 +88,7 @@ const lecciones = [
 
     {
         titulo: "¿CÓMO ESTÁS?",
+        video: "../videos/presentaciones/como-estas.mp4",
         descripcion:
             "Aprende cómo preguntar a otra persona cómo se encuentra.",
         icono: "💬",
@@ -88,6 +98,7 @@ const lecciones = [
 
     {
         titulo: "ESTOY BIEN",
+        video: "../videos/presentaciones/estoy-bien.mp4",
         descripcion:
             "Aprende cómo responder cuando te encuentras bien.",
         icono: "😊",
@@ -332,6 +343,67 @@ const learningCard =
         ".learning-card"
     );
 
+const material =
+    document.getElementById(
+        "materialLeccion"
+    );
+
+const contenidoVisual =
+    document.querySelector(
+        ".visual-content"
+    );
+
+
+/* =========================================
+   MATERIAL DE LA SEÑA
+   Si la lección tiene imagen o video, se
+   muestra en lugar del aviso "próximamente".
+========================================= */
+
+function mostrarMaterial(leccion) {
+
+    material.innerHTML = "";
+
+    if (!leccion.imagen && !leccion.video) {
+
+        material.hidden = true;
+
+        contenidoVisual.hidden = false;
+
+        return;
+    }
+
+    let elemento;
+
+    if (leccion.video) {
+
+        elemento =
+            document.createElement("video");
+
+        elemento.src = leccion.video;
+        elemento.controls = true;
+        elemento.autoplay = true;
+        elemento.muted = true;
+        elemento.loop = true;
+        elemento.playsInline = true;
+        elemento.setAttribute("controlsList", "nodownload");
+
+    } else {
+
+        elemento =
+            document.createElement("img");
+
+        elemento.src = leccion.imagen;
+        elemento.alt = `Seña de ${leccion.titulo.toLowerCase()}`;
+    }
+
+    material.appendChild(elemento);
+
+    material.hidden = false;
+
+    contenidoVisual.hidden = true;
+}
+
 
 /* =========================================
    MOSTRAR LECCIÓN
@@ -367,6 +439,9 @@ function mostrarLeccion(animar = false) {
 
         icono.textContent =
             leccion.icono;
+
+
+        mostrarMaterial(leccion);
 
 
         navigationText.textContent =

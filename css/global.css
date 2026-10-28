@@ -2,34 +2,32 @@
    SIGNBRIDGE - GLOBAL.CSS
    =========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 :root{
 
     /* Colores */
 
-    --primary:#2563EB;
-    --secondary:#14B8A6;
-    --accent:#7C3AED;
+    --primary:#4da2ff;
+    --secondary:#4da2ff;
+    --accent:#5c4ade;
 
-    --background:#f2f6fc;
-    --background2:#ebf1fa;
+    --background:#ffffff;
+    --background2:#ffffff;
 
-    --card:rgba(255, 255, 255, 0.84);
+    --card:#ffffff;
 
-    --border:rgba(15, 23, 42, 0.16);
+    --border:#000000;
 
-    --text:#141b29;
+    --text:#000000;
 
-    --text-light:#314256;
+    --text-light:#000000;
 
-    --success:#22C55E;
+    --success:#55db9c;
 
-    --danger:#EF4444;
+    --danger:#fb4903;
 
     --radius:22px;
 
-    --shadow:0 20px 45px rgba(15, 23, 42, 0.122);
+    --shadow: none;
 
 }
 
@@ -49,17 +47,11 @@ html{
 
 body{
 
-    font-family:'Poppins',sans-serif;
+    font-family: var(--font-ui);
 
     color:var(--text);
 
-    background:linear-gradient(
-        135deg,
-        #f2f6fc,
-        #e9f0fa,
-        #deeaf8,
-        #e0e4f5
-    );
+    background: #ffffff;
 
     min-height:100vh;
 
@@ -77,15 +69,15 @@ body{
 
 ::-webkit-scrollbar-thumb{
 
-    background:var(--primary);
+    background: var(--primary);
 
-    border-radius:50px;
+    border-radius: 50px;
 
 }
 
 ::-webkit-scrollbar-track{
 
-    background:#f4f7fc;
+    background: #ffffff;
 
 }
 
@@ -109,19 +101,15 @@ a{
 
     padding:14px 28px;
 
-    border-radius:15px;
+    border-radius: 1600px;
 
     font-size:16px;
 
     font-weight:600;
 
-    color:white;
+    color:#ffffff;
 
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
+    background: #000000;
 
     transition:.35s;
 
@@ -131,7 +119,7 @@ a{
 
     transform:translateY(-4px);
 
-    box-shadow:0 15px 35px rgba(37, 99, 235, 0.21);
+    box-shadow: none;
 
 }
 
@@ -139,15 +127,15 @@ a{
 
 .card{
 
-    background:var(--card);
+    background: var(--card);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: none;
 
     border:1px solid var(--border);
 
-    border-radius:var(--radius);
+    border-radius: var(--radius);
 
-    box-shadow:var(--shadow);
+    box-shadow: none;
 
 }
 /* ==========================================
@@ -155,7 +143,7 @@ a{
 ========================================== */
 
 html {
-    background: #edf2fb;
+    background: #ffffff;
 }
 
 body {

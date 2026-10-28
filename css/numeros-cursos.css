@@ -16,12 +16,10 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: "Poppins", sans-serif;
-    color: #141b29;
+    font-family: var(--font-ui);
+    color: #000000;
     overflow-x: hidden;
-    background:
-        radial-gradient(circle at top left, rgba(0, 198, 255, 0.12), transparent 35%),
-        linear-gradient(135deg, #f0f4fc, #e5eef9 50%, #e4f3f9);
+    background: #ffffff;
     opacity: 0;
     transform: translateY(8px);
     transition:
@@ -57,7 +55,7 @@ body.page-exiting {
 .blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
+    filter: none;
     opacity: 0.35;
     animation: floatingBlob 12s ease-in-out infinite alternate;
 }
@@ -67,7 +65,7 @@ body.page-exiting {
     height: 420px;
     top: -160px;
     left: -120px;
-    background: rgba(0, 198, 255, 0.45);
+    background: #4da2ff;
 }
 
 .blob2 {
@@ -75,7 +73,7 @@ body.page-exiting {
     height: 380px;
     right: -140px;
     top: 30%;
-    background: rgba(0, 114, 255, 0.35);
+    background: #dceeff;
     animation-delay: -4s;
 }
 
@@ -84,7 +82,7 @@ body.page-exiting {
     height: 340px;
     bottom: -150px;
     left: 35%;
-    background: rgba(0, 220, 200, 0.28);
+    background: #d6f5e6;
     animation-delay: -7s;
 }
 
@@ -135,20 +133,18 @@ body.page-exiting {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(15, 23, 42, 0.168);
-    border-radius: 16px;
+    border: 1px solid #000000;
+    border-radius: 1600px;
 
-    color: #141b29;
-    background: rgba(255, 255, 255, 0.84);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    color: #000000;
+    background: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     font-size: 27px;
     cursor: pointer;
 
-    box-shadow:
-        0 10px 30px rgba(15, 23, 42, 0.063),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: none;
 
     transition:
         transform 0.25s ease,
@@ -158,8 +154,8 @@ body.page-exiting {
 
 .back-button:hover {
     transform: translateX(-4px);
-    background: rgba(0, 198, 255, 0.16);
-    border-color: rgba(0, 198, 255, 0.35);
+    background: #dceeff;
+    border-color: #000000;
 }
 
 .back-button:active {
@@ -195,11 +191,9 @@ body.page-exiting {
 
     border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
-    box-shadow:
-        0 15px 35px rgba(15, 23, 42, 0.07),
-        0 0 30px rgba(0, 198, 255, 0.06);
+    box-shadow: none;
 }
 
 .logo-container img {
@@ -224,11 +218,11 @@ body.page-exiting {
 
     padding: 6px 12px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
-    color: #0e83aa;
-    background: rgba(0, 198, 255, 0.10);
-    border: 1px solid rgba(0, 198, 255, 0.20);
+    color: #5c4ade;
+    background: #dceeff;
+    border: 1px solid #000000;
 
     font-size: 11px;
     font-weight: 700;
@@ -241,21 +235,17 @@ body.page-exiting {
     font-weight: 800;
     letter-spacing: -1.2px;
 
-    background: linear-gradient(
-        90deg,
-        #141b29,
-        #0e86aa
-    );
+    background: none;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #5c4ade;
+    background-clip: border-box;
 }
 
 .header-text p {
     max-width: 670px;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 14px;
     line-height: 1.6;
@@ -276,22 +266,15 @@ body.page-exiting {
     padding: 24px 26px;
     margin-bottom: 30px;
 
-    border: 1px solid rgba(15, 23, 42, 0.12);
+    border: 1px solid #000000;
     border-radius: 24px;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0, 198, 255, 0.11),
-            rgba(255, 255, 255, 0.765)
-        );
+    background: transparent;
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow:
-        0 18px 45px rgba(15, 23, 42, 0.056),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-shadow: none;
 
     overflow: hidden;
 }
@@ -307,8 +290,8 @@ body.page-exiting {
 
     border-radius: 50%;
 
-    background: rgba(0, 198, 255, 0.12);
-    filter: blur(20px);
+    background: #dceeff;
+    filter: none;
 }
 
 .intro-icon {
@@ -325,23 +308,16 @@ body.page-exiting {
 
     border-radius: 20px;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0, 198, 255, 0.30),
-            rgba(0, 114, 255, 0.22)
-        );
+    background: transparent;
 
-    border: 1px solid rgba(0, 198, 255, 0.25);
+    border: 1px solid #000000;
 
-    color: #0e87aa;
+    color: #5c4ade;
 
     font-size: 20px;
     font-weight: 800;
 
-    box-shadow:
-        0 10px 25px rgba(15, 23, 42, 0.056),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: none;
 }
 
 .intro-content {
@@ -354,7 +330,7 @@ body.page-exiting {
 
     margin-bottom: 3px;
 
-    color: #0e83aa;
+    color: #5c4ade;
 
     font-size: 10px;
     font-weight: 700;
@@ -369,7 +345,7 @@ body.page-exiting {
 }
 
 .intro-content p {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 13px;
     line-height: 1.6;
@@ -403,22 +379,15 @@ body.page-exiting {
 
     padding: 23px;
 
-    border: 1px solid rgba(15, 23, 42, 0.128);
+    border: 1px solid #000000;
     border-radius: 26px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.885),
-            rgba(255, 255, 255, 0.735)
-        );
+    background: #ffffff;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    box-shadow:
-        0 18px 45px rgba(15, 23, 42, 0.06),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: none;
 
     overflow: hidden;
 
@@ -442,7 +411,7 @@ body.page-exiting {
 
     border-radius: 50%;
 
-    background: rgba(0, 198, 255, 0.09);
+    background: #dceeff;
 
     transition:
         transform 0.45s ease,
@@ -456,24 +425,16 @@ body.page-exiting {
 .number-course-card.available:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(0, 198, 255, 0.28);
+    border-color: #000000;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(0, 198, 255, 0.13),
-            rgba(255, 255, 255, 0.765)
-        );
+    background: transparent;
 
-    box-shadow:
-        0 24px 55px rgba(15, 23, 42, 0.08),
-        0 0 35px rgba(0, 198, 255, 0.048),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: none;
 }
 
 .number-course-card.available:hover::before {
     transform: scale(1.35);
-    background: rgba(0, 198, 255, 0.13);
+    background: #dceeff;
 }
 
 
@@ -488,7 +449,7 @@ body.page-exiting {
 }
 
 .course-number span {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 13px;
     font-weight: 800;
@@ -513,18 +474,11 @@ body.page-exiting {
 
     border-radius: 28px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(0, 198, 255, 0.20),
-            rgba(0, 114, 255, 0.20)
-        );
+    background: transparent;
 
-    border: 1px solid rgba(0, 198, 255, 0.18);
+    border: 1px solid #000000;
 
-    box-shadow:
-        0 14px 28px rgba(15, 23, 42, 0.063),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: none;
 
     transition:
         transform 0.35s ease,
@@ -534,15 +488,12 @@ body.page-exiting {
 .available:hover .course-icon {
     transform: scale(1.05) rotate(-2deg);
 
-    box-shadow:
-        0 18px 35px rgba(15, 23, 42, 0.07),
-        0 0 25px rgba(0, 198, 255, 0.072),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+    box-shadow: none;
 }
 
 .course-icon span {
     font-size: 42px;
-    filter: drop-shadow(0 5px 10px rgba(15, 23, 42, 0.063));
+    filter: none;
 }
 
 
@@ -578,7 +529,7 @@ body.page-exiting {
     min-height: 24px;
     padding: 4px 9px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
     font-size: 9px;
     font-weight: 800;
@@ -586,30 +537,30 @@ body.page-exiting {
 }
 
 .available-status {
-    color: #0e89aa;
+    color: #5c4ade;
 
-    background: rgba(0, 198, 255, 0.12);
-    border: 1px solid rgba(0, 198, 255, 0.20);
+    background: #dceeff;
+    border: 1px solid #000000;
 }
 
 .upcoming-status {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    border: 1px solid #000000;
 }
 
 .course-level {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
-    background: rgba(255, 255, 255, 0.735);
-    border: 1px solid rgba(15, 23, 42, 0.104);
+    background: #ffffff;
+    border: 1px solid #000000;
 }
 
 .course-info h2 {
     margin-bottom: 7px;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 19px;
     line-height: 1.25;
@@ -621,7 +572,7 @@ body.page-exiting {
 
     margin-bottom: 12px;
 
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 12px;
     line-height: 1.6;
@@ -642,7 +593,7 @@ body.page-exiting {
 }
 
 .course-meta span {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 10px;
     font-weight: 600;
@@ -663,17 +614,12 @@ body.page-exiting {
 
     padding: 9px 15px;
 
-    border: 1px solid rgba(0, 198, 255, 0.28);
-    border-radius: 12px;
+    border: 1px solid #000000;
+    border-radius: 1600px;
 
-    color: #141b29;
+    color: #000000;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0, 198, 255, 0.23),
-            rgba(0, 114, 255, 0.23)
-        );
+    background: transparent;
 
     font-family: inherit;
     font-size: 11px;
@@ -681,8 +627,7 @@ body.page-exiting {
 
     cursor: pointer;
 
-    box-shadow:
-        0 8px 20px rgba(15, 23, 42, 0.049);
+    box-shadow: none;
 
     transition:
         transform 0.25s ease,
@@ -694,18 +639,11 @@ body.page-exiting {
 .course-button:hover:not(:disabled) {
     transform: translateY(-2px);
 
-    border-color: rgba(0, 198, 255, 0.45);
+    border-color: #000000;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0, 198, 255, 0.34),
-            rgba(0, 114, 255, 0.30)
-        );
+    background: transparent;
 
-    box-shadow:
-        0 12px 25px rgba(15, 23, 42, 0.07),
-        0 0 20px rgba(0, 198, 255, 0.048);
+    box-shadow: none;
 }
 
 .course-button:active:not(:disabled) {
@@ -723,11 +661,11 @@ body.page-exiting {
 
 .course-button.disabled,
 .course-button:disabled {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
-    background: rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
-    border-color: rgba(15, 23, 42, 0.104);
+    border-color: #000000;
 
     box-shadow: none;
 
@@ -744,14 +682,9 @@ body.page-exiting {
 }
 
 .number-course-card.upcoming .course-icon {
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.84),
-            rgba(255, 255, 255, 0.705)
-        );
+    background: #ffffff;
 
-    border-color: rgba(15, 23, 42, 0.104);
+    border-color: #000000;
 }
 
 .number-course-card.upcoming .course-icon span {
@@ -782,11 +715,11 @@ body.page-exiting {
 
     flex-shrink: 0;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 }
 
 .numbers-footer p {
-    color: rgba(20, 27, 41, 0.75);
+    color: #000000;
 
     font-size: 11px;
 }
@@ -914,7 +847,7 @@ body.page-exiting {
     .back-button {
         width: 45px;
         height: 45px;
-        border-radius: 14px;
+        border-radius: 1600px;
         font-size: 23px;
     }
 
@@ -927,7 +860,7 @@ body.page-exiting {
         width: 60px;
         height: 60px;
         padding: 6px;
-        border-radius: 16px;
+        border-radius: 20px;
     }
 
     .section-badge {
@@ -953,7 +886,7 @@ body.page-exiting {
     .intro-icon {
         width: 55px;
         height: 55px;
-        border-radius: 16px;
+        border-radius: 20px;
         font-size: 16px;
     }
 

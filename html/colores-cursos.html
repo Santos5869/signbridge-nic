@@ -15,6 +15,8 @@
         rel="stylesheet"
         href="../css/colores-cursos.css"
     >
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
 </head>
 
 <body>
@@ -146,70 +148,10 @@
 
 
             <!-- ==================================
-                 MÁS COLORES
+                 QUIZ: ¿QUÉ COLOR ES?
             =================================== -->
 
             <article class="category-card">
-
-                <div class="category-image">
-
-                    🌈
-
-                </div>
-
-
-                <div class="category-content">
-
-                    <div class="category-header">
-
-                        <h2>
-                            Más colores
-                        </h2>
-
-                        <span class="status available">
-                            Disponible
-                        </span>
-
-                    </div>
-
-
-                    <p>
-                        Amplía tu vocabulario aprendiendo
-                        nuevos colores y tonalidades.
-                    </p>
-
-
-                    <div class="course-info">
-
-                        <span>
-                            📘 10 lecciones
-                        </span>
-
-                        <span>
-                            🔵 Nivel básico
-                        </span>
-
-                    </div>
-
-
-                    <button
-                        class="start-btn"
-                        onclick="abrirCurso('mas-colores')"
-                    >
-                        Comenzar
-                    </button>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ==================================
-                 PRÁCTICA DE COLORES
-            =================================== -->
-
-            <article class="category-card locked">
 
                 <div class="category-image">
 
@@ -223,36 +165,160 @@
                     <div class="category-header">
 
                         <h2>
-                            Práctica de colores
+                            ¿Qué color es?
                         </h2>
 
-                        <span class="status locked-status">
-                            🔒 Bloqueado
+                        <span class="status available">
+                            Práctica
                         </span>
 
                     </div>
 
 
                     <p>
-                        Pon a prueba lo aprendido mediante
-                        ejercicios interactivos.
+                        Mira la seña y elige el color correcto.
+                        Mantén tu racha de aciertos.
                     </p>
 
 
                     <div class="course-info">
 
                         <span>
-                            🎯 Próximamente
+                            🎯 Quiz
+                        </span>
+
+                        <span>
+                            🔥 Racha
                         </span>
 
                     </div>
 
 
                     <button
-                        class="start-btn disabled"
-                        disabled
+                        class="start-btn"
+                        onclick="abrirCurso('quiz')"
                     >
-                        Próximamente
+                        Jugar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 TOCA EL COLOR
+            =================================== -->
+
+            <article class="category-card">
+
+                <div class="category-image">
+
+                    🎨
+
+                </div>
+
+
+                <div class="category-content">
+
+                    <div class="category-header">
+
+                        <h2>
+                            Toca el color
+                        </h2>
+
+                        <span class="status available">
+                            Práctica
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Sin palabras: mira la seña y toca
+                        el color en la paleta de pintura.
+                    </p>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            🖌️ Paleta
+                        </span>
+
+                        <span>
+                            👀 Visual
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="start-btn"
+                        onclick="abrirCurso('paleta')"
+                    >
+                        Jugar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 MEMORIA DE COLORES
+            =================================== -->
+
+            <article class="category-card">
+
+                <div class="category-image">
+
+                    🃏
+
+                </div>
+
+
+                <div class="category-content">
+
+                    <div class="category-header">
+
+                        <h2>
+                            Memoria de colores
+                        </h2>
+
+                        <span class="status available">
+                            Práctica
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Voltea las cartas y une cada seña
+                        con su color.
+                    </p>
+
+
+                    <div class="course-info">
+
+                        <span>
+                            🃏 6 parejas
+                        </span>
+
+                        <span>
+                            🏆 Récord
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="start-btn"
+                        onclick="abrirCurso('memoria')"
+                    >
+                        Jugar
                     </button>
 
                 </div>

@@ -15,19 +15,13 @@ html {
 body {
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
 
-    color: #141b29;
+    color: #000000;
 
     overflow-x: hidden;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f0f4fc,
-            #e1ebf9 52%,
-            #e0f3f8
-        );
+    background: #ffffff;
 
     opacity: 0;
 
@@ -64,22 +58,7 @@ body.page-exiting {
 
     pointer-events: none;
 
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(37, 99, 235, 0.16),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 30%,
-            rgba(20, 184, 166, 0.13),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 50% 90%,
-            rgba(124, 58, 237, 0.10),
-            transparent 35%
-        );
+    background: transparent;
 }
 
 .grid-overlay {
@@ -87,16 +66,7 @@ body.page-exiting {
 
     inset: 0;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.675) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.675) 1px,
-            transparent 1px
-        );
+    background-image: transparent;
 
     background-size: 55px 55px;
 }
@@ -106,7 +76,7 @@ body.page-exiting {
 
     border-radius: 50%;
 
-    filter: blur(95px);
+    filter: none;
 
     opacity: 0.25;
 
@@ -121,7 +91,7 @@ body.page-exiting {
     top: -180px;
     left: -130px;
 
-    background: #1264e8;
+    background: #4da2ff;
 }
 
 .blob2 {
@@ -131,7 +101,7 @@ body.page-exiting {
     right: -140px;
     top: 28%;
 
-    background: #14b8a6;
+    background: #4da2ff;
 
     animation-delay: -4s;
 }
@@ -143,7 +113,7 @@ body.page-exiting {
     bottom: -220px;
     left: 35%;
 
-    background: #7c3aed;
+    background: #5c4ade;
 
     animation-delay: -8s;
 }
@@ -218,15 +188,14 @@ body.page-ready .topbar {
 
     padding: 12px 18px;
 
-    border-radius: 15px;
+    border-radius: 1600px;
 
     border:
-        1px solid rgba(15, 23, 42, 0.136);
+        1px solid #000000;
 
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 14px;
 
@@ -234,7 +203,7 @@ body.page-ready .topbar {
 
     cursor: pointer;
 
-    backdrop-filter: blur(14px);
+    backdrop-filter: none;
 
     transition:
         transform 0.3s ease,
@@ -246,11 +215,10 @@ body.page-ready .topbar {
     transform:
         translateX(-4px);
 
-    background:
-        rgba(105,213,255,0.10);
+    background: #dceeff;
 
     border-color:
-        rgba(105,213,255,0.30);
+        #000000;
 }
 
 
@@ -277,15 +245,12 @@ body.page-ready .topbar {
 
     border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.184);
+        1px solid #000000;
 
-    box-shadow:
-        0 15px 38px rgba(15, 23, 42, 0.077),
-        0 0 32px rgba(105, 213, 255, 0.048);
+    box-shadow: none;
 
     transition:
         transform 0.4s ease,
@@ -297,8 +262,7 @@ body.page-ready .topbar {
         translateY(-4px)
         scale(1.03);
 
-    box-shadow:
-        0 20px 45px rgba(15, 23, 42, 0.094);
+    box-shadow: none;
 }
 
 .logo {
@@ -324,7 +288,7 @@ body.page-ready .topbar {
 
 .brand-text span {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 12px;
 }
@@ -341,16 +305,15 @@ body.page-ready .topbar {
 
     padding: 10px 15px;
 
-    border-radius: 13px;
+    border-radius: 1600px;
 
-    background:
-        rgba(255, 255, 255, 0.81);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.112);
+        1px solid #000000;
 
     color:
-        rgba(20, 27, 41, 0.78);
+        #000000;
 
     font-size: 14px;
 
@@ -391,15 +354,14 @@ body.page-ready .course-heading {
 
     padding: 7px 13px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
-    background:
-        rgba(105,213,255,0.08);
+    background: #dceeff;
 
     border:
-        1px solid rgba(105,213,255,0.14);
+        1px solid #000000;
 
-    color: #0e7eaa;
+    color: #5c4ade;
 
     font-size: 12px;
 
@@ -421,7 +383,7 @@ body.page-ready .course-heading {
 
 .course-heading p {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 15px;
 
@@ -439,20 +401,14 @@ body.page-ready .course-heading {
 
     border-radius: 30px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(216, 229, 244, 0.7),
-            rgba(230, 239, 250, 0.6)
-        );
+    background: #dceeff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.128);
+        1px solid #000000;
 
-    box-shadow:
-        0 25px 70px rgba(15, 23, 42, 0.094);
+    box-shadow: none;
 
-    backdrop-filter: blur(20px);
+    backdrop-filter: none;
 
     opacity: 0;
 
@@ -489,7 +445,7 @@ body.page-ready .exercise-card {
 
     margin-bottom: 8px;
 
-    color: #0e7eaa;
+    color: #5c4ade;
 
     font-size: 12px;
 
@@ -528,15 +484,10 @@ body.page-ready .exercise-card {
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(57,84,126,0.46),
-            rgba(226, 238, 248, 0.36)
-        );
+    background: transparent;
 
     border:
-        1px solid rgba(15, 23, 42, 0.112);
+        1px solid #000000;
 }
 
 .visual-glow {
@@ -547,10 +498,9 @@ body.page-ready .exercise-card {
 
     border-radius: 50%;
 
-    background:
-        rgba(105,213,255,0.07);
+    background: #dceeff;
 
-    filter: blur(30px);
+    filter: none;
 
     animation:
         glowPulse 5s ease-in-out infinite alternate;
@@ -580,8 +530,7 @@ body.page-ready .exercise-card {
 
     border-radius: 20px;
 
-    box-shadow:
-        0 18px 42px rgba(15, 23, 42, 0.08);
+    box-shadow: none;
 
     transition:
         opacity 0.3s ease,
@@ -601,7 +550,7 @@ body.page-ready .exercise-card {
         translateY(12px)
         scale(.96);
 
-    filter: blur(4px);
+    filter: none;
 }
 
 .image-in {
@@ -618,7 +567,7 @@ body.page-ready .exercise-card {
             translateY(-10px)
             scale(.96);
 
-        filter: blur(4px);
+        filter: none;
     }
 
     to {
@@ -628,7 +577,7 @@ body.page-ready .exercise-card {
             translateY(0)
             scale(1);
 
-        filter: blur(0);
+        filter: none;
     }
 }
 
@@ -651,15 +600,14 @@ body.page-ready .exercise-card {
 .option {
     min-height: 58px;
 
-    border-radius: 15px;
+    border-radius: 20px;
 
     border:
-        1px solid rgba(15, 23, 42, 0.12);
+        1px solid #000000;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
-    color: #141b29;
+    color: #000000;
 
     font-size: 17px;
 
@@ -678,14 +626,12 @@ body.page-ready .exercise-card {
     transform:
         translateY(-3px);
 
-    background:
-        rgba(105,213,255,0.10);
+    background: #dceeff;
 
     border-color:
-        rgba(105,213,255,0.28);
+        #000000;
 
-    box-shadow:
-        0 10px 25px rgba(15, 23, 42, 0.056);
+    box-shadow: none;
 }
 
 .option:active:not(:disabled) {
@@ -694,22 +640,19 @@ body.page-ready .exercise-card {
 }
 
 .option.correct {
-    background:
-        rgba(22,184,122,0.18);
+    background: #d6f5e6;
 
     border-color:
-        rgba(22,220,140,0.48);
+        #000000;
 
-    box-shadow:
-        0 0 25px rgba(22, 220, 140, 0.06);
+    box-shadow: none;
 }
 
 .option.incorrect {
-    background:
-        rgba(239,68,68,0.16);
+    background: #ffe1d3;
 
     border-color:
-        rgba(239,68,68,0.42);
+        #000000;
 }
 
 .option:disabled {
@@ -734,13 +677,12 @@ body.page-ready .exercise-card {
 
     margin-bottom: 22px;
 
-    border-radius: 17px;
+    border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, 0.765);
+    background: #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.112);
+        1px solid #000000;
 
     text-align: left;
 
@@ -778,12 +720,11 @@ body.page-ready .exercise-card {
     align-items: center;
     justify-content: center;
 
-    border-radius: 11px;
+    border-radius: 20px;
 
-    background:
-        rgba(22,220,140,0.12);
+    background: #d6f5e6;
 
-    color: #1a9d62;
+    color: #12824f;
 
     font-weight: 900;
 }
@@ -798,7 +739,7 @@ body.page-ready .exercise-card {
 
 .result p {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 13px;
 }
@@ -820,13 +761,13 @@ body.page-ready .exercise-card {
     margin-bottom: 9px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 13px;
 }
 
 .progress-header strong {
-    color: #141b29;
+    color: #000000;
 }
 
 .progress {
@@ -836,8 +777,7 @@ body.page-ready .exercise-card {
 
     border-radius: 999px;
 
-    background:
-        rgba(255, 255, 255, 0.84);
+    background: #ffffff;
 }
 
 .progress-fill {
@@ -847,16 +787,9 @@ body.page-ready .exercise-card {
 
     border-radius: inherit;
 
-    background:
-        linear-gradient(
-            90deg,
-            #1264e8,
-            #1e9cce,
-            #16b7aa
-        );
+    background: #4da2ff;
 
-    box-shadow:
-        0 0 16px rgba(105, 213, 255, 0.12);
+    box-shadow: none;
 
     transition:
         width .8s cubic-bezier(.22,1,.36,1);
@@ -874,17 +807,11 @@ body.page-ready .exercise-card {
 
     border: none;
 
-    border-radius: 17px;
+    border-radius: 1600px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1264e8,
-            #1e9cce,
-            #16b7aa
-        );
+    background: #000000;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 16px;
 
@@ -892,8 +819,7 @@ body.page-ready .exercise-card {
 
     cursor: pointer;
 
-    box-shadow:
-        0 10px 25px rgba(18, 100, 232, 0.102);
+    box-shadow: none;
 
     transition:
         transform .3s ease,
@@ -905,8 +831,7 @@ body.page-ready .exercise-card {
     transform:
         translateY(-3px);
 
-    box-shadow:
-        0 16px 32px rgba(18, 100, 232, 0.168);
+    box-shadow: none;
 }
 
 .next-btn:disabled {
@@ -932,7 +857,7 @@ body.page-ready .exercise-card {
     margin: 22px auto 0;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     text-align: center;
 
@@ -966,10 +891,9 @@ body.page-ready .exercise-card {
 
     padding: 20px;
 
-    background:
-        rgba(245, 248, 253, 0.8);
+    background: #ffffff;
 
-    backdrop-filter: blur(17px);
+    backdrop-filter: none;
 }
 
 .final-screen.show {
@@ -1005,18 +929,12 @@ body.page-ready .exercise-card {
 
     border-radius: 28px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(215, 228, 243, 0.95),
-            rgba(227, 239, 249, 0.95)
-        );
+    background: #dceeff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.136);
+        1px solid #000000;
 
-    box-shadow:
-        0 30px 80px rgba(15, 23, 42, 0.147);
+    box-shadow: none;
 
     animation:
         finalCard .55s cubic-bezier(.22,1,.36,1) both;
@@ -1055,11 +973,9 @@ body.page-ready .exercise-card {
 
     border-radius: 22px;
 
-    background:
-        rgba(255, 255, 255, 0.92);
+    background: #ffffff;
 
-    box-shadow:
-        0 15px 35px rgba(15, 23, 42, 0.088);
+    box-shadow: none;
 }
 
 .final-logo img {
@@ -1076,12 +992,11 @@ body.page-ready .exercise-card {
 
     margin-bottom: 12px;
 
-    border-radius: 999px;
+    border-radius: 1600px;
 
-    background:
-        rgba(105,213,255,.08);
+    background: #dceeff;
 
-    color: #0e7eaa;
+    color: #5c4ade;
 
     font-size: 11px;
 
@@ -1106,7 +1021,7 @@ body.page-ready .exercise-card {
     margin-bottom: 22px;
 
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 15px;
 
@@ -1126,12 +1041,12 @@ body.page-ready .exercise-card {
 .final-progress strong {
     font-size: 25px;
 
-    color: #0e7eaa;
+    color: #5c4ade;
 }
 
 .final-progress span {
     color:
-        rgba(20, 27, 41, 0.75);
+        #000000;
 
     font-size: 12px;
 }
@@ -1142,16 +1057,11 @@ body.page-ready .exercise-card {
 
     border: none;
 
-    border-radius: 14px;
+    border-radius: 1600px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1264e8,
-            #16b7aa
-        );
+    background: #000000;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 14px;
 
@@ -1168,8 +1078,7 @@ body.page-ready .exercise-card {
     transform:
         translateY(-3px);
 
-    box-shadow:
-        0 14px 28px rgba(18, 100, 232, 0.15);
+    box-shadow: none;
 }
 
 

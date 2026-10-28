@@ -4,22 +4,20 @@
    tiza y un pupitre con tarjetas de respuesta.
 ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&family=Poppins:wght@500;600;700&display=swap');
-
 :root {
-    --wall: #eaf3ee;
-    --board: #2f5d4a;
-    --board-dark: #234838;
-    --wood: #9b6a3d;
-    --wood-dark: #7a4f29;
-    --chalk: #f4f7f2;
-    --chalk-soft: rgba(244, 247, 242, 0.7);
-    --chalk-yellow: #ffe58a;
-    --desk: #e9c89b;
-    --ink: #2b2b2b;
-    --good: #1f9d63;
-    --bad: #d6453d;
-    --chalk-font: 'Schoolbell', 'Comic Sans MS', cursive;
+    --wall: #d6f5e6;
+    --board: #000000;
+    --board-dark: #000000;
+    --wood: #fb4903;
+    --wood-dark: #fb4903;
+    --chalk: #ffffff;
+    --chalk-soft: #ffffff;
+    --chalk-yellow: #ffffff;
+    --desk: #fb4903;
+    --ink: #000000;
+    --good: #55db9c;
+    --bad: #fb4903;
+    --chalk-font: var(--font-ui);
 }
 
 * {
@@ -31,12 +29,10 @@
 body {
     min-height: 100vh;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-ui);
     color: var(--ink);
 
-    background:
-        linear-gradient(transparent 70%, #d8e8de 70%),
-        var(--wall);
+    background: var(--wall);
 
     animation: entrar .3s ease both;
 }
@@ -78,15 +74,15 @@ button {
 .back-link {
     padding: 9px 16px;
 
-    border-radius: 10px;
-    background: #fff;
+    border-radius: 1600px;
+    background: #ffffff;
     color: var(--board);
 
     font-weight: 600;
     font-size: 14px;
     text-decoration: none;
 
-    box-shadow: 0 3px 10px rgba(35, 72, 56, 0.12);
+    box-shadow: none;
 }
 
 .tabs {
@@ -95,20 +91,20 @@ button {
 
     padding: 5px;
 
-    border-radius: 14px;
-    background: #fff;
+    border-radius: 1600px;
+    background: #ffffff;
 
-    box-shadow: 0 3px 10px rgba(35, 72, 56, 0.1);
+    box-shadow: none;
 }
 
 .tab {
     padding: 9px 16px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 1600px;
 
     background: transparent;
-    color: #5c6f66;
+    color: #4a4a4a;
 
     font-size: 14px;
     font-weight: 600;
@@ -134,23 +130,17 @@ button {
     border: 16px solid var(--wood);
     border-radius: 8px;
 
-    background:
-        radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.07), transparent 60%),
-        radial-gradient(ellipse at 80% 90%, rgba(255, 255, 255, 0.05), transparent 50%),
-        var(--board);
+    background: var(--board);
 
     color: var(--chalk);
 
-    box-shadow:
-        inset 0 0 0 3px var(--wood-dark),
-        inset 0 0 40px rgba(0, 0, 0, 0.35),
-        0 18px 40px rgba(35, 72, 56, 0.25);
+    box-shadow: none;
 }
 
 .board-title {
     margin-bottom: 18px;
 
-    font-family: var(--chalk-font);
+    font-family: var(--font-ui);
     font-size: clamp(32px, 5vw, 46px);
     font-weight: 400;
     text-align: center;
@@ -191,7 +181,7 @@ button {
 
 .chalk-tray span:nth-child(3) {
     width: 20px;
-    background: #ffb3c1;
+    background: #ffffff;
 }
 
 
@@ -221,13 +211,13 @@ button {
 
     padding: 6px 10px;
 
-    border: 2px dashed transparent;
-    border-radius: 10px;
+    border: 1px dashed transparent;
+    border-radius: 20px;
 
     background: transparent;
     color: var(--chalk);
 
-    font-family: var(--chalk-font);
+    font-family: var(--font-ui);
     font-size: 22px;
     text-align: left;
 
@@ -241,7 +231,7 @@ button {
 }
 
 .chalk-item:hover {
-    background: rgba(255, 255, 255, 0.07);
+    background: #ffffff;
 }
 
 .chalk-item.current {
@@ -258,8 +248,8 @@ button {
 .mini-board {
     padding: 16px;
 
-    border: 2px solid rgba(244, 247, 242, 0.35);
-    border-radius: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
 
     background: var(--board-dark);
 
@@ -271,8 +261,8 @@ button {
 
     padding: 10px;
 
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    background: #ffffff;
     color: var(--ink);
 }
 
@@ -284,12 +274,12 @@ button {
 .chalk-big {
     margin-top: 12px;
 
-    font-family: var(--chalk-font);
+    font-family: var(--font-ui);
     font-size: 32px;
 }
 
 .chalk-small {
-    font-family: var(--chalk-font);
+    font-family: var(--font-ui);
     font-size: 20px;
     color: var(--chalk-soft);
 }
@@ -308,7 +298,7 @@ button {
 .tally {
     min-height: 28px;
 
-    font-family: var(--chalk-font);
+    font-family: var(--font-ui);
     font-size: 24px;
     letter-spacing: 3px;
     color: var(--chalk-yellow);
@@ -328,12 +318,10 @@ button {
     margin-top: 34px;
     padding: 22px;
 
-    border-radius: 18px;
-    background:
-        repeating-linear-gradient(0deg, rgba(122, 79, 41, 0.08) 0 3px, transparent 3px 14px),
-        var(--desk);
+    border-radius: 20px;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0 3px, transparent 3px 14px), var(--desk);
 
-    box-shadow: 0 10px 0 var(--wood-dark), 0 22px 30px rgba(35, 72, 56, 0.2);
+    box-shadow: none;
 }
 
 .teacher {
@@ -355,14 +343,14 @@ button {
 
     padding: 10px 12px;
 
-    border-radius: 14px;
-    background: #fff;
+    border-radius: 20px;
+    background: #ffffff;
 
     font-size: 14px;
     font-weight: 600;
     text-align: center;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 .bubble::before {
@@ -374,7 +362,7 @@ button {
 
     border: 8px solid transparent;
     border-top: 0;
-    border-bottom-color: #fff;
+    border-bottom-color: #000000;
 
     transform: translateX(-50%);
 }
@@ -403,7 +391,7 @@ button {
     border: none;
     border-radius: 6px;
 
-    background: #fffdf6;
+    background: #ffffff;
     color: var(--ink);
 
     font-size: 16px;
@@ -412,7 +400,7 @@ button {
 
     cursor: pointer;
 
-    box-shadow: 0 5px 0 rgba(122, 79, 41, 0.35);
+    box-shadow: none;
 
     transform: rotate(var(--giro, 0deg));
 
@@ -428,13 +416,13 @@ button {
 }
 
 .action.right {
-    background: #d7f5e6;
-    box-shadow: 0 5px 0 var(--good);
+    background: #d6f5e6;
+    box-shadow: none;
 }
 
 .action.wrong {
-    background: #fde2e0;
-    box-shadow: 0 5px 0 var(--bad);
+    background: #ffe1d3;
+    box-shadow: none;
     opacity: .7;
 }
 
@@ -457,7 +445,7 @@ button {
 
     padding: 16px;
 
-    background: rgba(20, 45, 35, 0.55);
+    background: rgba(0, 0, 0, 0.55);
 }
 
 .report {
@@ -468,11 +456,11 @@ button {
     border-top: 10px solid var(--board);
     border-radius: 6px;
 
-    background: #fff;
+    background: #ffffff;
 
     text-align: center;
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    box-shadow: none;
 
     animation: entrar .25s ease both;
 }
@@ -481,7 +469,7 @@ button {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #5c6f66;
+    color: #4a4a4a;
 }
 
 .report-row {
@@ -492,14 +480,14 @@ button {
     margin: 18px 0 10px;
     padding: 12px 0;
 
-    border-top: 2px solid #e6ece8;
-    border-bottom: 2px solid #e6ece8;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
 
     font-weight: 600;
 }
 
 .report-row strong {
-    font-family: var(--chalk-font);
+    font-family: var(--font-ui);
     font-size: 48px;
     line-height: 1;
 }
@@ -514,7 +502,7 @@ button {
 
 .report p {
     margin-bottom: 18px;
-    color: #5c6f66;
+    color: #4a4a4a;
 }
 
 .btn-chalk {
@@ -526,7 +514,7 @@ button {
     padding: 11px 18px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 1600px;
 
     background: var(--board);
     color: var(--chalk);
@@ -539,7 +527,7 @@ button {
 }
 
 .btn-chalk.light {
-    background: #eef3f0;
+    background: #ffffff;
     color: var(--board);
 }
 

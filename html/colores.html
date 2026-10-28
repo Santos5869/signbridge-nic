@@ -10,6 +10,8 @@
     <title>SignBridge | Colores básicos</title>
 
     <link rel="stylesheet" href="../css/colores.css">
+    <!-- Sistema de diseño común (va al final para unificar estilos) -->
+    <link rel="stylesheet" href="../css/slush.css">
 </head>
 
 <body>
@@ -69,7 +71,22 @@
 
             <div class="video-container">
 
-                <div class="video-placeholder">
+                <video
+                    id="videoColor"
+                    class="video-color"
+                    controls
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controlsList="nodownload"
+                    hidden
+                ></video>
+
+                <div
+                    id="videoPlaceholder"
+                    class="video-placeholder"
+                >
 
                     <div class="video-icon">
                         ▶
@@ -101,9 +118,8 @@
                     ROJO
                 </h2>
 
-                <p>
-                    Observa atentamente el video cuando esté disponible
-                    y practica la seña.
+                <p id="indicacionVideo">
+                    Observa atentamente el video y practica la seña.
                 </p>
 
             </div>
